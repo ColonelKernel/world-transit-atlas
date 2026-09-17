@@ -41,14 +41,28 @@ data/
   data/research/*         coords + covariates (inputs for the fetch/regenerate tools)
 ```
 
-## Rebuild after editing data
+## Finish the last cities (one command, your own terminal)
+34 cities still draw as stations only — mostly the German set (Berlin, Munich, Hamburg,
+Cologne, Frankfurt…) plus Seoul, Athens, Copenhagen and a few more. Their line geometry lives
+only in OpenStreetMap, which **neither the cloud session nor the linked‑desktop sandbox can
+reach** (both share the same egress allow‑list). Your own terminal has open internet, so:
 
 ```bash
-cd tools && python3 tm_gen.py        # writes ../index.html from data/*
+cd world-transit-atlas
+./finish.sh            # pulls the remaining lines from OSM, rebuilds index.html (~2 min)
 ```
-`tm_gen.py` expects to run from the repo (it reads `data/`). To add or refresh a city's geometry
-from OpenStreetMap, run `tools/fetch_networks_osm.py` on a machine with open internet, drop the
-resulting `data/networks/<slug>.json`, and regenerate.
+
+Reopen `index.html` and those cities draw their lines. (Send me the refreshed
+`data/networks/*.json` — or the rebuilt `index.html` — and I'll republish the hosted copy too.)
+
+## Rebuild / refresh manually
+
+```bash
+python3 tools/tm_gen.py                          # rebuild index.html from data/*
+python3 tools/fetch_networks_osm.py --only berlin,munich   # refetch specific cities from OSM
+```
+`finish.sh` just calls the fetcher with the current gap list. Both tools read/write the repo's
+`data/` folder; run them from the repo root.
 
 ## Data sources & attribution
 

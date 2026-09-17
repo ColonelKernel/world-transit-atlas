@@ -26,7 +26,7 @@
 # =============================================================================
 import json, csv, os, sys, time, math, urllib.request, urllib.parse, urllib.error
 
-DATA_DIR = os.environ.get("TRANSIT_DATA_DIR", ".")
+DATA_DIR = os.environ.get("TRANSIT_DATA_DIR") or os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
 OUT_DIR  = os.path.join(DATA_DIR, "networks")
 RADIUS_M = 45000          # search radius around each city centre (metres)
 SLEEP_S  = 4              # politeness pause between cities

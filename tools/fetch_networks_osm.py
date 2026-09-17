@@ -24,7 +24,7 @@
 # Inputs (under TRANSIT_DATA_DIR, default "."): research/coords.json (slug,lat,lon)
 # and research/covariates.csv (slug,city,mode). Output: <DATA_DIR>/networks/.
 # =============================================================================
-import json, csv, os, sys, time, math, urllib.request, urllib.parse, urllib.error
+import json, csv, os, sys, time, math, re, urllib.request, urllib.parse, urllib.error
 
 DATA_DIR = os.environ.get("TRANSIT_DATA_DIR") or os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
 OUT_DIR  = os.path.join(DATA_DIR, "networks")
@@ -34,10 +34,9 @@ ENDPOINTS = [             # rotated on failure; all are public Overpass mirrors
     "https://overpass-api.de/api/interpreter",
     "https://overpass.kumi.systems/api/interpreter",
     "https://overpass.private.coffee/api/interpreter",
-    "https://overpass.osm.jp/api/interpreter",
-    "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+    "https://overpass.osm.ch/api/interpreter",
 ]
-UA = "WorldTransitAtlas/1.0 (personal research; contact: you@example.com)"
+UA = "WorldTransitAtlas/1.0 (personal research; +https://github.com/ColonelKernel/world-transit-atlas)"
 
 # our mode string -> OSM route relation types + station selectors
 MODE_ROUTES = {
@@ -52,7 +51,7 @@ PALETTE = ["#e6194b","#3cb44b","#4363d8","#f58231","#911eb4","#46f0f0","#f032e6"
            "#000075","#a9a9a9","#ffe119","#00a1de","#ff6319","#6cbe45"]
 
 # ---- HTTP ------------------------------------------------------------------
-def overpass(query, tries=4):
+def overpass(query, tries=8):
     data = urllib.parse.urlencode({"data": query}).encode()
     last = None
     for i in range(tries):
@@ -69,11 +68,14 @@ def overpass(query, tries=4):
     raise RuntimeError(f"all Overpass endpoints failed: {last}")
 
 # ---- fetch one city --------------------------------------------------------
+# depot tracks, sidings and disused/heritage alignments are not passenger lines
+SKIP_REF = re.compile(r"former|disused|abandoned|proposed|planned|under construction|siding|depot|not in use", re.I)
+
 def fetch_lines(lat, lon, route_types):
     rt = "|".join(route_types)
     q = (f'[out:json][timeout:180];'
          f'relation["route"~"^({rt})$"](around:{RADIUS_M},{lat},{lon});'
-         f'out tags geom;')
+         f'out geom;')
     els = overpass(q).get("elements", [])
     lines, ci = [], 0
     for rel in els:
@@ -81,6 +83,8 @@ def fetch_lines(lat, lon, route_types):
             continue
         tags = rel.get("tags", {})
         ref = tags.get("ref") or tags.get("name") or f"L{len(lines)+1}"
+        if SKIP_REF.search(str(ref)) or tags.get("disused") or tags.get("proposed"):
+            continue
         color = tags.get("colour") or tags.get("color")
         if color and not color.startswith("#") and len(color) in (3, 6) and all(c in "0123456789abcdefABCDEF" for c in color):
             color = "#" + color

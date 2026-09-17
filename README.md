@@ -11,7 +11,9 @@ is served from your own domain, a live photo. Watch — and hear — March 2020 
 > doesn't cover). This works when the page is hosted on a normal web server (your site);
 > it stays text‑only inside sandboxes that block third‑party image hosts.
 
-**Live/standalone:** `index.html` is completely self-contained (all geometry, ridership series,
+**Live:** <https://colonelkernel.github.io/world-transit-atlas/>
+
+**Standalone:** `index.html` is completely self-contained (all geometry, ridership series,
 and the world basemap are embedded; the only external request is Google Fonts). Open it in any
 modern browser, or drop it on any static host.
 
@@ -21,9 +23,10 @@ It's one static file — nothing to build.
 
 - **Any web host / your own site:** upload `index.html` (rename as you like, e.g. `transit.html`)
   anywhere under `zachscheffler.com` and link to it. That's it.
-- **GitHub Pages:** push this repo to GitHub → Settings → Pages → deploy from `main` / root.
-  `index.html` at the root is served directly; the included `.nojekyll` keeps Pages from
-  touching it. Your site then lives at `https://<user>.github.io/<repo>/` (or a custom domain).
+- **GitHub Pages:** already enabled on this repo — `main` / root, served at
+  <https://colonelkernel.github.io/world-transit-atlas/>. `index.html` at the root is served
+  directly; the included `.nojekyll` keeps Pages from touching it. Pushing to `main`
+  redeploys. For a fork: Settings → Pages → deploy from `main` / root.
 - **Netlify / Vercel / Cloudflare Pages:** point at the repo, no build command, publish
   directory = root.
 
@@ -41,19 +44,35 @@ data/
   data/research/*         coords + covariates (inputs for the fetch/regenerate tools)
 ```
 
-## Finish the last cities (one command, your own terminal)
-34 cities still draw as stations only — mostly the German set (Berlin, Munich, Hamburg,
-Cologne, Frankfurt…) plus Seoul, Athens, Copenhagen and a few more. Their line geometry lives
-only in OpenStreetMap, which **neither the cloud session nor the linked‑desktop sandbox can
-reach** (both share the same egress allow‑list). Your own terminal has open internet, so:
+## Coverage
+
+All **201 systems carry both line and station geometry** — 1,303 lines and 22,641 stations.
+
+Getting the last 34 cities took two fixes rather than a different network:
+
+- `fetch_lines()` asked Overpass for `out tags geom;`. `tags` is an output *mode* that
+  suppresses relation member lists, so the fetcher received no members and wrote zero lines
+  for every city it touched, regardless of connectivity. It now asks for `out geom;`.
+- The coarse mode map sent `lrt` cities to `route=light_rail` only. German *Stadtbahn*
+  networks (Cologne, Düsseldorf, Hanover) and the Tyne & Wear Metro are tagged `tram` or
+  `light_rail` inconsistently in OSM, so those queries came back empty. They are fetched
+  across several route types now.
+
+To top up coverage later (after an OSM improvement, or for a newly opened line):
 
 ```bash
-cd world-transit-atlas
-./finish.sh            # pulls the remaining lines from OSM, rebuilds index.html (~2 min)
+./finish.sh    # refetches any city missing lines or stations, then rebuilds index.html
 ```
 
-Reopen `index.html` and those cities draw their lines. (Send me the refreshed
-`data/networks/*.json` — or the rebuilt `index.html` — and I'll republish the hosted copy too.)
+`finish.sh` derives its own gap list from `data/networks/*.json`, so it stays correct as
+coverage changes — it does nothing but rebuild once everything is complete.
+
+### A note on the fetch radius
+The fetcher sweeps a 45 km radius around each city centre, so in dense conurbations a city
+picks up its neighbours' routes: Cologne includes Bonn's 6x and Düsseldorf's 70x lines, and
+Düsseldorf spans much of the Rhine-Ruhr. The geometry is real, just drawn from a wider
+catchment than the city name implies. Lower `RADIUS_M` in `tools/fetch_networks_osm.py` and
+refetch if you want strictly municipal networks.
 
 ## Rebuild / refresh manually
 
@@ -61,8 +80,13 @@ Reopen `index.html` and those cities draw their lines. (Send me the refreshed
 python3 tools/tm_gen.py                          # rebuild index.html from data/*
 python3 tools/fetch_networks_osm.py --only berlin,munich   # refetch specific cities from OSM
 ```
-`finish.sh` just calls the fetcher with the current gap list. Both tools read/write the repo's
-`data/` folder; run them from the repo root.
+Both tools read/write the repo's `data/` folder; run them from the repo root.
+
+`data/networks/*.json` keeps full-fidelity OSM geometry (899k vertices). Raw OSM ways carry a
+vertex every few metres — far finer than the map can draw — so `tm_gen.py` simplifies paths
+on the way into the page (Ramer-Douglas-Peucker, ~17 m tolerance, below one screen pixel at
+the deepest city zoom). That trims 76% of the vertices and keeps `index.html` at ~6.5 MB
+instead of ~20 MB. Adjust `_TOL` in `tools/tm_gen.py` to trade size against precision.
 
 ## Data sources & attribution
 
@@ -79,9 +103,9 @@ Please keep this attribution when hosting publicly.
 - **Covariates:** World Bank indicators; national statistics.
 - **Basemap:** Natural Earth (public domain).
 
-Coverage note: of the 201 systems, most now carry full line + station geometry; a few remain
-station-only (their line geometry wasn't available from a reachable open source at build time).
-Geometry is real, not schematic — nothing was fabricated.
+Coverage note: all 201 systems carry full line + station geometry. Geometry is real, not
+schematic — nothing was fabricated. Depot tracks, sidings and disused/heritage alignments are
+filtered out, so the lines shown are passenger routes.
 
 ## Credit
 Built with Claude (Cowork). Transit data © its respective sources as listed above.

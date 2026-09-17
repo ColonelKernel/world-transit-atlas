@@ -8,11 +8,70 @@ data_js = json.dumps(D, ensure_ascii=False, separators=(",", ":"))
 WORLD = json.load(open(os.path.join(_DAT,"world_rings.json"),encoding="utf-8"))
 world_js = json.dumps(WORLD, separators=(",", ":"))
 import glob as _glob
+
+# ---------------------------------------------------------------------------
+# Raw OSM ways carry a vertex every few metres, which is far finer than this
+# map can ever draw. data/networks/*.json stays full-fidelity; the geometry is
+# simplified only on the way into the page, which keeps index.html loadable.
+# ---------------------------------------------------------------------------
+_TOL = 0.00015          # ~15 m: below one screen pixel at the deepest city zoom
+
+def _rdp(pts, tol=_TOL):
+    """Ramer-Douglas-Peucker, iterative so long ways can't blow the stack."""
+    n = len(pts)
+    if n < 3:
+        return pts
+    keep = [False]*n
+    keep[0] = keep[n-1] = True
+    stack = [(0, n-1)]
+    while stack:
+        i, j = stack.pop()
+        if j <= i+1:
+            continue
+        x1, y1 = pts[i]; x2, y2 = pts[j]
+        dx, dy = x2-x1, y2-y1
+        den = dx*dx + dy*dy
+        best, bi = -1.0, -1
+        for k in range(i+1, j):
+            px, py = pts[k]
+            if den == 0:
+                d = (px-x1)**2 + (py-y1)**2
+            else:
+                t = ((px-x1)*dx + (py-y1)*dy) / den
+                t = 0.0 if t < 0 else (1.0 if t > 1 else t)
+                ex, ey = x1 + t*dx, y1 + t*dy
+                d = (px-ex)**2 + (py-ey)**2
+            if d > best:
+                best, bi = d, k
+        if best > tol*tol:
+            keep[bi] = True
+            stack.append((i, bi)); stack.append((bi, j))
+    return [pts[k] for k in range(n) if keep[k]]
+
+def _thin(lines):
+    out = []
+    for ln in lines:
+        paths = []
+        for path in ln.get("paths", []):
+            sp = _rdp([[round(p[0],5), round(p[1],5)] for p in path])
+            if len(sp) >= 2:
+                paths.append(sp)
+        if paths:
+            out.append({"route": ln.get("route"), "color": ln.get("color"), "paths": paths})
+    return out
+
 NETWORKS = {}
+_before = _after = 0
 for _f in _glob.glob(os.path.join(_DAT,"networks","*.json")):
     _n = json.load(open(_f))
-    NETWORKS[_n["slug"]] = {"city": _n.get("city"), "stations": _n.get("stations", []), "lines": _n.get("lines", [])}
+    _lines = _n.get("lines", [])
+    _before += sum(len(p) for l in _lines for p in l.get("paths", []))
+    _lines = _thin(_lines)
+    _after  += sum(len(p) for l in _lines for p in l.get("paths", []))
+    NETWORKS[_n["slug"]] = {"city": _n.get("city"), "stations": _n.get("stations", []), "lines": _lines}
 networks_js = json.dumps(NETWORKS, separators=(",", ":"))
+print(f"simplified line geometry: {_before:,} -> {_after:,} vertices "
+      f"({100*(1-_after/max(_before,1)):.0f}% smaller, {_TOL*111000:.0f} m tolerance)")
 
 HTML = r"""<title>Metro Time Machine</title>
 <meta charset="utf-8">

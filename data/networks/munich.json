@@ -1,0 +1,517 @@
+{
+ "slug": "munich",
+ "city": "Munich",
+ "stations": [
+  {
+   "name": "Alte Heide",
+   "lon": 11.60393,
+   "lat": 48.17947,
+   "routes": "U6"
+  },
+  {
+   "name": "Am Hart",
+   "lon": 11.57181,
+   "lat": 48.19701,
+   "routes": "U2"
+  },
+  {
+   "name": "Arabellapark",
+   "lon": 11.62038,
+   "lat": 48.15328,
+   "routes": "U4"
+  },
+  {
+   "name": "Bonner Platz",
+   "lon": 11.57854,
+   "lat": 48.16691,
+   "routes": "U3"
+  },
+  {
+   "name": "Brudermühlstraße",
+   "lon": 11.54871,
+   "lat": 48.11217,
+   "routes": "U3"
+  },
+  {
+   "name": "Böhmerwaldplatz",
+   "lon": 11.61537,
+   "lat": 48.14287,
+   "routes": "U4"
+  },
+  {
+   "name": "Candidplatz",
+   "lon": 11.56983,
+   "lat": 48.1115,
+   "routes": "U1"
+  },
+  {
+   "name": "Dietlindenstraße",
+   "lon": 11.59031,
+   "lat": 48.16663,
+   "routes": "U6"
+  },
+  {
+   "name": "Dülferstraße",
+   "lon": 11.56251,
+   "lat": 48.21282,
+   "routes": "U2"
+  },
+  {
+   "name": "Feldmoching",
+   "lon": 11.54028,
+   "lat": 48.21392,
+   "routes": "U2"
+  },
+  {
+   "name": "Frankfurter Ring",
+   "lon": 11.57268,
+   "lat": 48.18749,
+   "routes": "U2"
+  },
+  {
+   "name": "Fraunhoferstraße",
+   "lon": 11.5762,
+   "lat": 48.12789,
+   "routes": "U1"
+  },
+  {
+   "name": "Freimann",
+   "lon": 11.61454,
+   "lat": 48.1924,
+   "routes": "U6"
+  },
+  {
+   "name": "Friedenheimer Straße",
+   "lon": 11.51137,
+   "lat": 48.13513,
+   "routes": "U5"
+  },
+  {
+   "name": "Fröttmaning",
+   "lon": 11.61833,
+   "lat": 48.2107,
+   "routes": "U6"
+  },
+  {
+   "name": "Garching",
+   "lon": 11.65251,
+   "lat": 48.24942,
+   "routes": "U6"
+  },
+  {
+   "name": "Garching-Forschungszentrum",
+   "lon": 11.67123,
+   "lat": 48.26486,
+   "routes": "U6"
+  },
+  {
+   "name": "Garching-Hochbrück",
+   "lon": 11.63083,
+   "lat": 48.24723,
+   "routes": "U6"
+  },
+  {
+   "name": "Georg-Brauchle-Ring",
+   "lon": 11.52909,
+   "lat": 48.17639,
+   "routes": "U1"
+  },
+  {
+   "name": "Gern",
+   "lon": 11.52898,
+   "lat": 48.1635,
+   "routes": "U1"
+  },
+  {
+   "name": "Giesing",
+   "lon": 11.59465,
+   "lat": 48.11081,
+   "routes": "U2"
+  },
+  {
+   "name": "Giselastraße",
+   "lon": 11.58493,
+   "lat": 48.15714,
+   "routes": "U6"
+  },
+  {
+   "name": "Goetheplatz",
+   "lon": 11.55842,
+   "lat": 48.12955,
+   "routes": "U6"
+  },
+  {
+   "name": "Harras",
+   "lon": 11.53621,
+   "lat": 48.11688,
+   "routes": "U6"
+  },
+  {
+   "name": "Harthof",
+   "lon": 11.56819,
+   "lat": 48.20489,
+   "routes": "U2"
+  },
+  {
+   "name": "Hasenbergl",
+   "lon": 11.55631,
+   "lat": 48.21322,
+   "routes": "U2"
+  },
+  {
+   "name": "Hauptbahnhof",
+   "lon": 11.56112,
+   "lat": 48.14031,
+   "routes": "U1,U2,U4,U5"
+  },
+  {
+   "name": "Heimeranplatz",
+   "lon": 11.53347,
+   "lat": 48.1334,
+   "routes": "U4,U5"
+  },
+  {
+   "name": "Hohenzollernplatz",
+   "lon": 11.56799,
+   "lat": 48.16117,
+   "routes": "U2"
+  },
+  {
+   "name": "Implerstraße",
+   "lon": 11.54834,
+   "lat": 48.11934,
+   "routes": "U3,U6"
+  },
+  {
+   "name": "Innsbrucker Ring",
+   "lon": 11.61915,
+   "lat": 48.12041,
+   "routes": "U2,U5"
+  },
+  {
+   "name": "Josephsburg",
+   "lon": 11.63443,
+   "lat": 48.12696,
+   "routes": "U2"
+  },
+  {
+   "name": "Josephsplatz",
+   "lon": 11.56628,
+   "lat": 48.15478,
+   "routes": "U2"
+  },
+  {
+   "name": "Karl-Preis-Platz",
+   "lon": 11.60952,
+   "lat": 48.11846,
+   "routes": "U2"
+  },
+  {
+   "name": "Karlsplatz",
+   "lon": 11.5654,
+   "lat": 48.13937,
+   "routes": "U4,U5"
+  },
+  {
+   "name": "Kieferngarten",
+   "lon": 11.61251,
+   "lat": 48.20267,
+   "routes": "U6"
+  },
+  {
+   "name": "Kolumbusplatz",
+   "lon": 11.57652,
+   "lat": 48.11908,
+   "routes": "U1,U2"
+  },
+  {
+   "name": "Kreillerstraße",
+   "lon": 11.6447,
+   "lat": 48.12585,
+   "routes": "U2"
+  },
+  {
+   "name": "Königsplatz",
+   "lon": 11.56401,
+   "lat": 48.14618,
+   "routes": "U2"
+  },
+  {
+   "name": "Laimer Platz",
+   "lon": 11.50297,
+   "lat": 48.13547,
+   "routes": "U5"
+  },
+  {
+   "name": "Lehel",
+   "lon": 11.58857,
+   "lat": 48.13961,
+   "routes": "U4,U5"
+  },
+  {
+   "name": "Maillingerstraße",
+   "lon": 11.54462,
+   "lat": 48.15026,
+   "routes": "U1"
+  },
+  {
+   "name": "Mangfallplatz",
+   "lon": 11.58097,
+   "lat": 48.09789,
+   "routes": "U1"
+  },
+  {
+   "name": "Marienplatz",
+   "lon": 11.57766,
+   "lat": 48.13644,
+   "routes": "U6"
+  },
+  {
+   "name": "Max-Weber-Platz",
+   "lon": 11.59789,
+   "lat": 48.13566,
+   "routes": "U4,U5"
+  },
+  {
+   "name": "Messestadt Ost",
+   "lon": 11.70363,
+   "lat": 48.13336,
+   "routes": "U2"
+  },
+  {
+   "name": "Messestadt West",
+   "lon": 11.68976,
+   "lat": 48.13343,
+   "routes": "U2"
+  },
+  {
+   "name": "Michaelibad",
+   "lon": 11.6306,
+   "lat": 48.11878,
+   "routes": "U5"
+  },
+  {
+   "name": "Milbertshofen",
+   "lon": 11.57312,
+   "lat": 48.18116,
+   "routes": "U2"
+  },
+  {
+   "name": "Moosach",
+   "lon": 11.50737,
+   "lat": 48.18042,
+   "routes": "U3"
+  },
+  {
+   "name": "Moosacher St.-Martins-Platz",
+   "lon": 11.51731,
+   "lat": 48.1818,
+   "routes": "U3"
+  },
+  {
+   "name": "Moosfeld",
+   "lon": 11.67076,
+   "lat": 48.13051,
+   "routes": "U2"
+  },
+  {
+   "name": "Münchner Freiheit",
+   "lon": 11.5863,
+   "lat": 48.16187,
+   "routes": "U3,U6"
+  },
+  {
+   "name": "Neuperlach Süd",
+   "lon": 11.64442,
+   "lat": 48.0895,
+   "routes": "U5"
+  },
+  {
+   "name": "Neuperlach Zentrum",
+   "lon": 11.64743,
+   "lat": 48.10098,
+   "routes": "U5"
+  },
+  {
+   "name": "Nordfriedhof",
+   "lon": 11.5974,
+   "lat": 48.1734,
+   "routes": "U6"
+  },
+  {
+   "name": "Oberwiesenfeld",
+   "lon": 11.54571,
+   "lat": 48.18618,
+   "routes": "U3"
+  },
+  {
+   "name": "Odeonsplatz",
+   "lon": 11.57774,
+   "lat": 48.14292,
+   "routes": "U4,U5,U6"
+  },
+  {
+   "name": "Olympia-Einkaufszentrum",
+   "lon": 11.52954,
+   "lat": 48.18199,
+   "routes": "U1,U3"
+  },
+  {
+   "name": "Olympiazentrum",
+   "lon": 11.55667,
+   "lat": 48.17871,
+   "routes": "U3"
+  },
+  {
+   "name": "Ostbahnhof",
+   "lon": 11.60407,
+   "lat": 48.12814,
+   "routes": "U5"
+  },
+  {
+   "name": "Partnachplatz",
+   "lon": 11.5266,
+   "lat": 48.11652,
+   "routes": "U6"
+  },
+  {
+   "name": "Petuelring",
+   "lon": 11.56657,
+   "lat": 48.17545,
+   "routes": "U3"
+  },
+  {
+   "name": "Poccistraße",
+   "lon": 11.54962,
+   "lat": 48.12509,
+   "routes": "U6"
+  },
+  {
+   "name": "Prinzregentenplatz",
+   "lon": 11.607,
+   "lat": 48.13931,
+   "routes": "U4"
+  },
+  {
+   "name": "Quiddestraße",
+   "lon": 11.64642,
+   "lat": 48.1091,
+   "routes": "U5"
+  },
+  {
+   "name": "Richard-Strauss-Straße",
+   "lon": 11.6163,
+   "lat": 48.14887,
+   "routes": "U4"
+  },
+  {
+   "name": "Rotkreuzplatz",
+   "lon": 11.53351,
+   "lat": 48.15299,
+   "routes": "U1"
+  },
+  {
+   "name": "Scheidplatz",
+   "lon": 11.5727,
+   "lat": 48.17148,
+   "routes": "U2,U3"
+  },
+  {
+   "name": "Schwanthalerhöhe",
+   "lon": 11.53976,
+   "lat": 48.13347,
+   "routes": "U4,U5"
+  },
+  {
+   "name": "Sendlinger Tor",
+   "lon": 11.5664,
+   "lat": 48.1333,
+   "routes": "U1,U6"
+  },
+  {
+   "name": "Silberhornstraße",
+   "lon": 11.57946,
+   "lat": 48.11516,
+   "routes": "U2"
+  },
+  {
+   "name": "St.-Quirin-Platz",
+   "lon": 11.58179,
+   "lat": 48.10396,
+   "routes": "U1"
+  },
+  {
+   "name": "Stiglmaierplatz",
+   "lon": 11.55878,
+   "lat": 48.14713,
+   "routes": "U1"
+  },
+  {
+   "name": "Studentenstadt",
+   "lon": 11.60803,
+   "lat": 48.18329,
+   "routes": "U6"
+  },
+  {
+   "name": "Therese-Giehse-Allee",
+   "lon": 11.64333,
+   "lat": 48.09544,
+   "routes": "U5"
+  },
+  {
+   "name": "Theresienstraße",
+   "lon": 11.56427,
+   "lat": 48.15122,
+   "routes": "U2"
+  },
+  {
+   "name": "Theresienwiese",
+   "lon": 11.55221,
+   "lat": 48.13566,
+   "routes": "U4,U5"
+  },
+  {
+   "name": "Trudering",
+   "lon": 11.66335,
+   "lat": 48.12552,
+   "routes": "U2"
+  },
+  {
+   "name": "Universität",
+   "lon": 11.58051,
+   "lat": 48.14901,
+   "routes": "U6"
+  },
+  {
+   "name": "Untersbergstraße",
+   "lon": 11.58738,
+   "lat": 48.11264,
+   "routes": "U2"
+  },
+  {
+   "name": "Westendstraße",
+   "lon": 11.5227,
+   "lat": 48.13438,
+   "routes": "U4,U5"
+  },
+  {
+   "name": "Westfriedhof",
+   "lon": 11.52846,
+   "lat": 48.16931,
+   "routes": "U1"
+  },
+  {
+   "name": "Westpark",
+   "lon": 11.51712,
+   "lat": 48.11787,
+   "routes": "U6"
+  },
+  {
+   "name": "Wettersteinplatz",
+   "lon": 11.57476,
+   "lat": 48.1092,
+   "routes": "U1"
+  }
+ ],
+ "lines": []
+}

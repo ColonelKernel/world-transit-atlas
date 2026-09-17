@@ -1,0 +1,1208 @@
+[
+  {
+    "slug": "shanghai",
+    "city": "Shanghai",
+    "lat": 31.23,
+    "lon": 121.47
+  },
+  {
+    "slug": "beijing",
+    "city": "Beijing",
+    "lat": 39.9,
+    "lon": 116.4
+  },
+  {
+    "slug": "tokyo",
+    "city": "Tokyo",
+    "lat": 35.68,
+    "lon": 139.76
+  },
+  {
+    "slug": "guangzhou",
+    "city": "Guangzhou",
+    "lat": 23.13,
+    "lon": 113.26
+  },
+  {
+    "slug": "shenzhen",
+    "city": "Shenzhen",
+    "lat": 22.54,
+    "lon": 114.06
+  },
+  {
+    "slug": "seoul",
+    "city": "Seoul",
+    "lat": 37.57,
+    "lon": 126.98
+  },
+  {
+    "slug": "moscow",
+    "city": "Moscow",
+    "lat": 55.76,
+    "lon": 37.62
+  },
+  {
+    "slug": "delhi",
+    "city": "Delhi",
+    "lat": 28.61,
+    "lon": 77.21
+  },
+  {
+    "slug": "chengdu",
+    "city": "Chengdu",
+    "lat": 30.57,
+    "lon": 104.07
+  },
+  {
+    "slug": "hong-kong",
+    "city": "Hong Kong",
+    "lat": 22.32,
+    "lon": 114.17
+  },
+  {
+    "slug": "paris",
+    "city": "Paris",
+    "lat": 48.86,
+    "lon": 2.35
+  },
+  {
+    "slug": "hangzhou",
+    "city": "Hangzhou",
+    "lat": 30.27,
+    "lon": 120.15
+  },
+  {
+    "slug": "cairo",
+    "city": "Cairo",
+    "lat": 30.04,
+    "lon": 31.24
+  },
+  {
+    "slug": "wuhan",
+    "city": "Wuhan",
+    "lat": 30.59,
+    "lon": 114.3
+  },
+  {
+    "slug": "chongqing",
+    "city": "Chongqing",
+    "lat": 29.56,
+    "lon": 106.55
+  },
+  {
+    "slug": "xian",
+    "city": "Xi'an",
+    "lat": 34.27,
+    "lon": 108.94
+  },
+  {
+    "slug": "new-york",
+    "city": "New York City",
+    "lat": 40.71,
+    "lon": -74.01
+  },
+  {
+    "slug": "singapore",
+    "city": "Singapore",
+    "lat": 1.35,
+    "lon": 103.82
+  },
+  {
+    "slug": "london",
+    "city": "London",
+    "lat": 51.51,
+    "lon": -0.13
+  },
+  {
+    "slug": "mexico-city",
+    "city": "Mexico City",
+    "lat": 19.43,
+    "lon": -99.13
+  },
+  {
+    "slug": "osaka",
+    "city": "Osaka",
+    "lat": 34.69,
+    "lon": 135.5
+  },
+  {
+    "slug": "prague",
+    "city": "Prague",
+    "lat": 50.08,
+    "lon": 14.44
+  },
+  {
+    "slug": "nanjing",
+    "city": "Nanjing",
+    "lat": 32.06,
+    "lon": 118.8
+  },
+  {
+    "slug": "changsha",
+    "city": "Changsha",
+    "lat": 28.23,
+    "lon": 112.94
+  },
+  {
+    "slug": "berlin",
+    "city": "Berlin",
+    "lat": 52.52,
+    "lon": 13.4
+  },
+  {
+    "slug": "istanbul",
+    "city": "Istanbul",
+    "lat": 41.01,
+    "lon": 28.98
+  },
+  {
+    "slug": "sao-paulo",
+    "city": "São Paulo",
+    "lat": -23.55,
+    "lon": -46.63
+  },
+  {
+    "slug": "vienna",
+    "city": "Vienna",
+    "lat": 48.21,
+    "lon": 16.37
+  },
+  {
+    "slug": "taipei",
+    "city": "Taipei",
+    "lat": 25.03,
+    "lon": 121.57
+  },
+  {
+    "slug": "madrid",
+    "city": "Madrid",
+    "lat": 40.42,
+    "lon": -3.7
+  },
+  {
+    "slug": "zhengzhou",
+    "city": "Zhengzhou",
+    "lat": 34.75,
+    "lon": 113.62
+  },
+  {
+    "slug": "tianjin",
+    "city": "Tianjin",
+    "lat": 39.13,
+    "lon": 117.2
+  },
+  {
+    "slug": "milan",
+    "city": "Milan",
+    "lat": 45.46,
+    "lon": 9.19
+  },
+  {
+    "slug": "santiago",
+    "city": "Santiago",
+    "lat": -33.45,
+    "lon": -70.67
+  },
+  {
+    "slug": "suzhou",
+    "city": "Suzhou",
+    "lat": 31.3,
+    "lon": 120.62
+  },
+  {
+    "slug": "hamburg",
+    "city": "Hamburg",
+    "lat": 53.55,
+    "lon": 9.99
+  },
+  {
+    "slug": "qingdao",
+    "city": "Qingdao",
+    "lat": 36.07,
+    "lon": 120.38
+  },
+  {
+    "slug": "hefei",
+    "city": "Hefei",
+    "lat": 31.82,
+    "lon": 117.23
+  },
+  {
+    "slug": "shenyang",
+    "city": "Shenyang",
+    "lat": 41.8,
+    "lon": 123.43
+  },
+  {
+    "slug": "saint-petersburg",
+    "city": "Saint Petersburg",
+    "lat": 59.93,
+    "lon": 30.34
+  },
+  {
+    "slug": "athens",
+    "city": "Athens",
+    "lat": 37.98,
+    "lon": 23.73
+  },
+  {
+    "slug": "barcelona",
+    "city": "Barcelona",
+    "lat": 41.39,
+    "lon": 2.17
+  },
+  {
+    "slug": "tunis",
+    "city": "Tunis",
+    "lat": 36.81,
+    "lon": 10.18
+  },
+  {
+    "slug": "nagoya",
+    "city": "Nagoya",
+    "lat": 35.18,
+    "lon": 136.91
+  },
+  {
+    "slug": "munich",
+    "city": "Munich",
+    "lat": 48.14,
+    "lon": 11.58
+  },
+  {
+    "slug": "nanchang",
+    "city": "Nanchang",
+    "lat": 28.68,
+    "lon": 115.86
+  },
+  {
+    "slug": "toronto",
+    "city": "Toronto",
+    "lat": 43.65,
+    "lon": -79.38
+  },
+  {
+    "slug": "brussels",
+    "city": "Brussels",
+    "lat": 50.85,
+    "lon": 4.35
+  },
+  {
+    "slug": "caracas",
+    "city": "Caracas",
+    "lat": 10.48,
+    "lon": -66.9
+  },
+  {
+    "slug": "ningbo",
+    "city": "Ningbo",
+    "lat": 29.87,
+    "lon": 121.55
+  },
+  {
+    "slug": "sydney",
+    "city": "Sydney",
+    "lat": -33.87,
+    "lon": 151.21
+  },
+  {
+    "slug": "tehran",
+    "city": "Tehran",
+    "lat": 35.69,
+    "lon": 51.39
+  },
+  {
+    "slug": "harbin",
+    "city": "Harbin",
+    "lat": 45.8,
+    "lon": 126.53
+  },
+  {
+    "slug": "melbourne",
+    "city": "Melbourne",
+    "lat": -37.81,
+    "lon": 144.96
+  },
+  {
+    "slug": "mumbai",
+    "city": "Mumbai",
+    "lat": 19.08,
+    "lon": 72.88
+  },
+  {
+    "slug": "rio-de-janeiro",
+    "city": "Rio de Janeiro",
+    "lat": -22.91,
+    "lon": -43.17
+  },
+  {
+    "slug": "rome",
+    "city": "Rome",
+    "lat": 41.9,
+    "lon": 12.5
+  },
+  {
+    "slug": "busan",
+    "city": "Busan",
+    "lat": 35.18,
+    "lon": 129.08
+  },
+  {
+    "slug": "stockholm",
+    "city": "Stockholm",
+    "lat": 59.33,
+    "lon": 18.07
+  },
+  {
+    "slug": "montreal",
+    "city": "Montréal",
+    "lat": 45.5,
+    "lon": -73.57
+  },
+  {
+    "slug": "medellin",
+    "city": "Medellín",
+    "lat": 6.25,
+    "lon": -75.56
+  },
+  {
+    "slug": "kunming",
+    "city": "Kunming",
+    "lat": 25.04,
+    "lon": 102.72
+  },
+  {
+    "slug": "kuala-lumpur",
+    "city": "Kuala Lumpur",
+    "lat": 3.14,
+    "lon": 101.69
+  },
+  {
+    "slug": "tashkent",
+    "city": "Tashkent",
+    "lat": 41.3,
+    "lon": 69.24
+  },
+  {
+    "slug": "bengaluru",
+    "city": "Bengaluru",
+    "lat": 12.97,
+    "lon": 77.59
+  },
+  {
+    "slug": "dubai",
+    "city": "Dubai",
+    "lat": 25.2,
+    "lon": 55.27
+  },
+  {
+    "slug": "changchun",
+    "city": "Changchun",
+    "lat": 43.88,
+    "lon": 125.32
+  },
+  {
+    "slug": "dalian",
+    "city": "Dalian",
+    "lat": 38.91,
+    "lon": 121.6
+  },
+  {
+    "slug": "bangkok",
+    "city": "Bangkok",
+    "lat": 13.75,
+    "lon": 100.5
+  },
+  {
+    "slug": "guiyang",
+    "city": "Guiyang",
+    "lat": 26.65,
+    "lon": 106.63
+  },
+  {
+    "slug": "kyiv",
+    "city": "Kyiv",
+    "lat": 50.45,
+    "lon": 30.52
+  },
+  {
+    "slug": "budapest",
+    "city": "Budapest",
+    "lat": 47.5,
+    "lon": 19.04
+  },
+  {
+    "slug": "cologne",
+    "city": "Cologne",
+    "lat": 50.94,
+    "lon": 6.96
+  },
+  {
+    "slug": "buenos-aires",
+    "city": "Buenos Aires",
+    "lat": -34.6,
+    "lon": -58.38
+  },
+  {
+    "slug": "minsk",
+    "city": "Minsk",
+    "lat": 53.9,
+    "lon": 27.57
+  },
+  {
+    "slug": "sapporo",
+    "city": "Sapporo",
+    "lat": 43.06,
+    "lon": 141.35
+  },
+  {
+    "slug": "baku",
+    "city": "Baku",
+    "lat": 40.41,
+    "lon": 49.87
+  },
+  {
+    "slug": "yokohama",
+    "city": "Yokohama",
+    "lat": 35.44,
+    "lon": 139.64
+  },
+  {
+    "slug": "kharkiv",
+    "city": "Kharkiv",
+    "lat": 49.99,
+    "lon": 36.23
+  },
+  {
+    "slug": "lyon",
+    "city": "Lyon",
+    "lat": 45.76,
+    "lon": 4.84
+  },
+  {
+    "slug": "kolkata",
+    "city": "Kolkata",
+    "lat": 22.57,
+    "lon": 88.36
+  },
+  {
+    "slug": "dusseldorf",
+    "city": "Düsseldorf",
+    "lat": 51.23,
+    "lon": 6.77
+  },
+  {
+    "slug": "warsaw",
+    "city": "Warsaw",
+    "lat": 52.23,
+    "lon": 21.01
+  },
+  {
+    "slug": "lima",
+    "city": "Lima",
+    "lat": -12.05,
+    "lon": -77.04
+  },
+  {
+    "slug": "zurich",
+    "city": "Zurich",
+    "lat": 47.37,
+    "lon": 8.54
+  },
+  {
+    "slug": "dresden",
+    "city": "Dresden",
+    "lat": 51.05,
+    "lon": 13.74
+  },
+  {
+    "slug": "frankfurt",
+    "city": "Frankfurt",
+    "lat": 50.11,
+    "lon": 8.68
+  },
+  {
+    "slug": "ankara",
+    "city": "Ankara",
+    "lat": 39.93,
+    "lon": 32.86
+  },
+  {
+    "slug": "lisbon",
+    "city": "Lisbon",
+    "lat": 38.72,
+    "lon": -9.14
+  },
+  {
+    "slug": "guadalajara",
+    "city": "Guadalajara",
+    "lat": 20.68,
+    "lon": -103.35
+  },
+  {
+    "slug": "leipzig",
+    "city": "Leipzig",
+    "lat": 51.34,
+    "lon": 12.37
+  },
+  {
+    "slug": "stuttgart",
+    "city": "Stuttgart",
+    "lat": 48.78,
+    "lon": 9.18
+  },
+  {
+    "slug": "hanover",
+    "city": "Hanover",
+    "lat": 52.37,
+    "lon": 9.73
+  },
+  {
+    "slug": "nuremberg",
+    "city": "Nuremberg",
+    "lat": 49.45,
+    "lon": 11.08
+  },
+  {
+    "slug": "rotterdam",
+    "city": "Rotterdam",
+    "lat": 51.92,
+    "lon": 4.48
+  },
+  {
+    "slug": "kobe",
+    "city": "Kobe",
+    "lat": 34.69,
+    "lon": 135.2
+  },
+  {
+    "slug": "vancouver",
+    "city": "Vancouver",
+    "lat": 49.28,
+    "lon": -123.12
+  },
+  {
+    "slug": "boston",
+    "city": "Boston",
+    "lat": 42.36,
+    "lon": -71.06
+  },
+  {
+    "slug": "bucharest",
+    "city": "Bucharest",
+    "lat": 44.43,
+    "lon": 26.1
+  },
+  {
+    "slug": "washington",
+    "city": "Washington, DC",
+    "lat": 38.9,
+    "lon": -77.04
+  },
+  {
+    "slug": "chicago",
+    "city": "Chicago",
+    "lat": 41.88,
+    "lon": -87.63
+  },
+  {
+    "slug": "strasbourg",
+    "city": "Strasbourg",
+    "lat": 48.58,
+    "lon": 7.75
+  },
+  {
+    "slug": "izmir",
+    "city": "İzmir",
+    "lat": 38.42,
+    "lon": 27.14
+  },
+  {
+    "slug": "sofia",
+    "city": "Sofia",
+    "lat": 42.7,
+    "lon": 23.32
+  },
+  {
+    "slug": "kyoto",
+    "city": "Kyoto",
+    "lat": 35.01,
+    "lon": 135.77
+  },
+  {
+    "slug": "copenhagen",
+    "city": "Copenhagen",
+    "lat": 55.68,
+    "lon": 12.57
+  },
+  {
+    "slug": "gothenburg",
+    "city": "Gothenburg",
+    "lat": 57.71,
+    "lon": 11.97
+  },
+  {
+    "slug": "helsinki",
+    "city": "Helsinki",
+    "lat": 60.17,
+    "lon": 24.94
+  },
+  {
+    "slug": "zagreb",
+    "city": "Zagreb",
+    "lat": 45.81,
+    "lon": 15.98
+  },
+  {
+    "slug": "toulouse",
+    "city": "Toulouse",
+    "lat": 43.6,
+    "lon": 1.44
+  },
+  {
+    "slug": "oslo",
+    "city": "Oslo",
+    "lat": 59.91,
+    "lon": 10.75
+  },
+  {
+    "slug": "salvador",
+    "city": "Salvador",
+    "lat": -12.97,
+    "lon": -38.51
+  },
+  {
+    "slug": "jinan",
+    "city": "Jinan",
+    "lat": 36.65,
+    "lon": 116.99
+  },
+  {
+    "slug": "panama-city",
+    "city": "Panama City",
+    "lat": 8.98,
+    "lon": -79.52
+  },
+  {
+    "slug": "tbilisi",
+    "city": "Tbilisi",
+    "lat": 41.72,
+    "lon": 44.79
+  },
+  {
+    "slug": "basel",
+    "city": "Basel",
+    "lat": 47.56,
+    "lon": 7.59
+  },
+  {
+    "slug": "chennai",
+    "city": "Chennai",
+    "lat": 13.08,
+    "lon": 80.27
+  },
+  {
+    "slug": "fuzhou",
+    "city": "Fuzhou",
+    "lat": 26.08,
+    "lon": 119.3
+  },
+  {
+    "slug": "lille",
+    "city": "Lille",
+    "lat": 50.63,
+    "lon": 3.06
+  },
+  {
+    "slug": "montpellier",
+    "city": "Montpellier",
+    "lat": 43.61,
+    "lon": 3.88
+  },
+  {
+    "slug": "bursa",
+    "city": "Bursa",
+    "lat": 40.19,
+    "lon": 29.06
+  },
+  {
+    "slug": "santo-domingo",
+    "city": "Santo Domingo",
+    "lat": 18.49,
+    "lon": -69.94
+  },
+  {
+    "slug": "recife",
+    "city": "Recife",
+    "lat": -8.05,
+    "lon": -34.88
+  },
+  {
+    "slug": "bilbao",
+    "city": "Bilbao",
+    "lat": 43.26,
+    "lon": -2.94
+  },
+  {
+    "slug": "monterrey",
+    "city": "Monterrey",
+    "lat": 25.69,
+    "lon": -100.32
+  },
+  {
+    "slug": "bordeaux",
+    "city": "Bordeaux",
+    "lat": 44.84,
+    "lon": -0.58
+  },
+  {
+    "slug": "calgary",
+    "city": "Calgary",
+    "lat": 51.05,
+    "lon": -114.07
+  },
+  {
+    "slug": "sendai",
+    "city": "Sendai",
+    "lat": 38.27,
+    "lon": 140.87
+  },
+  {
+    "slug": "valencia",
+    "city": "Valencia",
+    "lat": 39.47,
+    "lon": -0.38
+  },
+  {
+    "slug": "philadelphia",
+    "city": "Philadelphia",
+    "lat": 39.95,
+    "lon": -75.17
+  },
+  {
+    "slug": "the-hague",
+    "city": "The Hague",
+    "lat": 52.08,
+    "lon": 4.31
+  },
+  {
+    "slug": "wuxi",
+    "city": "Wuxi",
+    "lat": 31.57,
+    "lon": 120.3
+  },
+  {
+    "slug": "porto",
+    "city": "Porto",
+    "lat": 41.15,
+    "lon": -8.61
+  },
+  {
+    "slug": "manila",
+    "city": "Manila",
+    "lat": 14.6,
+    "lon": 120.98
+  },
+  {
+    "slug": "marseille",
+    "city": "Marseille",
+    "lat": 43.3,
+    "lon": 5.37
+  },
+  {
+    "slug": "nantes",
+    "city": "Nantes",
+    "lat": 47.22,
+    "lon": -1.55
+  },
+  {
+    "slug": "karlsruhe",
+    "city": "Karlsruhe",
+    "lat": 49.01,
+    "lon": 8.4
+  },
+  {
+    "slug": "kaohsiung",
+    "city": "Kaohsiung",
+    "lat": 22.63,
+    "lon": 120.3
+  },
+  {
+    "slug": "los-angeles",
+    "city": "Los Angeles",
+    "lat": 34.05,
+    "lon": -118.24
+  },
+  {
+    "slug": "amsterdam",
+    "city": "Amsterdam",
+    "lat": 52.37,
+    "lon": 4.9
+  },
+  {
+    "slug": "lahore",
+    "city": "Lahore",
+    "lat": 31.55,
+    "lon": 74.34
+  },
+  {
+    "slug": "quito",
+    "city": "Quito",
+    "lat": -0.19,
+    "lon": -78.47
+  },
+  {
+    "slug": "xiamen",
+    "city": "Xiamen",
+    "lat": 24.48,
+    "lon": 118.09
+  },
+  {
+    "slug": "san-francisco-bart",
+    "city": "San Francisco Bay Area",
+    "lat": 37.77,
+    "lon": -122.42
+  },
+  {
+    "slug": "dublin",
+    "city": "Dublin",
+    "lat": 53.35,
+    "lon": -6.26
+  },
+  {
+    "slug": "ahmedabad",
+    "city": "Ahmedabad",
+    "lat": 23.03,
+    "lon": 72.58
+  },
+  {
+    "slug": "lausanne",
+    "city": "Lausanne",
+    "lat": 46.52,
+    "lon": 6.63
+  },
+  {
+    "slug": "manchester",
+    "city": "Manchester",
+    "lat": 53.48,
+    "lon": -2.24
+  },
+  {
+    "slug": "algiers",
+    "city": "Algiers",
+    "lat": 36.75,
+    "lon": 3.06
+  },
+  {
+    "slug": "rennes",
+    "city": "Rennes",
+    "lat": 48.11,
+    "lon": -1.68
+  },
+  {
+    "slug": "brasilia",
+    "city": "Brasília",
+    "lat": -15.79,
+    "lon": -47.88
+  },
+  {
+    "slug": "jakarta",
+    "city": "Jakarta",
+    "lat": -6.21,
+    "lon": 106.85
+  },
+  {
+    "slug": "naples",
+    "city": "Naples",
+    "lat": 40.85,
+    "lon": 14.27
+  },
+  {
+    "slug": "san-diego",
+    "city": "San Diego",
+    "lat": 32.72,
+    "lon": -117.16
+  },
+  {
+    "slug": "seattle",
+    "city": "Seattle",
+    "lat": 47.61,
+    "lon": -122.33
+  },
+  {
+    "slug": "turin",
+    "city": "Turin",
+    "lat": 45.07,
+    "lon": 7.69
+  },
+  {
+    "slug": "tel-aviv",
+    "city": "Tel Aviv",
+    "lat": 32.08,
+    "lon": 34.78
+  },
+  {
+    "slug": "san-francisco-muni",
+    "city": "San Francisco",
+    "lat": 37.77,
+    "lon": -122.42
+  },
+  {
+    "slug": "newcastle",
+    "city": "Newcastle / Tyne and Wear",
+    "lat": 54.98,
+    "lon": -1.61
+  },
+  {
+    "slug": "rabat",
+    "city": "Rabat",
+    "lat": 34.02,
+    "lon": -6.83
+  },
+  {
+    "slug": "casablanca",
+    "city": "Casablanca",
+    "lat": 33.57,
+    "lon": -7.59
+  },
+  {
+    "slug": "atlanta",
+    "city": "Atlanta",
+    "lat": 33.75,
+    "lon": -84.39
+  },
+  {
+    "slug": "thessaloniki",
+    "city": "Thessaloniki",
+    "lat": 40.64,
+    "lon": 22.94
+  },
+  {
+    "slug": "miami",
+    "city": "Miami",
+    "lat": 25.76,
+    "lon": -80.19
+  },
+  {
+    "slug": "portland",
+    "city": "Portland",
+    "lat": 45.52,
+    "lon": -122.68
+  },
+  {
+    "slug": "dallas",
+    "city": "Dallas",
+    "lat": 32.78,
+    "lon": -96.8
+  },
+  {
+    "slug": "ottawa",
+    "city": "Ottawa",
+    "lat": 45.42,
+    "lon": -75.7
+  },
+  {
+    "slug": "ho-chi-minh-city",
+    "city": "Ho Chi Minh City",
+    "lat": 10.78,
+    "lon": 106.7
+  },
+  {
+    "slug": "addis-ababa",
+    "city": "Addis Ababa",
+    "lat": 9.02,
+    "lon": 38.75
+  },
+  {
+    "slug": "porto-alegre",
+    "city": "Porto Alegre",
+    "lat": -30.03,
+    "lon": -51.23
+  },
+  {
+    "slug": "hanoi",
+    "city": "Hanoi",
+    "lat": 21.03,
+    "lon": 105.85
+  },
+  {
+    "slug": "shiraz",
+    "city": "Shiraz",
+    "lat": 29.59,
+    "lon": 52.58
+  },
+  {
+    "slug": "minneapolis",
+    "city": "Minneapolis–St. Paul",
+    "lat": 44.98,
+    "lon": -93.27
+  },
+  {
+    "slug": "salt-lake-city",
+    "city": "Salt Lake City",
+    "lat": 40.76,
+    "lon": -111.89
+  },
+  {
+    "slug": "glasgow",
+    "city": "Glasgow",
+    "lat": 55.86,
+    "lon": -4.25
+  },
+  {
+    "slug": "houston",
+    "city": "Houston",
+    "lat": 29.76,
+    "lon": -95.37
+  },
+  {
+    "slug": "phoenix",
+    "city": "Phoenix",
+    "lat": 33.45,
+    "lon": -112.07
+  },
+  {
+    "slug": "denver",
+    "city": "Denver",
+    "lat": 39.74,
+    "lon": -104.99
+  },
+  {
+    "slug": "baltimore",
+    "city": "Baltimore",
+    "lat": 39.29,
+    "lon": -76.61
+  },
+  {
+    "slug": "pune",
+    "city": "Pune",
+    "lat": 18.52,
+    "lon": 73.86
+  },
+  {
+    "slug": "st-louis",
+    "city": "St. Louis",
+    "lat": 38.63,
+    "lon": -90.2
+  },
+  {
+    "slug": "sacramento",
+    "city": "Sacramento",
+    "lat": 38.58,
+    "lon": -121.49
+  },
+  {
+    "slug": "charlotte",
+    "city": "Charlotte",
+    "lat": 35.23,
+    "lon": -80.84
+  },
+  {
+    "slug": "san-jose",
+    "city": "San Jose",
+    "lat": 37.34,
+    "lon": -121.89
+  },
+  {
+    "slug": "lagos",
+    "city": "Lagos",
+    "lat": 6.52,
+    "lon": 3.38
+  },
+  {
+    "slug": "edmonton",
+    "city": "Edmonton",
+    "lat": 53.55,
+    "lon": -113.49
+  },
+  {
+    "slug": "antwerp",
+    "city": "Antwerp",
+    "lat": 51.22,
+    "lon": 4.4
+  },
+  {
+    "slug": "krakow",
+    "city": "Kraków",
+    "lat": 50.06,
+    "lon": 19.94
+  },
+  {
+    "slug": "mashhad",
+    "city": "Mashhad",
+    "lat": 36.3,
+    "lon": 59.6
+  },
+  {
+    "slug": "doha",
+    "city": "Doha",
+    "lat": 25.29,
+    "lon": 51.53
+  },
+  {
+    "slug": "riyadh",
+    "city": "Riyadh",
+    "lat": 24.71,
+    "lon": 46.68
+  },
+  {
+    "slug": "dhaka",
+    "city": "Dhaka",
+    "lat": 23.81,
+    "lon": 90.41
+  },
+  {
+    "slug": "nanning",
+    "city": "Nanning",
+    "lat": 22.82,
+    "lon": 108.32
+  },
+  {
+    "slug": "shijiazhuang",
+    "city": "Shijiazhuang",
+    "lat": 38.04,
+    "lon": 114.51
+  },
+  {
+    "slug": "hyderabad",
+    "city": "Hyderabad",
+    "lat": 17.39,
+    "lon": 78.49
+  },
+  {
+    "slug": "kochi",
+    "city": "Kochi",
+    "lat": 9.94,
+    "lon": 76.26
+  },
+  {
+    "slug": "nagpur",
+    "city": "Nagpur",
+    "lat": 21.15,
+    "lon": 79.08
+  },
+  {
+    "slug": "fukuoka",
+    "city": "Fukuoka",
+    "lat": 33.59,
+    "lon": 130.4
+  },
+  {
+    "slug": "daegu",
+    "city": "Daegu",
+    "lat": 35.87,
+    "lon": 128.6
+  },
+  {
+    "slug": "incheon",
+    "city": "Incheon",
+    "lat": 37.46,
+    "lon": 126.7
+  },
+  {
+    "slug": "taoyuan",
+    "city": "Taoyuan",
+    "lat": 24.99,
+    "lon": 121.3
+  }
+]

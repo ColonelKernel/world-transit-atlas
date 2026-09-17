@@ -156,6 +156,13 @@ button{font-family:inherit;cursor:pointer}
   border:0;border-radius:999px;padding:13px 30px;box-shadow:0 6px 26px rgba(255,194,77,.35)}
 .tip{position:absolute;pointer-events:none;z-index:8;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;
   padding:5px 9px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink);display:none;white-space:nowrap;transform:translate(-50%,-140%)}
+#scard{position:absolute;pointer-events:none;z-index:9;width:230px;background:var(--bg3);border:1px solid var(--border2);
+  border-radius:11px;overflow:hidden;display:none;transform:translate(-50%,calc(-100% - 16px));box-shadow:0 12px 34px rgba(0,0,0,.55)}
+#scard img{display:none;width:100%;height:128px;object-fit:cover;background:var(--bg2)}
+#scard .b{padding:8px 11px 10px}
+#scard .nm{font-family:"Barlow Semi Condensed",sans-serif;font-weight:700;font-size:16px;line-height:1.08;color:var(--ink)}
+#scard .mt{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--ink2);margin-top:3px;white-space:normal}
+#scard .cr{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.04em;color:var(--ink3);margin-top:6px;display:none}
 @media (max-width:640px){.now{width:calc(100% - 40px)} .hint{display:none} .console{gap:12px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
@@ -215,6 +222,7 @@ button{font-family:inherit;cursor:pointer}
     </div>
   </div>
   <div class="tip" id="tip"></div>
+  <div id="scard"><img id="scardImg" alt=""><div class="b"><div class="nm" id="scardNm"></div><div class="mt" id="scardMt"></div><div class="cr" id="scardCr">photo via Wikimedia Commons</div></div></div>
 </div>
 
 <div id="netview" hidden>
@@ -409,6 +417,9 @@ function draw(){
   if(view.z>3){ ctx.font='600 10.5px "IBM Plex Mono",monospace';ctx.textAlign="left";ctx.textBaseline="middle";
     order.forEach(s=>{ if(s._x>-30&&s._x<W+30&&s._y>60&&s._y<H-120){ ctx.fillStyle=s===selS?"#ffc24d":"rgba(228,236,247,.66)";
       ctx.fillText(s.city, s._x+s._r+4, s._y); } }); }
+  if(hoverStation){ const st=hoverStation.st, X=SX(BX(st.lon)), Y=SY(BY(st.lat));
+    ctx.beginPath();ctx.arc(X,Y,6.5,0,7);ctx.strokeStyle="#ffc24d";ctx.lineWidth=2;ctx.stroke();
+    ctx.beginPath();ctx.arc(X,Y,2.2,0,7);ctx.fillStyle="#fff";ctx.fill(); }
 }
 
 /* --- audio: an immersive world ensemble + a lead voice for the selected city --- */
@@ -543,6 +554,41 @@ function drawSpark(){ const s=selS; if(!s||!s.series)return; const c=$("nSpark")
 
 /* interaction: hover + click hit-testing */
 function pick(mx,my){ let best=null,bd=1e9; for(const s of SYS){ const dx=s._x-mx,dy=s._y-my,d=dx*dx+dy*dy; const rr=(s._r+7)*(s._r+7); if(d<rr&&d<bd){bd=d;best=s;} } return best; }
+/* --- station-level hover: info card + live Wikimedia photo (loads when self-hosted; degrades to text where image hosts are blocked) --- */
+function BX(lon){return PROJ.ox+(lon-lonMin)*PROJ.sc;} function BY(lat){return PROJ.oy+(latMax-lat)*PROJ.sc;}
+let hoverStation=null, _scardKey=null, _photoTimer=null; const _imgCache={};
+function pickStation(mx,my){
+  if(!PROJ.sc||view.z<4) return null; let best=null,bd=12*12;
+  for(const s of SYS){ const net=NETWORKS[s.slug]; if(!net||!net.stations||!net.stations.length||!s._netR) continue;
+    if(s._netR*2*PROJ.sc*view.z<70) continue;                    // only once the network is legibly zoomed
+    if(s._x<-380||s._x>W+380||s._y<-380||s._y>H+380) continue;
+    for(const st of net.stations){ const X=SX(BX(st.lon)),Y=SY(BY(st.lat)); const dx=X-mx,dy=Y-my,d=dx*dx+dy*dy;
+      if(d<bd){bd=d;best={s,st};} } }
+  return best;
+}
+function stationPhoto(name,city,cb){ const key=(name+"|"+city).toLowerCase();
+  if(key in _imgCache){cb(_imgCache[key]);return;}
+  const q=encodeURIComponent((name||"")+" station "+(city||""));
+  const url="https://en.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch="+q+"&gsrlimit=1&prop=pageimages&piprop=thumbnail&pithumbsize=380&format=json&origin=*";
+  fetch(url).then(r=>r.json()).then(j=>{ let src=null; const pg=j&&j.query&&j.query.pages;
+    if(pg){ for(const k in pg){ const t=pg[k].thumbnail; if(t&&t.source){src=t.source;break;} } }
+    _imgCache[key]=src||null; cb(_imgCache[key]);
+  }).catch(()=>{ _imgCache[key]=null; cb(null); }); }
+function showStationCard(stn,x,y){
+  const sc=$("scard"), st=stn.st, city=stn.s.city;
+  sc.style.display="block"; sc.style.left=x+"px"; sc.style.top=y+"px";
+  $("scardNm").textContent=st.name||"(unnamed stop)";
+  $("scardMt").textContent=[city, st.routes||""].filter(Boolean).join(" · ");
+  const key=(st.name||"")+"|"+city;
+  if(key!==_scardKey){ _scardKey=key; const img=$("scardImg"),cr=$("scardCr");
+    img.style.display="none"; cr.style.display="none"; img.removeAttribute("src");
+    if(_photoTimer)clearTimeout(_photoTimer);
+    if(st.name){ _photoTimer=setTimeout(()=>{ const want=key;
+      stationPhoto(st.name,city,src=>{ if(_scardKey!==want||!src)return;
+        img.onload=()=>{ if(_scardKey===want){img.style.display="block";cr.style.display="block";} };
+        img.onerror=()=>{img.style.display="none";cr.style.display="none";}; img.src=src; }); }, 260); } }
+}
+function hideStationCard(){ const sc=$("scard"); if(sc.style.display!=="none")sc.style.display="none"; _scardKey=null; hoverStation=null; if(_photoTimer)clearTimeout(_photoTimer); }
 function relPos(pt){const r=cv.getBoundingClientRect();return [pt.clientX-r.left,pt.clientY-r.top];}
 function showTip(s){ const tip=$("tip");
   if(s){ tip.style.display="block";tip.style.left=s._x+"px";tip.style.top=s._y+"px";
@@ -553,10 +599,12 @@ let drag=null, pinch=null;
 cv.addEventListener("mousedown",e=>{ const [x,y]=relPos(e); drag={x,y,px:view.px,py:view.py,moved:false}; });
 window.addEventListener("mousemove",e=>{ const [x,y]=relPos(e);
   if(drag){ const dx=x-drag.x,dy=y-drag.y; if(Math.abs(dx)+Math.abs(dy)>3)drag.moved=true;
-    if(drag.moved){ if(view.z>1){view.px=drag.px+dx;view.py=drag.py+dy;clampPan();cv.style.cursor="grabbing";} showTip(null);hoverS=null; return; } }
-  hoverS=pick(x,y); showTip(hoverS); cv.style.cursor=hoverS?"pointer":(view.z>1?"grab":"default"); });
+    if(drag.moved){ if(view.z>1){view.px=drag.px+dx;view.py=drag.py+dy;clampPan();cv.style.cursor="grabbing";} showTip(null);hoverS=null;hideStationCard(); return; } }
+  const stn=pickStation(x,y);
+  if(stn){ hoverStation=stn; hoverS=null; showTip(null); showStationCard(stn,x,y); cv.style.cursor="pointer"; }
+  else { hideStationCard(); hoverS=pick(x,y); showTip(hoverS); cv.style.cursor=hoverS?"pointer":(view.z>1?"grab":"default"); } });
 window.addEventListener("mouseup",e=>{ if(drag&&!drag.moved){ const [x,y]=relPos(e); doSelect(pick(x,y)); } drag=null; });
-cv.addEventListener("mouseleave",()=>{hoverS=null;showTip(null);});
+cv.addEventListener("mouseleave",()=>{hoverS=null;showTip(null);hideStationCard();});
 window.addEventListener("wheel",e=>{ e.preventDefault(); const [x,y]=relPos(e); zoomAt(x,y,view.z*Math.exp(-e.deltaY*0.0024)); },{passive:false});
 cv.addEventListener("dblclick",e=>{ const [x,y]=relPos(e); const s=pick(x,y); if(s&&NETWORKS[s.slug]&&s._netR){flyToNetwork(s.slug);} else zoomAt(x,y,view.z*2.2); });
 window.addEventListener("keydown",e=>{ if(e.target&&e.target.tagName==="INPUT")return; if(!$("netview").hidden)return; const cx=W/2,cy=(86+H-132)/2;

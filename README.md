@@ -1,9 +1,15 @@
 # Metro Time Machine — World Transit Network Atlas
 
 An interactive, sonified world map of **201 metro / light-rail / tram systems**. Move the
-dial through the years and each city's ridership becomes a voice; zoom in (or pick a city and
-"fly to its metro") and its real lines and stations surface in place on the map. Watch — and
-hear — March 2020 arrive.
+dial through the years and each city's ridership becomes a voice in an immersive, panned
+28‑voice world ensemble; zoom in (or pick a city and "fly to its metro") and its real lines
+and stations surface in place on the map. Hover a station for its details — and, when the page
+is served from your own domain, a live photo. Watch — and hear — March 2020 arrive.
+
+> **Station photos:** hovering a station fetches a representative image live from the
+> Wikimedia Commons / Wikipedia API (with graceful "no photo" fallback for stations it
+> doesn't cover). This works when the page is hosted on a normal web server (your site);
+> it stays text‑only inside sandboxes that block third‑party image hosts.
 
 **Live/standalone:** `index.html` is completely self-contained (all geometry, ridership series,
 and the world basemap are embedded; the only external request is Google Fonts). Open it in any

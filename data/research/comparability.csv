@@ -1,0 +1,202 @@
+slug,city,country,region,ridership_metric,ridership_vintage,population_basis,metric_known,denominator_consistent,vintage_comparable,usable_for_ratio
+shanghai,Shanghai,China,Asia,unknown,2025,demographia_built_up,false,true,true,true
+beijing,Beijing,China,Asia,unknown,2025,demographia_built_up,false,true,true,true
+tokyo,Tokyo,Japan,Asia,unknown,2025,demographia_built_up,false,true,true,true
+guangzhou,Guangzhou,China,Asia,unknown,2025,demographia_built_up,false,true,true,true
+shenzhen,Shenzhen,China,Asia,unknown,2025,demographia_built_up,false,true,true,true
+seoul,Seoul,South Korea,Asia,unknown,2024,demographia_built_up,false,true,true,true
+moscow,Moscow,Russia,Europe,unknown,2024,demographia_built_up,false,true,true,true
+delhi,Delhi,India,Asia,unknown,2025,demographia_built_up,false,true,true,true
+chengdu,Chengdu,China,Asia,unknown,2025,demographia_built_up,false,true,true,true
+hong-kong,Hong Kong,Hong Kong,Asia,unknown,2025,demographia_built_up,false,true,true,true
+paris,Paris,France,Europe,unknown,2024,demographia_built_up,false,true,true,true
+hangzhou,Hangzhou,China,Asia,unknown,2024,demographia_built_up,false,true,true,true
+cairo,Cairo,Egypt,Africa,unknown,2023,demographia_built_up,false,true,true,true
+wuhan,Wuhan,China,Asia,unknown,2024,demographia_built_up,false,true,true,true
+chongqing,Chongqing,China,Asia,unknown,2024,demographia_built_up,false,true,true,true
+xian,Xi'an,China,Asia,unknown,2024,demographia_built_up,false,true,true,true
+new-york,New York City,United States,North America,unlinked_boardings,2025,demographia_built_up,true,true,true,true
+singapore,Singapore,Singapore,Asia,unknown,2025,demographia_built_up,false,true,true,true
+london,London,United Kingdom,Europe,unknown,2024,demographia_built_up,false,true,true,true
+mexico-city,Mexico City,Mexico,North America,unknown,2024,demographia_built_up,false,true,true,true
+osaka,Osaka,Japan,Asia,unknown,2023,demographia_built_up,false,true,true,true
+prague,Prague,Czechia,Europe,unknown,2024,other,false,false,true,false
+nanjing,Nanjing,China,Asia,unknown,2024,demographia_built_up,false,true,true,true
+changsha,Changsha,China,Asia,unknown,2024,demographia_built_up,false,true,true,true
+berlin,Berlin,Germany,Europe,unknown,2024,demographia_built_up,false,true,true,true
+istanbul,Istanbul,Türkiye,Europe,unknown,2024,demographia_built_up,false,true,true,true
+sao-paulo,São Paulo,Brazil,South America,unknown,2025,demographia_built_up,false,true,true,true
+vienna,Vienna,Austria,Europe,unknown,2024,demographia_built_up,false,true,true,true
+taipei,Taipei,Taiwan,Asia,unknown,2025,demographia_built_up,false,true,true,true
+madrid,Madrid,Spain,Europe,unknown,2025,demographia_built_up,false,true,true,true
+zhengzhou,Zhengzhou,China,Asia,unknown,2024,demographia_built_up,false,true,true,true
+tianjin,Tianjin,China,Asia,unknown,2025,demographia_built_up,false,true,true,true
+milan,Milan,Italy,Europe,unknown,2023,demographia_built_up,false,true,true,true
+santiago,Santiago,Chile,South America,unknown,2025,demographia_built_up,false,true,true,true
+suzhou,Suzhou,China,Asia,unknown,2024,demographia_built_up,false,true,true,true
+hamburg,Hamburg,Germany,Europe,unknown,2025,demographia_built_up,false,true,true,true
+qingdao,Qingdao,China,Asia,unknown,2025,demographia_built_up,false,true,true,true
+hefei,Hefei,China,Asia,unknown,2024,demographia_built_up,false,true,true,true
+shenyang,Shenyang,China,Asia,unknown,2023,demographia_built_up,false,true,true,true
+saint-petersburg,Saint Petersburg,Russia,Europe,unknown,2020,demographia_built_up,false,true,false,false
+athens,Athens,Greece,Europe,unknown,2013,demographia_built_up,false,true,false,false
+barcelona,Barcelona,Spain,Europe,unknown,2024,demographia_built_up,false,true,true,true
+tunis,Tunis,Tunisia,Africa,unknown,2026,demographia_built_up,false,true,true,true
+nagoya,Nagoya,Japan,Asia,unknown,2024,demographia_built_up,false,true,true,true
+munich,Munich,Germany,Europe,unknown,2025,demographia_built_up,false,true,true,true
+nanchang,Nanchang,China,Asia,unknown,2024,demographia_built_up,false,true,true,true
+toronto,Toronto,Canada,North America,unknown,2024,demographia_built_up,false,true,true,true
+brussels,Brussels,Belgium,Europe,unknown,2024,demographia_built_up,false,true,true,true
+caracas,Caracas,Venezuela,South America,unknown,2014,demographia_built_up,false,true,false,false
+ningbo,Ningbo,China,Asia,unknown,2024,demographia_built_up,false,true,true,true
+sydney,Sydney,Australia,Oceania,unknown,2025,demographia_built_up,false,true,true,true
+tehran,Tehran,Iran,Middle East & Central Asia,unknown,2025,demographia_built_up,false,true,true,true
+harbin,Harbin,China,Asia,unknown,2024,demographia_built_up,false,true,true,true
+melbourne,Melbourne,Australia,Oceania,unknown,2024,demographia_built_up,false,true,true,true
+mumbai,Mumbai,India,Asia,unknown,2025,demographia_built_up,false,true,true,true
+rio-de-janeiro,Rio de Janeiro,Brazil,South America,unknown,2024,demographia_built_up,false,true,true,true
+rome,Rome,Italy,Europe,unknown,2019,demographia_built_up,false,true,false,false
+busan,Busan,South Korea,Asia,unknown,2024,demographia_built_up,false,true,true,true
+stockholm,Stockholm,Sweden,Europe,unknown,2024,demographia_built_up,false,true,true,true
+montreal,Montréal,Canada,North America,unknown,2025,demographia_built_up,false,true,true,true
+medellin,Medellín,Colombia,South America,unknown,2024,demographia_built_up,false,true,true,true
+kunming,Kunming,China,Asia,unknown,2024,demographia_built_up,false,true,true,true
+kuala-lumpur,Kuala Lumpur,Malaysia,Asia,unknown,2024,demographia_built_up,false,true,true,true
+tashkent,Tashkent,Uzbekistan,Middle East & Central Asia,unknown,2025,demographia_built_up,false,true,true,true
+bengaluru,Bengaluru,India,Asia,unknown,2025,demographia_built_up,false,true,true,true
+dubai,Dubai,United Arab Emirates,Middle East & Central Asia,unknown,2024,demographia_built_up,false,true,true,true
+changchun,Changchun,China,Asia,unknown,2024,demographia_built_up,false,true,true,true
+dalian,Dalian,China,Asia,unknown,2024,demographia_built_up,false,true,true,true
+bangkok,Bangkok,Thailand,Asia,unknown,2024,demographia_built_up,false,true,true,true
+guiyang,Guiyang,China,Asia,unknown,2024,demographia_built_up,false,true,true,true
+kyiv,Kyiv,Ukraine,Europe,unknown,2025,demographia_built_up,false,true,true,true
+budapest,Budapest,Hungary,Europe,unknown,2025,demographia_built_up,false,true,true,true
+cologne,Cologne,Germany,Europe,unknown,2024,demographia_built_up,false,true,true,true
+buenos-aires,Buenos Aires,Argentina,South America,unknown,2023,demographia_built_up,false,true,true,true
+minsk,Minsk,Belarus,Europe,unknown,2023,demographia_built_up,false,true,true,true
+sapporo,Sapporo,Japan,Asia,unknown,2024,demographia_built_up,false,true,true,true
+baku,Baku,Azerbaijan,Middle East & Central Asia,unknown,2024,demographia_built_up,false,true,true,true
+yokohama,Yokohama,Japan,Asia,unknown,2024,demographia_built_up,false,true,true,true
+kharkiv,Kharkiv,Ukraine,Europe,unknown,2018,demographia_built_up,false,true,false,false
+lyon,Lyon,France,Europe,unknown,2019,demographia_built_up,false,true,false,false
+kolkata,Kolkata,India,Asia,unknown,2025,demographia_built_up,false,true,true,true
+dusseldorf,Düsseldorf,Germany,Europe,unknown,2024,demographia_built_up,false,true,true,true
+warsaw,Warsaw,Poland,Europe,unknown,2024,demographia_built_up,false,true,true,true
+lima,Lima,Peru,South America,unknown,2024,demographia_built_up,false,true,true,true
+zurich,Zurich,Switzerland,Europe,unknown,2024,other,false,false,true,false
+dresden,Dresden,Germany,Europe,unknown,2024,other,false,false,true,false
+frankfurt,Frankfurt,Germany,Europe,unknown,2024,demographia_built_up,false,true,true,true
+ankara,Ankara,Türkiye,Europe,unknown,2025,demographia_built_up,false,true,true,true
+lisbon,Lisbon,Portugal,Europe,unknown,2019,demographia_built_up,false,true,false,false
+guadalajara,Guadalajara,Mexico,North America,unknown,2024,demographia_built_up,false,true,true,true
+leipzig,Leipzig,Germany,Europe,unknown,2024,other,false,false,true,false
+stuttgart,Stuttgart,Germany,Europe,unknown,2024,other,false,false,true,false
+hanover,Hanover,Germany,Europe,unknown,2024,other,false,false,true,false
+nuremberg,Nuremberg,Germany,Europe,unknown,2024,other,false,false,true,false
+rotterdam,Rotterdam,Netherlands,Europe,unknown,2025,demographia_built_up,false,true,true,true
+kobe,Kobe,Japan,Asia,unknown,2024,demographia_built_up,false,true,true,true
+vancouver,Vancouver,Canada,North America,unknown,2025,demographia_built_up,false,true,true,true
+boston,Boston,United States,North America,unlinked_boardings,2025,demographia_built_up,true,true,true,true
+bucharest,Bucharest,Romania,Europe,unknown,2023,demographia_built_up,false,true,true,true
+washington,"Washington, DC",United States,North America,unlinked_boardings,2025,demographia_built_up,true,true,true,true
+chicago,Chicago,United States,North America,unlinked_boardings,2025,demographia_built_up,true,true,true,true
+strasbourg,Strasbourg,France,Europe,unknown,2024,other,false,false,true,false
+izmir,İzmir,Türkiye,Europe,unknown,2024,demographia_built_up,false,true,true,true
+sofia,Sofia,Bulgaria,Europe,unknown,2024,other,false,false,true,false
+kyoto,Kyoto,Japan,Asia,unknown,2024,other,false,false,true,false
+copenhagen,Copenhagen,Denmark,Europe,unknown,2024,other,false,false,true,false
+gothenburg,Gothenburg,Sweden,Europe,unknown,2024,other,false,false,true,false
+helsinki,Helsinki,Finland,Europe,unknown,2024,other,false,false,true,false
+zagreb,Zagreb,Croatia,Europe,unknown,2024,other,false,false,true,false
+toulouse,Toulouse,France,Europe,unknown,2024,other,false,false,true,false
+oslo,Oslo,Norway,Europe,unknown,2016,other,false,false,false,false
+salvador,Salvador,Brazil,South America,unknown,2024,other,false,false,true,false
+jinan,Jinan,China,Asia,unknown,2024,demographia_built_up,false,true,true,true
+panama-city,Panama City,Panama,North America,unknown,2025,other,false,false,true,false
+tbilisi,Tbilisi,Georgia,Middle East & Central Asia,unknown,2017,other,false,false,false,false
+basel,Basel,Switzerland,Europe,unknown,2024,other,false,false,true,false
+chennai,Chennai,India,Asia,unknown,2025,demographia_built_up,false,true,true,true
+fuzhou,Fuzhou,China,Asia,unknown,2022,demographia_built_up,false,true,true,true
+lille,Lille,France,Europe,unknown,2016,other,false,false,false,false
+montpellier,Montpellier,France,Europe,unknown,2024,other,false,false,true,false
+bursa,Bursa,Türkiye,Europe,unknown,2024,demographia_built_up,false,true,true,true
+santo-domingo,Santo Domingo,Dominican Republic,North America,unknown,2023,demographia_built_up,false,true,true,true
+recife,Recife,Brazil,South America,unknown,2018,demographia_built_up,false,true,false,false
+bilbao,Bilbao,Spain,Europe,unknown,2024,other,false,false,true,false
+monterrey,Monterrey,Mexico,North America,unknown,2025,demographia_built_up,false,true,true,true
+bordeaux,Bordeaux,France,Europe,unknown,2018,other,false,false,false,false
+calgary,Calgary,Canada,North America,unknown,2025,other,false,false,true,false
+sendai,Sendai,Japan,Asia,unknown,2024,other,false,false,true,false
+valencia,Valencia,Spain,Europe,unknown,2024,other,false,false,true,false
+philadelphia,Philadelphia,United States,North America,unlinked_boardings,2025,demographia_built_up,true,true,true,true
+the-hague,The Hague,Netherlands,Europe,unknown,2018,other,false,false,false,false
+wuxi,Wuxi,China,Asia,unknown,2016,other,false,false,false,false
+porto,Porto,Portugal,Europe,unknown,2023,demographia_built_up,false,true,true,true
+manila,Manila,Philippines,Asia,unknown,2022,demographia_built_up,false,true,true,true
+marseille,Marseille,France,Europe,unknown,2024,demographia_built_up,false,true,true,true
+nantes,Nantes,France,Europe,unknown,2025,other,false,false,true,false
+karlsruhe,Karlsruhe,Germany,Europe,unknown,2024,other,false,false,true,false
+kaohsiung,Kaohsiung,Taiwan,Asia,unknown,2025,demographia_built_up,false,true,true,true
+los-angeles,Los Angeles,United States,North America,unlinked_boardings,2025,demographia_built_up,true,true,true,true
+amsterdam,Amsterdam,Netherlands,Europe,unknown,2015,demographia_built_up,false,true,false,false
+lahore,Lahore,Pakistan,Asia,unknown,2023,demographia_built_up,false,true,true,true
+quito,Quito,Ecuador,South America,unknown,2025,demographia_built_up,false,true,true,true
+xiamen,Xiamen,China,Asia,unknown,2019,demographia_built_up,false,true,false,false
+san-francisco-bart,San Francisco Bay Area,United States,North America,unlinked_boardings,2025,demographia_built_up,true,true,true,true
+dublin,Dublin,Ireland,Europe,unknown,2024,demographia_built_up,false,true,true,true
+ahmedabad,Ahmedabad,India,Asia,unknown,2025,demographia_built_up,false,true,true,true
+lausanne,Lausanne,Switzerland,Europe,unknown,2023,other,false,false,true,false
+manchester,Manchester,United Kingdom,Europe,unknown,2025,demographia_built_up,false,true,true,true
+algiers,Algiers,Algeria,Africa,unknown,2023,demographia_built_up,false,true,true,true
+rennes,Rennes,France,Europe,unknown,2022,other,false,false,true,false
+brasilia,Brasília,Brazil,South America,unknown,2025,demographia_built_up,false,true,true,true
+jakarta,Jakarta,Indonesia,Asia,unknown,2024,demographia_built_up,false,true,true,true
+naples,Naples,Italy,Europe,unknown,2024,demographia_built_up,false,true,true,true
+san-diego,San Diego,United States,North America,unlinked_boardings,2025,demographia_built_up,true,true,true,true
+seattle,Seattle,United States,North America,unlinked_boardings,2025,demographia_built_up,true,true,true,true
+turin,Turin,Italy,Europe,unknown,2023,demographia_built_up,false,true,true,true
+tel-aviv,Tel Aviv,Israel,Middle East & Central Asia,unknown,2024,demographia_built_up,false,true,true,true
+san-francisco-muni,San Francisco,United States,North America,unlinked_boardings,2025,demographia_built_up,true,true,true,true
+newcastle,Newcastle / Tyne and Wear,United Kingdom,Europe,unknown,2025,other,false,false,true,false
+rabat,Rabat,Morocco,Africa,unknown,2015,demographia_built_up,false,true,false,false
+casablanca,Casablanca,Morocco,Africa,unknown,2018,demographia_built_up,false,true,false,false
+atlanta,Atlanta,United States,North America,unlinked_boardings,2025,demographia_built_up,true,true,true,true
+thessaloniki,Thessaloniki,Greece,Europe,unknown,2025,other,false,false,true,false
+miami,Miami,United States,North America,unlinked_boardings,2025,demographia_built_up,true,true,true,true
+portland,Portland,United States,North America,unlinked_boardings,2025,demographia_built_up,true,true,true,true
+dallas,Dallas,United States,North America,unlinked_boardings,2025,demographia_built_up,true,true,true,true
+ottawa,Ottawa,Canada,North America,unknown,2024,other,false,false,true,false
+ho-chi-minh-city,Ho Chi Minh City,Vietnam,Asia,unknown,2025,demographia_built_up,false,true,true,true
+addis-ababa,Addis Ababa,Ethiopia,Africa,unknown,2023,demographia_built_up,false,true,true,true
+porto-alegre,Porto Alegre,Brazil,South America,unknown,2024,demographia_built_up,false,true,true,true
+hanoi,Hanoi,Vietnam,Asia,unknown,2025,demographia_built_up,false,true,true,true
+shiraz,Shiraz,Iran,Middle East & Central Asia,unknown,2018,other,false,false,false,false
+minneapolis,Minneapolis–St. Paul,United States,North America,unlinked_boardings,2024,demographia_built_up,true,true,true,true
+salt-lake-city,Salt Lake City,United States,North America,unlinked_boardings,2025,demographia_built_up,true,true,true,true
+glasgow,Glasgow,United Kingdom,Europe,unknown,2025,other,false,false,true,false
+houston,Houston,United States,North America,unlinked_boardings,2025,demographia_built_up,true,true,true,true
+phoenix,Phoenix,United States,North America,unlinked_boardings,2025,demographia_built_up,true,true,true,true
+denver,Denver,United States,North America,unlinked_boardings,2025,demographia_built_up,true,true,true,true
+baltimore,Baltimore,United States,North America,unlinked_boardings,2025,demographia_built_up,true,true,true,true
+pune,Pune,India,Asia,unknown,2023,demographia_built_up,false,true,true,true
+st-louis,St. Louis,United States,North America,unlinked_boardings,2025,demographia_built_up,true,true,true,true
+sacramento,Sacramento,United States,North America,unlinked_boardings,2025,demographia_built_up,true,true,true,true
+charlotte,Charlotte,United States,North America,unlinked_boardings,2025,demographia_built_up,true,true,true,true
+san-jose,San Jose,United States,North America,unlinked_boardings,2025,demographia_built_up,true,true,true,true
+lagos,Lagos,Nigeria,Africa,unknown,2025,demographia_built_up,false,true,true,true
+edmonton,Edmonton,Canada,North America,unknown,,other,false,false,false,false
+antwerp,Antwerp,Belgium,Europe,unknown,,other,false,false,false,false
+krakow,Kraków,Poland,Europe,unknown,,other,false,false,false,false
+mashhad,Mashhad,Iran,Middle East & Central Asia,unknown,,demographia_built_up,false,true,false,false
+doha,Doha,Qatar,Middle East & Central Asia,unknown,2024,demographia_built_up,false,true,true,true
+riyadh,Riyadh,Saudi Arabia,Middle East & Central Asia,unknown,,demographia_built_up,false,true,false,false
+dhaka,Dhaka,Bangladesh,Asia,unknown,2025,demographia_built_up,false,true,true,true
+nanning,Nanning,China,Asia,unknown,2024,demographia_built_up,false,true,true,true
+shijiazhuang,Shijiazhuang,China,Asia,unknown,2025,demographia_built_up,false,true,true,true
+hyderabad,Hyderabad,India,Asia,unknown,2025,demographia_built_up,false,true,true,true
+kochi,Kochi,India,Asia,unknown,2025,demographia_built_up,false,true,true,true
+nagpur,Nagpur,India,Asia,unknown,2025,demographia_built_up,false,true,true,true
+fukuoka,Fukuoka,Japan,Asia,unknown,2024,demographia_built_up,false,true,true,true
+daegu,Daegu,South Korea,Asia,unknown,2023,demographia_built_up,false,true,true,true
+incheon,Incheon,South Korea,Asia,unknown,2025,demographia_built_up,false,true,true,true
+taoyuan,Taoyuan,Taiwan,Asia,unknown,2025,other,false,false,true,false

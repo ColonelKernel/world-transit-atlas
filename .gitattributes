@@ -1,0 +1,5 @@
+# index.html is a generated single-file build of the atlas: ~6.5 MB of
+# inlined geometry and markup emitted by the build, not source anyone wrote.
+# Without this, GitHub counts it as the repository's own code and labels the
+# project HTML at 98%, burying the Python and R that do the analysis.
+index.html linguist-generated=true

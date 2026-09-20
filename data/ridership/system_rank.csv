@@ -1,0 +1,202 @@
+rank,system_id,city,country,region,system,mode,annual_riders,year,measure_def,has_series,best_ts_granularity,ts_tier,confidence,annual_url
+1,shanghai,Shanghai,China,Asia,Shanghai Metro,metro,3700000000,2025,station_entries,annual,annual,national_db,medium,https://www.21jingji.com/article/20260323/herald/4a067dcb98fac7137c2bd3eb930d6c4a.html
+2,beijing,Beijing,China,Asia,Beijing Subway,metro,3570000000,2025,station_entries,annual,annual,national_db,medium,https://www.21jingji.com/article/20260323/herald/4a067dcb98fac7137c2bd3eb930d6c4a.html
+3,tokyo,Tokyo,Japan,Asia,Tokyo subway (Tokyo Metro + Toei),metro,3533565000,2025,estimated,annual,annual,official,medium,https://www.tokyometro.jp/corporate/enterprise/passenger_rail/transportation/lines/index.html
+4,guangzhou,Guangzhou,China,Asia,Guangzhou Metro,metro,3399000000,2025,station_entries,annual,annual,national_db,high,https://news.dayoo.com/guangzhou/202606/08/139995_54967477.htm
+5,shenzhen,Shenzhen,China,Asia,Shenzhen Metro,metro,3285000000,2025,station_entries,annual,annual,national_db,medium,https://www.21jingji.com/article/20260323/herald/4a067dcb98fac7137c2bd3eb930d6c4a.html
+6,seoul,Seoul,South Korea,Asia,Seoul Metropolitan Subway,metro,2417520000,2024,station_entries,annual,daily,official,high,https://www.redaily.co.kr/news/articleView.html?idxno=11429
+7,moscow,Moscow,Russia,Europe,"Moscow Metro (+ MCC, MCD)",metro,2415600000,2024,estimated,annual,annual,community/aggregator,low,https://t-j.ru/moscowtrans-stat/
+8,delhi,Delhi,India,Asia,Delhi Metro,metro,2358000000,2025,unlinked_trips,annual,annual,official,high,https://www.millenniumpost.in/delhi/delhi-metro-ridership-rises-to-2358-crore-in-2025-network-remains-largest-in-india-651962
+9,chengdu,Chengdu,China,Asia,Chengdu Metro,metro,2244000000,2025,station_entries,annual,annual,national_db,medium,https://www.21jingji.com/article/20260323/herald/4a067dcb98fac7137c2bd3eb930d6c4a.html
+10,hong-kong,Hong Kong,Hong Kong,Asia,MTR (+ Light Rail),metro,1900000000,2025,passenger_journeys,monthly,monthly,official,medium,http://www.irasia.com/listco/hk/mtr/annual/2025/respress.htm
+11,paris,Paris,France,Europe,"Métro de Paris (+ RER, tram)",metro,1479000000,2024,passenger_journeys,annual,annual,official,high,https://ratpgroup.com/fr/rapport-activite-et-developpement-durable-2024/performances/
+12,hangzhou,Hangzhou,China,Asia,Hangzhou Metro,metro,1469842700,2024,station_entries,annual,annual,national_db,medium,https://infosharingp2-oss.camet.org.cn/resources/manual/2025/04/01/660853988892741.pdf
+13,cairo,Cairo,Egypt,Africa,Cairo Metro,metro,1460000000,2023,estimated,annual,annual,community/aggregator,low,https://en.wikipedia.org/wiki/Cairo_Metro
+14,wuhan,Wuhan,China,Asia,Wuhan Metro,metro,1457000000,2024,station_entries,annual,annual,national_db,high,https://finance.sina.cn/2025-01-02/detail-inecqsvs9696786.d.html?oid=Jqi&vt=4&cid=76729&node_id=76729
+15,chongqing,Chongqing,China,Asia,Chongqing Rail Transit,metro,1445000000,2024,station_entries,annual,annual,national_db,high,https://en.wikipedia.org/wiki/Chongqing_Rail_Transit
+16,xian,Xi'an,China,Asia,Xi'an Metro,metro,1406401300,2024,station_entries,annual,annual,national_db,medium,https://infosharingp2-oss.camet.org.cn/resources/manual/2025/04/01/660853988892741.pdf
+17,new-york,New York City,United States,North America,New York City Subway,metro,1281883362,2025,unlinked_trips,monthly,daily,official,high,https://www.mta.info/agency/new-york-city-transit/ridership/2025
+18,singapore,Singapore,Singapore,Asia,MRT & LRT,metro,1273850000,2025,estimated,annual,monthly,official,medium,https://data.gov.sg/datasets/d_ba615ec4cc5d9f5b7800ad82057f36f1/view
+19,london,London,United Kingdom,Europe,"London Underground (Tube map incl. Overground, Elizabeth line, DLR, trams)",metro,1181000000,2024,station_entries,monthly,monthly,official,high,https://content.tfl.gov.uk/travel-in-london-2024-annual-overview-acc.pdf
+20,mexico-city,Mexico City,Mexico,North America,Metro de la Ciudad de México,metro,1171859113,2024,station_entries,annual,daily,official,medium,https://www.eluniversal.com.mx/metropoli/metro-de-la-cdmx-incrementa-5-su-afluencia-en-2024-pero-no-alcanza-niveles-prepandemia/
+21,osaka,Osaka,Japan,Asia,Osaka Metro,metro,1114710000,2023,estimated,annual,annual,national_db,low,https://ja.wikipedia.org/wiki/%E5%A4%A7%E9%98%AA%E5%B8%82%E9%AB%98%E9%80%9F%E9%9B%BB%E6%B0%97%E8%BB%8C%E9%81%93
+22,prague,Prague,Czechia,Europe,Prague Metro (+ trams),metro+tram,1104935520,2024,passenger_journeys,annual,annual,official,medium,https://data.praha.eu/praha-v-cislech/celkovy-pocet-cestujicich
+23,nanjing,Nanjing,China,Asia,Nanjing Metro,metro,1096000000,2024,station_entries,annual,annual,national_db,high,https://tjj.nanjing.gov.cn/bmfw/njsj/202504/t20250401_5108490.html
+24,changsha,Changsha,China,Asia,Changsha Metro,metro,1031632900,2024,station_entries,annual,annual,national_db,medium,https://infosharingp2-oss.camet.org.cn/resources/manual/2026/04/01/790018567319621.pdf
+25,berlin,Berlin,Germany,Europe,U-Bahn + S-Bahn Berlin,metro,1010300000,2024,estimated,annual,annual,official,medium,https://www.bvg.de/dam/jcr:27ceb5b8-a738-400e-b288-0044d523d050/2025-05-05-bvg-in-zahlen-2024.pdf
+26,istanbul,Istanbul,Türkiye,Europe,"Istanbul Metro (+ Marmaray, trams, funiculars)",metro,915314407,2024,station_entries,annual,daily,official,high,https://www.metro.istanbul/Content/assets/uploaded/Y%C4%B1llara%20G%C3%B6re%20Toplam%20Yolcu%20Say%C4%B1lar%C4%B1-TR-2024.pdf
+27,sao-paulo,São Paulo,Brazil,South America,Metrô de São Paulo + CPTM (rede metroferroviária),metro,892700000,2025,passenger_journeys,monthly,daily,official,medium,https://diariodotransporte.com.br/2026/04/08/metro-de-sao-paulo-transporta-mais-passageiros-bate-recorde-de-satisfacao-mas-prejuizo-dispara-em-2025/
+28,vienna,Vienna,Austria,Europe,U-Bahn + Straßenbahn Wien,metro+tram,873000000,2024,passenger_journeys,annual,annual,official,medium,https://presse.wien.gv.at/presse/2025/04/03/bilanz-2024-wiener-linien-erzielen-neuen-rekord-an-stammkund-innen
+29,taipei,Taipei,Taiwan,Asia,Taipei Metro,metro,770000000,2025,station_entries,annual,daily,official,high,https://news.ltn.com.tw/news/life/breakingnews/5427634
+30,madrid,Madrid,Spain,Europe,Metro de Madrid,metro,736874012,2025,passenger_journeys,annual,annual,official,high,https://www.metromadrid.es/en/press-release/2026-01-16/in-2025-the-community-of-madrid-reaches-the-all-time-record-number-of-metro-users-with-a-total-of-736-874-012
+31,zhengzhou,Zhengzhou,China,Asia,Zhengzhou Metro,metro,697272500,2024,station_entries,annual,annual,national_db,medium,https://infosharingp2-oss.camet.org.cn/resources/manual/2026/04/01/790018567319621.pdf
+32,tianjin,Tianjin,China,Asia,Tianjin Metro,metro,674000000,2025,station_entries,annual,annual,national_db,medium,https://www.teda.gov.cn/contents/26/99736.html
+33,milan,Milan,Italy,Europe,Metropolitana di Milano (+ tram),metro,662200000,2023,passenger_journeys,annual,annual,official,medium,https://risultati.atm.it/2023/files/12-Relazione-Annuale-Integrata-Gruppo-ATM-2023.pdf
+34,santiago,Santiago,Chile,South America,Metro de Santiago,metro,661000000,2025,passenger_journeys,monthly,monthly,national_db,high,https://www.metro.cl/documentos/Presentacion_de_resultados_Metro_2025.pdf
+35,suzhou,Suzhou,China,Asia,Suzhou Rail Transit,metro,637940700,2024,station_entries,annual,annual,national_db,medium,https://infosharingp2-oss.camet.org.cn/resources/manual/2026/04/01/790018567319621.pdf
+36,hamburg,Hamburg,Germany,Europe,U-Bahn + S-Bahn Hamburg,metro,552000000,2025,passenger_journeys,annual,annual,official,medium,https://www.hochbahn.de/de/unternehmen/unternehmensbericht
+37,qingdao,Qingdao,China,Asia,Qingdao Metro,metro,534000000,2025,station_entries,annual,annual,national_db,high,https://news.qq.com/rain/a/20260208A05UZX00
+38,hefei,Hefei,China,Asia,Hefei Metro,metro,524431400,2024,station_entries,annual,annual,national_db,high,https://infosharingp2-oss.camet.org.cn/resources/manual/2025/04/01/660853988892741.pdf
+39,shenyang,Shenyang,China,Asia,Shenyang Metro,metro,508000000,2023,station_entries,annual,annual,community/aggregator,medium,https://zh.wikipedia.org/wiki/沈阳地铁
+40,saint-petersburg,Saint Petersburg,Russia,Europe,Petersburg Metro,metro,495000000,2020,passenger_journeys,annual,annual,community/aggregator,low,https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%B5%D1%82%D1%80%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%D1%82%D0%B5%D0%BD
+41,athens,Athens,Greece,Europe,Athens Metro (+ tram),metro,493800000,2013,passenger_journeys,annual,annual,community/aggregator,low,https://en.wikipedia.org/wiki/Athens_Metro
+42,barcelona,Barcelona,Spain,Europe,Metro de Barcelona (TMB + FGC),metro,468670000,2024,station_entries,annual,annual,national_db,high,https://www.idescat.cat/indicadors/?id=aec&n=15578&lang=es
+43,tunis,Tunis,Tunisia,Africa,Métro léger de Tunis,lrt,460000000,2026,passenger_journeys,annual,annual,community/aggregator,low,https://fr.wikipedia.org/wiki/Soci%C3%A9t%C3%A9_des_transports_de_Tunis
+44,nagoya,Nagoya,Japan,Asia,Nagoya Municipal Subway,metro,459900000,2024,estimated,annual,annual,official,medium,https://www.kotsu.city.nagoya.jp/rp/about/trp0005399.htm
+45,munich,Munich,Germany,Europe,U-Bahn + S-Bahn München,metro,442000000,2025,passenger_journeys,annual,annual,official,high,https://www.mvg.de/presse/pressemeldungen/2026-03-27-fahrgast-rekord.html?lang=en
+46,nanchang,Nanchang,China,Asia,Nanchang Metro,metro,439000000,2024,station_entries,annual,daily,community/aggregator,low,https://en.wikipedia.org/wiki/Nanchang_Metro
+47,toronto,Toronto,Canada,North America,TTC Subway (+ streetcar network),metro+tram,420000000,2024,unlinked_trips,monthly,monthly,official,medium,https://www.toronto.ca/legdocs/mmis/2025/ttc/bgrd/backgroundfile-254392.pdf
+48,brussels,Brussels,Belgium,Europe,Brussels Metro + Tram,metro+tram,402000000,2024,linked_journeys,annual,annual,official,medium,https://www.lavenir.net/regions/bruxelles/2025/01/08/la-stib-a-enregistre-plus-de-400-millions-de-voyages-en-2024-FPCXXD6J3BEDPJROLXLZDRTWHY/
+49,caracas,Caracas,Venezuela,South America,Metro de Caracas,metro,400000000,2014,passenger_journeys,annual,annual,community/aggregator,low,https://www.mppt.gob.ve/2015/mas-de-400-millones-de-usuarios-traslado-metro-de-caracas-en-el-2014/
+50,ningbo,Ningbo,China,Asia,Ningbo Rail Transit,metro,388000000,2024,station_entries,annual,annual,community/aggregator,medium,https://en.wikipedia.org/wiki/Ningbo_Rail_Transit
+51,sydney,Sydney,Australia,Oceania,Sydney Metro + Sydney Trains + Light Rail,metro,383090000,2025,passenger_journeys,annual,monthly,official,medium,https://en.wikipedia.org/wiki/Sydney_Trains
+52,tehran,Tehran,Iran,Middle East & Central Asia,Tehran Metro,metro,363000000,2025,passenger_journeys,annual,annual,community/aggregator,low,https://www.mehrnews.com/news/6817549/%D8%AC%D8%A7%D8%A8%D8%AC%D8%A7%DB%8C%DB%8C-%DB%B3%DB%B6%DB%B3-%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86-%D9%85%D8%B3%D8%A7%D9%81%D8%B1-%D8%A8%D8%A7-%D9%85%D8%AA%D8%B1%D9%88-%D8%AA%D9%87%D8%B1%D8%A7%D9%86-%D8%AF%D8%B1-%D8%B3%D8%A7%D9%84-%DB%B1%DB%B4%DB%B0%DB%B4
+53,harbin,Harbin,China,Asia,Harbin Metro,metro,361230700,2024,station_entries,annual,annual,national_db,high,https://infosharingp2-oss.camet.org.cn/resources/manual/2025/04/01/660853988892741.pdf
+54,melbourne,Melbourne,Australia,Oceania,Melbourne trams (+ Metro Trains network),tram,337300000,2024,passenger_journeys,annual,annual,national_db,medium,https://en.wikipedia.org/wiki/Trams_in_Melbourne
+55,mumbai,Mumbai,India,Asia,Mumbai Metro (+ Monorail),metro,328500000,2025,estimated,annual,annual,community/aggregator,low,https://en.wikipedia.org/wiki/Mumbai_Metro
+56,rio-de-janeiro,Rio de Janeiro,Brazil,South America,MetrôRio,metro,322100000,2024,passenger_journeys,annual,monthly,official,medium,https://grokipedia.com/page/List_of_Latin_American_rail_transit_systems_by_ridership
+57,rome,Rome,Italy,Europe,Metropolitana di Roma,metro,320000000,2019,passenger_journeys,annual,annual,official,low,https://en.wikipedia.org/wiki/Rome_Metro
+58,busan,Busan,South Korea,Asia,Busan Metro,metro,315460000,2024,station_entries,annual,daily,national_db,medium,https://www2.humetro.busan.kr/homepage/manage/page/subLocation.do?menu_no=10070302
+59,stockholm,Stockholm,Sweden,Europe,Tunnelbana,metro,314000000,2024,passenger_journeys,annual,annual,national_db,medium,https://www.trafa.se/globalassets/statistik/bantrafik/bantrafik/2024/bantrafik-2024.pdf
+60,montreal,Montréal,Canada,North America,Métro de Montréal (+ REM),metro,311929200,2025,unlinked_trips,annual,annual,official,medium,https://www.apta.com/wp-content/uploads/2026/03/2025-Q4-Ridership-APTA.pdf
+61,medellin,Medellín,Colombia,South America,"Metro de Medellín (+ Metrocable, Tranvía)",metro,308300000,2024,passenger_journeys,annual,annual,official,high,https://www.metrodemedellin.gov.co/hubfs/memorias-de-sostenibilidad/2024/Memoria_%20Sostenibilidad_MetrodeMedellin_2024.pdf
+62,kunming,Kunming,China,Asia,Kunming Metro,metro,307424100,2024,station_entries,annual,annual,national_db,high,https://infosharingp2-oss.camet.org.cn/resources/manual/2025/04/01/660853988892741.pdf
+63,kuala-lumpur,Kuala Lumpur,Malaysia,Asia,"Klang Valley Integrated Transit (LRT, MRT, Monorail, KTM)",metro,296581044,2024,estimated,monthly,daily,official,medium,https://myrapid.com.my/bus-train/ridership/
+64,tashkent,Tashkent,Uzbekistan,Middle East & Central Asia,Tashkent Metro,metro,286800000,2025,station_entries,annual,annual,national_db,medium,https://en.wikipedia.org/wiki/Tashkent_Metro
+65,bengaluru,Bengaluru,India,Asia,Namma Metro,metro,276670000,2025,estimated,annual,annual,community/aggregator,medium,https://www.nativeplanet.com/news/despite-strong-ridership-namma-metro-sees-deepening-losses-in-2024-25-as-depreciation-and-taxes-pus-018291.html
+66,dubai,Dubai,United Arab Emirates,Middle East & Central Asia,Dubai Metro (+ Tram),metro,275400000,2024,station_entries,annual,annual,community/aggregator,medium,https://en.wikipedia.org/wiki/Dubai_Metro
+67,changchun,Changchun,China,Asia,Changchun Rail Transit,metro,271092600,2024,station_entries,annual,annual,national_db,high,https://infosharingp2-oss.camet.org.cn/resources/manual/2025/04/01/660853988892741.pdf
+68,dalian,Dalian,China,Asia,Dalian Metro,metro,267000000,2024,station_entries,annual,annual,national_db,medium,https://www.dltransgrp.com/subway/subwayShow.do?columnId=2
+69,bangkok,Bangkok,Thailand,Asia,"Bangkok rail transit (BTS, MRT, ARL, SRT Red Line)",metro,263955804,2024,station_entries,monthly,monthly,official,medium,https://en.wikipedia.org/wiki/BTS_Skytrain
+70,guiyang,Guiyang,China,Asia,Guiyang Metro,metro,255189600,2024,station_entries,annual,annual,national_db,high,https://infosharingp2-oss.camet.org.cn/resources/manual/2025/04/01/660853988892741.pdf
+71,kyiv,Kyiv,Ukraine,Europe,Kyiv Metro,metro,250000000,2025,station_entries,annual,annual,community/aggregator,medium,https://glavcom.ua/kyiv/news/250-mln-pasazhiriv-ta-persha-zhinka-mashinistka-jakim-buv-2025-rik-u-kijivskomu-metro--1097937.html
+72,budapest,Budapest,Hungary,Europe,Budapest Metro (+ trams),metro+tram,247300000,2025,passenger_journeys,annual,annual,national_db,medium,https://www.ksh.hu/stadat_files/sza/hu/sza0067.html
+73,cologne,Cologne,Germany,Europe,Stadtbahn Köln,lrt,236200000,2024,passenger_journeys,annual,annual,national_db,medium,https://www.stadtwerkekoeln.de/pressemitteilungen/fahrgastzahlen-bei-der-kvb-sind-in-2024-nahezu-konstant-geblieben
+74,buenos-aires,Buenos Aires,Argentina,South America,Subte,metro,236000000,2023,station_entries,annual,daily,official,medium,https://es.wikipedia.org/wiki/Subte_de_Buenos_Aires
+75,minsk,Minsk,Belarus,Europe,Minsk Metro,metro,233900000,2023,passenger_journeys,annual,annual,community/aggregator,medium,https://en.wikipedia.org/wiki/Minsk_Metro
+76,sapporo,Sapporo,Japan,Asia,Sapporo Municipal Subway,metro,229875000,2024,station_entries,annual,annual,national_db,medium,https://www.jametro.or.jp/upload/data/txYrAazWqkWT.pdf
+77,baku,Baku,Azerbaijan,Middle East & Central Asia,Baku Metro,metro,229600000,2024,passenger_journeys,annual,annual,community/aggregator,medium,https://azertag.az/xeber/oten_il_baki_metrosundan_istifade_eden_sernisinlerin_sayi_artib-3390807
+78,yokohama,Yokohama,Japan,Asia,Yokohama Municipal Subway,metro,228232000,2024,station_entries,annual,annual,national_db,medium,https://www.jametro.or.jp/upload/data/txYrAazWqkWT.pdf
+79,kharkiv,Kharkiv,Ukraine,Europe,Kharkiv Metro,metro,223000000,2018,passenger_journeys,annual,annual,community/aggregator,low,https://en.wikipedia.org/wiki/Kharkiv_Metro
+80,lyon,Lyon,France,Europe,"Métro de Lyon (+ tram, funiculaire)",metro,219000000,2019,passenger_journeys,annual,annual,national_db,medium,http://sytral-mobilites.fr/UserFiles/File/projet/consultations-passees/consultation-metro/faq-en-savoir-plus/sytral-dossier-de-consultation-web.pdf
+81,kolkata,Kolkata,India,Asia,Kolkata Metro,metro,218100000,2025,passenger_journeys,annual,annual,community/aggregator,high,https://www.uniindia.com/~/kolkata-metro-carries-21-81-cr-passenger-in-2024-25/Business%20Economy/news/3433709.html
+82,dusseldorf,Düsseldorf,Germany,Europe,Stadtbahn / Straßenbahn Düsseldorf,lrt,204700000,2024,passenger_journeys,annual,annual,official,medium,https://duesseldorf-blog.de/2025/06/04/geschaeftsbericht-2024-rheinbahn-mit-rekord-32-millionen-fahrgaeste-mehr-als-im-vorjahr-unternehmen-schreibt-jedoch-rote-zahlen-in-hoehe-von-1422-millionen-euro/
+83,warsaw,Warsaw,Poland,Europe,Warsaw Metro (+ trams),metro+tram,197300000,2024,passenger_journeys,annual,annual,community/aggregator,medium,https://en.wikipedia.org/wiki/Warsaw_Metro
+84,lima,Lima,Peru,South America,Metro de Lima y Callao,metro,191000000,2024,passenger_journeys,annual,annual,official,medium,https://energiminas.com/2025/03/10/linea-1-del-metro-transportaria-212-millones-de-pasajeros-este-ano-11-mas-que-2024/
+85,zurich,Zurich,Switzerland,Europe,Zurich tram network,tram,188600000,2024,passenger_journeys,annual,annual,community/aggregator,low,https://www.bahnonline.ch/75490/vbz-fahrgastzahlen-im-jahr-2024-weiter-angestiegen/
+86,dresden,Dresden,Germany,Europe,Straßenbahn Dresden,tram,183700000,2024,passenger_journeys,annual,annual,official,high,https://www.dvb.de/de-de/die-dvb/unternehmen/zahlen-und-daten-neu
+87,frankfurt,Frankfurt,Germany,Europe,U-Bahn Frankfurt (+ S-Bahn Rhein-Main),metro+lrt,182440000,2024,passenger_journeys,annual,annual,official,medium,https://www.vgf-ffm.de/fileadmin/VGF/Die_VGF/Zahlen_und_Berichte/Documents/Geschaeftsbericht_2024.pdf
+88,ankara,Ankara,Türkiye,Europe,Ankara Metro (+ Ankaray),metro,173200000,2025,passenger_journeys,annual,monthly,official,medium,https://m.ego.gov.tr/dosya/indir/34218.pdf
+89,lisbon,Lisbon,Portugal,Europe,Metropolitano de Lisboa,metro,173000000,2019,passenger_journeys,annual,annual,community/aggregator,medium,https://en.wikipedia.org/wiki/Lisbon_Metro
+90,guadalajara,Guadalajara,Mexico,North America,Mi Tren (SITEUR),lrt,168605000,2024,station_entries,annual,monthly,national_db,high,https://en.wikipedia.org/wiki/Sistema_de_Tren_El%C3%A9ctrico_Urbano
+91,leipzig,Leipzig,Germany,Europe,Straßenbahn Leipzig,tram,166000000,2024,passenger_journeys,annual,annual,community/aggregator,medium,https://www.l-iz.de/wirtschaft/wirtschaft-leipzig/2025/07/lvb-bilanz-fuer-2024-mehr-fahrgaeste-mehr-umsatz-mehr-zuschuss-629230
+92,stuttgart,Stuttgart,Germany,Europe,Stadtbahn Stuttgart,lrt,165600000,2024,passenger_journeys,annual,annual,official,medium,https://www.ssb-ag.de/fileadmin/04_Unternehmen/Informationen_und_Fakten/geschaeftsberichte/25-159_01_Geschaeftsbericht_03LowRes_finaler_Entwurf.pdf
+93,hanover,Hanover,Germany,Europe,Stadtbahn Hannover,lrt,163500000,2024,passenger_journeys,annual,annual,official,medium,https://www.zughalt.de/2025/05/uestra-mehr-fahrgaeste-und-mitarbeiter/
+94,nuremberg,Nuremberg,Germany,Europe,U-Bahn Nürnberg,metro,161300000,2024,passenger_journeys,annual,annual,official,high,https://www.nordbayern.de/nuernberg/rekord-geknackt-161-3-millionen-menschen-in-nurnberg-nutzen-bus-und-bahn-trotzdem-minusgeschaft-1.14710988
+95,rotterdam,Rotterdam,Netherlands,Europe,Rotterdam Metro (+ tram),metro,160000000,2025,unlinked_trips,annual,annual,official,medium,https://corporate.ret.nl/nieuws/jaarverslag-2025-reizigers-centraal-en-voorsorteren-op-de-toekomst
+96,kobe,Kobe,Japan,Asia,Kobe Municipal Subway,metro,159574289,2024,station_entries,annual,annual,national_db,medium,https://www.jametro.or.jp/upload/data/txYrAazWqkWT.pdf
+97,vancouver,Vancouver,Canada,North America,SkyTrain,metro,146789800,2025,station_entries,annual,annual,official,medium,https://en.wikipedia.org/wiki/SkyTrain_(Vancouver)
+98,boston,Boston,United States,North America,MBTA Subway (the T),metro+lrt,143119600,2025,unlinked_trips,monthly,monthly,official,high,https://www.apta.com/wp-content/uploads/2026/03/2025-Q4-Ridership-APTA.pdf
+99,bucharest,Bucharest,Romania,Europe,Bucharest Metro,metro,142783000,2023,passenger_journeys,annual,annual,official,medium,https://www.metrorex.ro/storage/documents/1720090135Raport%20de%20activitate%202023%20Metrorex%20S.A..pdf
+100,washington,"Washington, DC",United States,North America,Washington Metro (Metrorail),metro,142093000,2025,unlinked_trips,monthly,monthly,national_db,medium,https://northernvirginiamag.com/news/2025/12/22/wmata-releases-2025-metro-rewind-with-ridership-stats/
+101,chicago,Chicago,United States,North America,Chicago 'L',metro,138392897,2025,station_entries,monthly,daily,official,high,https://www.transitchicago.com/assets/1/6/Monthly_Ridership_2025-12.pdf
+102,strasbourg,Strasbourg,France,Europe,Tramway de Strasbourg,tram,138300000,2024,passenger_journeys,annual,annual,official,low,https://www.cts-strasbourg.eu/export/sites/default/.galleries/Documents/Rapport-dactivite-et-de-responsabilite-sociale-et-environnementale-de-la-CTS-2025.pdf
+103,izmir,İzmir,Türkiye,Europe,"İzmir Metro (+ İZBAN, tram)",metro,127373929,2024,passenger_journeys,annual,annual,national_db,medium,https://www.tursid.org/rayli-sistem-verileri
+104,sofia,Sofia,Bulgaria,Europe,Sofia Metro,metro,127200000,2024,passenger_journeys,annual,annual,official,high,https://www.metropolitan.bg/aktualno/nad-127-mln.-ptniczi-e-prevozilo-metro-v-sofiya-prez-2024-g
+105,kyoto,Kyoto,Japan,Asia,Kyoto Municipal Subway,metro,127086000,2024,station_entries,annual,annual,national_db,medium,https://www.jametro.or.jp/upload/data/txYrAazWqkWT.pdf
+106,copenhagen,Copenhagen,Denmark,Europe,Copenhagen Metro,metro,126000000,2024,passenger_journeys,annual,monthly,official,high,https://metroselskabet.dk/en/contact-and-press/press/press-releases/record-year-for-the-metro-six-million-more-passengers-in-2024/
+107,gothenburg,Gothenburg,Sweden,Europe,Gothenburg tram network,tram,125000000,2024,estimated,annual,annual,community/aggregator,medium,https://en.wikipedia.org/wiki/Gothenburg_tram_network
+108,helsinki,Helsinki,Finland,Europe,Helsinki Metro + tram,metro+tram,124000000,2024,passenger_journeys,annual,annual,official,high,https://kaupunkiliikenne.fi/content/uploads/2025/04/Vuosikertomus-2024.pdf
+109,zagreb,Zagreb,Croatia,Europe,ZET tram network,tram,121800000,2024,passenger_journeys,annual,annual,official,high,https://www.zagreb.hr/userdocsimages/arhiva/statistika/2024/prijevoz%202024/Prijevoz%20I%20-%20XII.%202024_web.pdf
+110,toulouse,Toulouse,France,Europe,Métro de Toulouse,metro,118297877,2024,passenger_journeys,annual,annual,official,high,https://www.tisseo-collectivites.fr/sites/default/files/media/downloads/chiffres-cles_2024_interactive_corrections.pdf
+111,oslo,Oslo,Norway,Europe,T-bane (+ tram),metro,118000000,2016,passenger_journeys,annual,annual,community/aggregator,low,https://en.wikipedia.org/wiki/Oslo_Metro
+112,salvador,Salvador,Brazil,South America,Metrô de Salvador,metro,117737000,2024,passenger_journeys,annual,annual,national_db,high,https://badevalor.com.br/metro-de-salvador-alcanca-117737-milhoes-de-passageiros-em-2024/
+113,jinan,Jinan,China,Asia,Jinan Metro,metro,116398600,2024,station_entries,annual,annual,national_db,high,https://infosharingp2-oss.camet.org.cn/resources/manual/2025/04/01/660853988892741.pdf
+114,panama-city,Panama City,Panama,North America,Metro de Panamá,metro,114900000,2025,station_entries,annual,monthly,official,high,https://www.infobae.com/panama/2026/02/07/panama-cerro-2025-con-1149-millones-de-pasajeros-en-el-metro-y-1399-millones-en-buses/
+115,tbilisi,Tbilisi,Georgia,Middle East & Central Asia,Tbilisi Metro,metro,113827000,2017,station_entries,annual,annual,community/aggregator,low,https://en.wikipedia.org/wiki/Tbilisi_Metro
+116,basel,Basel,Switzerland,Europe,Basel tram network,tram,113550000,2024,passenger_journeys,annual,annual,official,medium,https://www.bvb.ch/wp-content/bvb/Dokumente/Geschaeftsberichte/2024/BVB_Geschaeftsbericht_2024.pdf
+117,chennai,Chennai,India,Asia,Chennai Metro,metro,113238447,FY2025-26,passenger_journeys,annual,monthly,official,high,https://chennaimetrorail.org/wp-content/uploads/2026/08/Media-wise-Ridership-details_Apr_2023-to-July_2026.pdf
+118,fuzhou,Fuzhou,China,Asia,Fuzhou Metro,metro,113000000,2022,station_entries,annual,annual,community/aggregator,medium,https://zh.wikipedia.org/wiki/福州地铁
+119,lille,Lille,France,Europe,Métro de Lille,metro,112000000,2016,passenger_journeys,annual,annual,community/aggregator,low,https://fr.wikipedia.org/wiki/M%C3%A9tro_de_Lille
+120,montpellier,Montpellier,France,Europe,Tramway de Montpellier,tram,110000000,2024,passenger_journeys,annual,annual,official,low,https://www.lejournaltoulousain.fr/occitanie/herault/montpellier/bilan-mitige-un-an-gratuite-transports-montpellier-298192/
+121,bursa,Bursa,Türkiye,Europe,Bursaray,lrt,109895653,2024,passenger_journeys,annual,annual,national_db,medium,https://www.tursid.org/rayli-sistem-verileri
+122,santo-domingo,Santo Domingo,Dominican Republic,North America,Metro de Santo Domingo,metro,104003341,2023,station_entries,annual,monthly,official,medium,https://presidencia.gob.do/noticias/el-metro-de-santo-domingo-rompe-record-de-usuarios-en-los-ultimos-12-meses
+123,recife,Recife,Brazil,South America,Metrô do Recife,metro,102089000,2018,passenger_journeys,annual,annual,official,low,https://en.wikipedia.org/wiki/Recife_Metro
+124,bilbao,Bilbao,Spain,Europe,Metro Bilbao,metro,100000000,2024,unlinked_trips,annual,annual,community/aggregator,high,https://en.wikipedia.org/wiki/Metro_Bilbao
+125,monterrey,Monterrey,Mexico,North America,Metrorrey,metro,97090000,2025,station_entries,annual,monthly,national_db,high,https://en.wikipedia.org/wiki/Metrorrey
+126,bordeaux,Bordeaux,France,Europe,Tramway de Bordeaux,tram,96770000,2018,passenger_journeys,annual,annual,national_db,medium,https://en.wikipedia.org/wiki/Bordeaux_tramway
+127,calgary,Calgary,Canada,North America,CTrain,lrt,94097200,2025,unlinked_trips,annual,monthly,official,medium,https://en.wikipedia.org/wiki/CTrain
+128,sendai,Sendai,Japan,Asia,Sendai Subway,metro,93233000,2024,station_entries,annual,annual,national_db,medium,https://www.jametro.or.jp/upload/data/txYrAazWqkWT.pdf
+129,valencia,Valencia,Spain,Europe,Metrovalencia,metro,91100000,2024,passenger_journeys,annual,annual,community/aggregator,medium,https://en.wikipedia.org/wiki/Metrovalencia
+130,philadelphia,Philadelphia,United States,North America,SEPTA Metro,metro+lrt,90242900,2025,unlinked_trips,monthly,monthly,national_db,high,https://en.wikipedia.org/wiki/SEPTA_Metro
+131,the-hague,The Hague,Netherlands,Europe,HTM tram / RandstadRail,tram,83967000,2018,passenger_journeys,annual,annual,official,low,https://en.wikipedia.org/wiki/Trams_in_The_Hague
+132,wuxi,Wuxi,China,Asia,Wuxi Metro,metro,81468000,2016,station_entries,annual,annual,community/aggregator,low,https://zh.m.wikipedia.org/wiki/无锡地铁
+133,porto,Porto,Portugal,Europe,Metro do Porto,lrt,79000000,2023,passenger_journeys,annual,annual,national_db,high,https://en.wikipedia.org/wiki/Porto_Metro
+134,manila,Manila,Philippines,Asia,"LRT-1, LRT-2, MRT-3",metro,78000000,2022,passenger_journeys,annual,daily,community/aggregator,low,https://en.wikipedia.org/wiki/Manila_Light_Rail_Transit_System_Line_1
+135,marseille,Marseille,France,Europe,Métro de Marseille (+ tram),metro,76800000,2024,passenger_journeys,annual,annual,official,high,https://www.rtm.fr/sites/default/files/docs/009%20RTM_RA2024%204.pdf
+136,nantes,Nantes,France,Europe,Tramway de Nantes,tram,74600000,2025,passenger_journeys,annual,annual,official,medium,https://www.semitan.fr/fr/histoire-et-chiffres-cles
+137,karlsruhe,Karlsruhe,Germany,Europe,Stadtbahn Karlsruhe (tram-train),tram,71910000,2024,passenger_journeys,annual,annual,official,medium,https://www.vbk.info/fileadmin/user_upload/vbk/Dateien/VBK_Geschaeftsbericht_2024_A4_screen.pdf
+138,kaohsiung,Kaohsiung,Taiwan,Asia,Kaohsiung MRT (+ Circular LRT),metro,71300000,2025,station_entries,annual,monthly,official,high,https://corp.krtc.com.tw/
+139,los-angeles,Los Angeles,United States,North America,Metro Rail,metro+lrt,68764300,2025,unlinked_trips,monthly,monthly,national_db,medium,https://www.apta.com/wp-content/uploads/2026/03/2025-Q4-Ridership-APTA.pdf
+140,amsterdam,Amsterdam,Netherlands,Europe,GVB Metro + Tram,metro+tram,66200000,2015,passenger_journeys,annual,annual,official,low,https://en.wikipedia.org/wiki/Amsterdam_Metro
+141,lahore,Lahore,Pakistan,Asia,Lahore Metro Orange Line,metro,65230610,2023,estimated,annual,daily,community/aggregator,low,https://www.dawn.com/news/1768572
+142,quito,Quito,Ecuador,South America,Metro de Quito,metro,63008757,2025,passenger_journeys,annual,monthly,official,medium,https://metrodequito.gob.ec/wp-content/uploads/2026/02/26-02-23-Boletin-Estadistico-02-2026.pdf
+143,xiamen,Xiamen,China,Asia,Xiamen Metro,metro,58030000,2019,station_entries,annual,annual,community/aggregator,low,https://zh.m.wikipedia.org/wiki/厦门轨道交通
+144,san-francisco-bart,San Francisco Bay Area,United States,North America,BART,metro,55610841,2025,unlinked_trips,monthly,hourly,official,high,https://www.bart.gov/about/reports/ridership
+145,dublin,Dublin,Ireland,Europe,Luas,tram,54000000,2024,passenger_journeys,annual,annual,official,high,https://www.nationaltransport.ie/news/record-breaking-passenger-numbers-on-pso-services-for-second-year/
+146,ahmedabad,Ahmedabad,India,Asia,Ahmedabad Metro,metro,51029000,2025-26,passenger_journeys,annual,annual,community/aggregator,medium,https://en.wikipedia.org/wiki/Ahmedabad_Metro
+147,lausanne,Lausanne,Switzerland,Europe,Métro de Lausanne (M1/M2),metro,50000000,2023,passenger_journeys,annual,annual,community/aggregator,medium,https://fr.wikipedia.org/wiki/M%C3%A9tro_de_Lausanne
+148,manchester,Manchester,United Kingdom,Europe,Metrolink,lrt,46000000,2025,passenger_journeys,annual,annual,national_db,high,https://en.wikipedia.org/wiki/Manchester_Metrolink
+149,algiers,Algiers,Algeria,Africa,Algiers Metro (+ tram),metro,46000000,2023,passenger_journeys,annual,annual,community/aggregator,medium,http://www.metroalger-dz.com/fr/statistiques.php
+150,rennes,Rennes,France,Europe,Métro de Rennes,metro,42020000,2022,passenger_journeys,annual,annual,official,medium,https://en.wikipedia.org/wiki/Rennes_Metro
+151,brasilia,Brasília,Brazil,South America,Metrô-DF,metro,41550000,2025,passenger_journeys,annual,annual,national_db,high,https://www.metrocptm.com.br/metro-do-df-perde-passageiros-pelo-segundo-ano-seguido-e-acende-alerta-no-setor/
+152,jakarta,Jakarta,Indonesia,Asia,"Jakarta MRT (+ LRT, KRL Commuterline)",metro,40821000,2024,passenger_journeys,annual,annual,community/aggregator,medium,https://en.wikipedia.org/wiki/Jakarta_MRT
+153,naples,Naples,Italy,Europe,Metropolitana di Napoli,metro,38259075,2024,passenger_journeys,annual,annual,official,high,https://www.anm.it/resource/1768990802000/cartadellamobilita25
+154,san-diego,San Diego,United States,North America,San Diego Trolley,lrt,38047300,2025,unlinked_trips,monthly,monthly,national_db,high,https://en.wikipedia.org/wiki/San_Diego_Trolley
+155,seattle,Seattle,United States,North America,Link light rail,lrt,37800000,2025,unlinked_trips,monthly,monthly,national_db,high,https://en.wikipedia.org/wiki/Link_light_rail
+156,turin,Turin,Italy,Europe,Metropolitana di Torino,metro,36500000,2023,passenger_journeys,annual,annual,community/aggregator,medium,https://it.wikipedia.org/wiki/Metropolitana_di_Torino
+157,tel-aviv,Tel Aviv,Israel,Middle East & Central Asia,Dankal Light Rail (Red Line),lrt,36500000,2024,passenger_journeys,annual,daily,community/aggregator,low,https://en.globes.co.il/en/article-passengers-shun-tel-aviv-light-rail-1001486834
+158,san-francisco-muni,San Francisco,United States,North America,Muni Metro,lrt,34229500,2025,unlinked_trips,monthly,monthly,national_db,high,https://en.wikipedia.org/wiki/Muni_Metro
+159,newcastle,Newcastle / Tyne and Wear,United Kingdom,Europe,Tyne and Wear Metro,metro,32200000,2025,passenger_journeys,annual,annual,national_db,high,https://en.wikipedia.org/wiki/Tyne_and_Wear_Metro
+160,rabat,Rabat,Morocco,Africa,Rabat-Salé Tramway,tram,32000000,2015,passenger_journeys,annual,daily,community/aggregator,low,https://fr.wikipedia.org/wiki/Tramway_de_Rabat-Sal%C3%A9
+161,casablanca,Casablanca,Morocco,Africa,Casablanca Tramway (+ Busway),tram,31400000,2018,estimated,annual,daily,community/aggregator,low,https://www.leconomiste.com/article/1021456-casa-tram-157-millions-de-passagers-en-5-ans
+162,atlanta,Atlanta,United States,North America,MARTA Rail,metro,30373600,2025,unlinked_trips,monthly,monthly,national_db,high,https://en.wikipedia.org/wiki/MARTA_rail
+163,thessaloniki,Thessaloniki,Greece,Europe,Thessaloniki Metro,metro,30000000,2025,passenger_journeys,annual,annual,community/aggregator,low,https://www.emakedonia.gr/metro-thessalonikis-tameio-me-30-ekatommyria-epivates-kai-kathara-kerdi-sto-proto-plires-etos-leitoyrgias-814388
+164,miami,Miami,United States,North America,Metrorail (+ Metromover),metro,22217800,2025,unlinked_trips,monthly,monthly,national_db,medium,https://en.wikipedia.org/wiki/Metrorail_(Miami-Dade_County)
+165,portland,Portland,United States,North America,MAX Light Rail,lrt,22100000,2025,unlinked_trips,monthly,monthly,national_db,high,https://en.wikipedia.org/wiki/MAX_Light_Rail
+166,dallas,Dallas,United States,North America,DART Rail,lrt,21611600,2025,unlinked_trips,monthly,monthly,national_db,high,https://en.wikipedia.org/wiki/DART_rail
+167,ottawa,Ottawa,Canada,North America,O-Train,lrt,20838300,2024,linked_journeys,annual,monthly,official,medium,https://en.wikipedia.org/wiki/O-Train
+168,ho-chi-minh-city,Ho Chi Minh City,Vietnam,Asia,HCMC Metro Line 1,metro,20463587,2025,passenger_journeys,annual,annual,community/aggregator,high,https://cafef.vn/metro-so-1-tphcm-don-hon-20-trieu-luot-khach-ngan-sach-tro-gia-278-ty-vuot-xa-tien-ban-ve-188260521230557608.chn
+169,addis-ababa,Addis Ababa,Ethiopia,Africa,Addis Ababa Light Rail,lrt,20440000,2023,estimated,annual,daily,community/aggregator,low,https://en.wikipedia.org/wiki/Addis_Ababa_Light_Rail
+170,porto-alegre,Porto Alegre,Brazil,South America,Trensurb,metro,20134159,2024,passenger_journeys,annual,annual,national_db,high,https://anptrilhos.org.br/em-ano-mais-desafiador-de-sua-historia-trensurb-transportou-2013-milhoes-de-passageiros/
+171,hanoi,Hanoi,Vietnam,Asia,Hanoi Metro,metro,20000000,2025,passenger_journeys,annual,annual,community/aggregator,medium,https://vtv.vn/metro-ha-noi-can-moc-hon-20-trieu-luot-hanh-khach-trong-nam-2025-100260109110618498.htm
+172,shiraz,Shiraz,Iran,Middle East & Central Asia,Shiraz Metro,metro,18000000,2018,station_entries,annual,annual,community/aggregator,low,https://en.wikipedia.org/wiki/Shiraz_Metro
+173,minneapolis,Minneapolis–St. Paul,United States,North America,METRO light rail (Blue & Green lines),lrt,15500000,2024,unlinked_trips,monthly,monthly,national_db,medium,https://www.metrotransit.org/annual-ridership-grows-to-475-million-rides-in-2024
+174,salt-lake-city,Salt Lake City,United States,North America,TRAX,lrt,13279100,2025,unlinked_trips,monthly,monthly,national_db,high,https://en.wikipedia.org/wiki/TRAX_(light_rail)
+175,glasgow,Glasgow,United Kingdom,Europe,Glasgow Subway,metro,13000000,2025,passenger_journeys,annual,annual,national_db,medium,https://en.wikipedia.org/wiki/Glasgow_Subway
+176,houston,Houston,United States,North America,METRORail,lrt,12651100,2025,unlinked_trips,monthly,monthly,national_db,high,https://en.wikipedia.org/wiki/METRORail
+177,phoenix,Phoenix,United States,North America,Valley Metro Rail,lrt,11100300,2025,unlinked_trips,monthly,monthly,national_db,high,https://en.wikipedia.org/wiki/Valley_Metro_Rail
+178,denver,Denver,United States,North America,RTD Rail,lrt,10568000,2025,unlinked_trips,monthly,monthly,national_db,high,https://en.wikipedia.org/wiki/Regional_Transportation_District
+179,baltimore,Baltimore,United States,North America,Metro SubwayLink & Light RailLink,metro+lrt,9625500,2025,unlinked_trips,monthly,monthly,national_db,medium,https://en.wikipedia.org/wiki/Baltimore_Metro_SubwayLink
+180,pune,Pune,India,Asia,Pune Metro,metro,9302891,2023,passenger_journeys,annual,annual,community/aggregator,medium,https://en.wikipedia.org/wiki/Pune_Metro
+181,st-louis,St. Louis,United States,North America,MetroLink,lrt,7665000,2025,unlinked_trips,monthly,monthly,national_db,high,https://en.wikipedia.org/wiki/MetroLink_(St._Louis)
+182,sacramento,Sacramento,United States,North America,SacRT Light Rail,lrt,7410000,2025,unlinked_trips,monthly,monthly,national_db,high,https://en.wikipedia.org/wiki/SacRT_light_rail
+183,charlotte,Charlotte,United States,North America,LYNX,lrt,5956914,2025,unlinked_trips,monthly,monthly,national_db,high,https://data.transportation.gov/Public-Transit/Complete-Monthly-Ridership-with-Adjustments-and-Es/8bui-9xvu
+184,san-jose,San Jose,United States,North America,VTA Light Rail,lrt,4469300,2025,unlinked_trips,monthly,monthly,national_db,high,https://en.wikipedia.org/wiki/VTA_light_rail
+185,lagos,Lagos,Nigeria,Africa,Lagos Rail Mass Transit (Blue & Red lines),metro,3000000,2025,estimated,annual,annual,community/aggregator,low,https://en.wikipedia.org/wiki/Blue_Line_(Lagos)
+186,edmonton,Edmonton,Canada,North America,Edmonton LRT,lrt,,,,,annual,official,low,
+187,antwerp,Antwerp,Belgium,Europe,Antwerp tram / premetro,tram,,,,,annual,official,low,
+188,krakow,Kraków,Poland,Europe,Kraków tram network,tram,,,,,,official,low,
+189,mashhad,Mashhad,Iran,Middle East & Central Asia,Mashhad Urban Railway,metro,,,,,,official,low,
+190,doha,Doha,Qatar,Middle East & Central Asia,Doha Metro (+ Lusail Tram),metro,,,,,,official,low,
+191,riyadh,Riyadh,Saudi Arabia,Middle East & Central Asia,Riyadh Metro,metro,,,,,,,low,
+192,dhaka,Dhaka,Bangladesh,Asia,Dhaka Metro Rail,metro,,,,,,official,low,
+193,nanning,Nanning,China,Asia,Nanning Metro,metro,,,,,,community/aggregator,low,
+194,shijiazhuang,Shijiazhuang,China,Asia,Shijiazhuang Metro,metro,,,,,,community/aggregator,low,
+195,hyderabad,Hyderabad,India,Asia,Hyderabad Metro,metro,,,,,,community/aggregator,low,
+196,kochi,Kochi,India,Asia,Kochi Metro,metro,,,,,,community/aggregator,low,
+197,nagpur,Nagpur,India,Asia,Nagpur Metro,metro,,,,,,community/aggregator,low,
+198,fukuoka,Fukuoka,Japan,Asia,Fukuoka City Subway,metro,,,,,annual,official,low,
+199,daegu,Daegu,South Korea,Asia,Daegu Metro,metro,,,,,annual,official,low,
+200,incheon,Incheon,South Korea,Asia,Incheon Subway,metro,,,,,annual,official,low,
+201,taoyuan,Taoyuan,Taiwan,Asia,Taoyuan Metro (Airport MRT),metro,,,,,monthly,official,low,

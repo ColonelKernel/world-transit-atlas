@@ -41,12 +41,24 @@ data/
   timemachine_data.json   the 201 systems: location, region, mode, ridership series, attributes
   world_rings.json        Natural Earth land outlines (basemap)
   networks/<slug>.json    per-city line + station geometry
-  data/research/*         coords + covariates (inputs for the fetch/regenerate tools)
+  ridership/              what every ridership figure actually counts (see below)
+    SCHEMA.md               the canonical schema + the measure_def enum
+    system_rank.csv         measure_def, annual_url, confidence per system
+    sources.csv             full citation rows: publisher, URL, access, caveats
+    ridership_long.csv      tidy panel, per-row measure_def and source_id
+    measure_def_overrides.csv  reviewed corrections, each with its evidence
+  research/
+    covariates.csv          population, density, GDP/cap, motorization, trips/cap
+    ridership_verified.csv  the joined, graded dataset (built, not hand-edited)
+    comparability.csv       the grade table
+    coords.json             lat/lon for all 201
 ```
 
 ## Coverage
 
-All **201 systems carry both line and station geometry** — 1,303 lines and 22,641 stations.
+All **201 systems carry both line and station geometry** — 1,298 lines and 22,641 stations,
+counted from `data/networks/*.json` rather than from memory. (This line said 1,303 until the
+count was actually re-run.)
 
 Getting the last 34 cities took two fixes rather than a different network:
 
@@ -99,13 +111,52 @@ Please keep this attribution when hosting publicly.
   and others); and a handful of open GitHub datasets (China via `luxueyan/generate-china-subways-geojson`,
   Taipei `leoluyi/taipei_mrt`, Bengaluru `geohacker/namma-metro`, and others).
 - **Ridership series:** US National Transit Database (BTS/FTA) monthly rail UPT; municipal open-data
-  feeds (e.g. Chicago 'L'); agency reports.
+  feeds (e.g. Chicago 'L'); agency reports; China Association of Metros (CAMET) annual statistics.
 - **Covariates:** World Bank indicators; national statistics.
 - **Basemap:** Natural Earth (public domain).
 
 Coverage note: all 201 systems carry full line + station geometry. Geometry is real, not
 schematic — nothing was fabricated. Depot tracks, sidings and disused/heritage alignments are
 filtered out, so the lines shown are passenger routes.
+
+## What the ridership numbers count
+
+Agencies do not count the same thing, and a figure means nothing until you know
+which thing. `data/ridership/SCHEMA.md` defines the enum and the rule that goes
+with it — **we do not silently convert between these**:
+
+| `measure_def` | what it counts | n |
+|---|---|---|
+| `passenger_journeys` | the operator's headline "journeys" figure | 87 |
+| `unlinked_trips` | boardings, including transfers (US NTD "UPT", Chinese 客运量) | 55 |
+| `station_entries` | taps/entries at faregates (TfL gateline, Chinese 进站量) | 26 |
+| `estimated` | modelled or derived, usually from a daily average | 17 |
+| `linked_journeys` | one trip end to end regardless of transfers | 2 |
+| *(unknown)* | the value matches no source we could locate | 9 |
+
+A transfer-heavy network reports roughly 1.2–1.6x more under boardings than
+under journeys for identical travel, so mixing these silently is not noise —
+it is slope.
+
+```bash
+python3 tools/comparability.py --write   # grade all four comparability axes, rebuild the dataset
+python3 tools/verify_camet.py            # re-derive the Chinese conventions from CAMET 表3
+python3 tools/ridership_model.py         # the model, and what did not survive it
+```
+
+`verify_camet.py` is worth reading even if you do not run it. CAMET publishes
+客运量 and 进站量 side by side, and for every single-line city the two columns
+are bit-identical — no transfers, so a boarding and a station entry are the
+same event. Where there is more than one line the gap between them *is* the
+transfer volume, nationally 1.666x. That identity is what proves 客运量 is
+boardings, and it is why 26 Chinese systems were relabelled.
+
+**Four axes, not one.** The counting convention is only the first. The
+denominator basis (built-up urban area vs metro region vs city proper) and the
+vintage (these figures run 2013–2026, straddling COVID) are graded too. The
+fourth — what *modes* the numerator covers, metro only vs metro+tram vs a whole
+multimodal agency including bus — is recorded nowhere, and is the likeliest
+explanation for the extreme values in the table.
 
 ## Credit
 Built with Claude (Cowork). Transit data © its respective sources as listed above.

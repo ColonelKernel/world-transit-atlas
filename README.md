@@ -153,10 +153,59 @@ boardings, and it is why 26 Chinese systems were relabelled.
 
 **Four axes, not one.** The counting convention is only the first. The
 denominator basis (built-up urban area vs metro region vs city proper) and the
-vintage (these figures run 2013–2026, straddling COVID) are graded too. The
-fourth — what *modes* the numerator covers, metro only vs metro+tram vs a whole
-multimodal agency including bus — is recorded nowhere, and is the likeliest
-explanation for the extreme values in the table.
+vintage (these figures run 2013–2026, straddling COVID) are graded too. So, now,
+is the fourth.
+
+### Axis 2: what modes the numerator covers
+
+This axis used to read "recorded nowhere". It is now graded for 194 of the 196
+systems that carry a figure, by `tools/mode_scope.py`, from the scope qualifier
+`system_rank.system` pairs with each number — "Métro de Paris (+ RER, tram)",
+"U-Bahn + S-Bahn Hamburg". Because that is an author annotation rather than a
+re-reading of each agency's report, derived values are stamped `system_field`
+and checked ones `override:<source>`, exactly as `measure_def` already does.
+
+| `mode_scope` | n |
+|---|---|
+| `metro_only` | 113 |
+| `tram_or_lrt_only` | 39 |
+| `metro_plus_urban_rail` | 24 |
+| `metro_plus_regional_rail` | 15 |
+| `multimodal_agency` | 3 |
+| *(unknown)* | 2 |
+
+**Four figures were checked against the publisher, and all four were mislabelled**
+(`data/ridership/mode_scope_overrides.csv`):
+
+- **Prague** — data.praha.eu reports 1,104,935,520 for the whole integrated
+  network: metro ~36%, tram ~33%, bus ~31%. The stored value matches exactly, so
+  it is ~2.9× the metro's ~379M. This is the case comparability.py's docstring
+  predicted.
+- **Vienna** — "873 Millionen Fahrgäste" is all of Wiener Linien, bus included,
+  not the "U-Bahn + Straßenbahn" the system string implies.
+- **Berlin** — *BVG in Zahlen 2024* gives 1,109.7M (U-Bahn 554.3 / tram 226.1 /
+  bus+ferry 459.2). Bus is in; the S-Bahn the system string claims is not, being
+  a separate company. The stored 1,010,300,000 matches nothing in the source, so
+  the scope is recorded as **unknown**.
+- **Munich** — the cited MVG release says 621M "mit U-Bahn, Bus und Tram" for
+  2025 against a stored 442,000,000. Also **unknown**.
+
+The last two are the important shape: when a citation does not support the number
+attached to it, the honest grade is `unknown`, not a plausible guess.
+
+### What grading it changed
+
+`usable_for_ratio` now also requires an urban-rail-only numerator, which takes the
+comparable subset from 143 systems to 126. On that subset the counting-convention
+effect stops being significant — `is_boarding` moves from +0.789 (p=0.029) to
++0.709 (p=0.077). The effect was partly carried by systems whose numerator was
+quietly larger.
+
+Entered as regressors instead (spec H), the scope dummies do **not** reach
+significance (p = 0.98, 0.41, 0.12, 0.14) and the mode coefficients inflate,
+because mode scope is strongly collinear with the mode column — a tram system's
+figure covers trams. Axis 2 earns its place as an exclusion criterion, not as a
+predictor, and the ladder reports both.
 
 ## Credit
 Built with Claude (Cowork). Transit data © its respective sources as listed above.

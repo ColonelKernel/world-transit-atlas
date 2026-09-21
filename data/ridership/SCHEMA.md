@@ -55,6 +55,39 @@ can compare like-with-like and flag mismatches:
 We do NOT silently convert between these. Cross-def comparisons in the dashboard get a visible
 "definition differs" marker. Where an operator publishes a transfer/linking factor we note it.
 
+## `mode_scope` — what modes the numerator covers (axis 2)
+
+A counting convention says *how* a rider is counted; `mode_scope` says *who gets
+counted at all*. Folding an S-Bahn or a bus network into the figure does not add
+noise to trips-per-capita, it adds scale — Prague's headline 1,104,935,520 is the
+whole integrated network and is ~2.9x the metro's ~379M.
+
+| value | the numerator covers |
+|---|---|
+| `metro_only` | one or more heavy-rail metro operators, nothing else |
+| `tram_or_lrt_only` | the system is itself a tram / light-rail network |
+| `metro_plus_urban_rail` | metro + tram / LRT / monorail / people-mover, still all urban |
+| `metro_plus_regional_rail` | adds S-Bahn / RER / commuter / mainline rail |
+| `multimodal_agency` | includes bus, i.e. the operator's whole network |
+| `unknown` | not established from the citation on file |
+
+Derived in `tools/mode_scope.py` from the scope qualifier `system_rank.system`
+pairs with each figure ("Metro de Paris (+ RER, tram)", "U-Bahn + S-Bahn
+Hamburg"). That is the dataset author's annotation, not a re-reading of each
+agency's report, so every derived value is stamped `system_field` and a value
+checked against the publisher is stamped `override:<source>`. The two-tier
+scheme is the same one `measure_def` already uses.
+
+`data/ridership/mode_scope_overrides.csv` holds the reviewed rows, each with its
+quote and URL. **A reviewed row may widen a scope the system string understates**
+— Vienna's "U-Bahn + Strassenbahn Wien" is in fact all of Wiener Linien
+including bus — **and may reduce it to `unknown`** when the cited source does not
+support the stored value, which is what happened to Berlin and Munich.
+
+Comparable numerators are urban rail and nothing else
+(`metro_only`, `tram_or_lrt_only`, `metro_plus_urban_rail`); `usable_for_ratio`
+requires it.
+
 ## `daily_equiv` derivation rules (standardized, reversible, labeled)
 
 - daily source → `daily_equiv = value` (is_estimate=false)

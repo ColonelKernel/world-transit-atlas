@@ -95,6 +95,7 @@ def load():
             "vintage": year,
             "tpc": num(r["trips_per_capita"]),
             "usable": r.get("usable_for_ratio") == "true",
+            "scope": r.get("mode_scope") or "unknown",
         })
     return out
 
@@ -277,6 +278,19 @@ def main():
             base_lab + ["log_stations"] + [f"reg_{x[:12]}" for x in regions3]
             + [f"is_{f}" for f in fam3] + [f"mode_{m[:10]}" for m in modes3],
             "G. spec F on the comparable subset only (usable_for_ratio)")
+
+    # Axis 2 entered as dummies on the full sample. If the scope of the
+    # numerator is doing work that spec F attributed to mode or convention,
+    # it shows up here: metro_only is the base, so each coefficient is the
+    # log-ridership gap from counting a metro alone.
+    SCOPE_BASE = "metro_only"
+    scopes = sorted({r["scope"] for r in rows
+                     if r["scope"] != SCOPE_BASE and sum(1 for x in rows if x["scope"] == r["scope"]) > 2})
+    if scopes:
+        ols(rows, base + ["log_stations"] + REG + FAM + MODE + [("scope", sc) for sc in scopes],
+            base_lab + ["log_stations"] + REG_LAB + FAM_LAB + MODE_LAB
+            + [f"scope_{sc.replace('metro_plus_','+')[:14]}" for sc in scopes],
+            f"H. + numerator mode scope (axis 2; {SCOPE_BASE} = base)")
 
     print("\n" + "=" * 74)
     print("LEAVE-ONE-REGION-OUT on the convention dummies (spec D)")

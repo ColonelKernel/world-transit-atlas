@@ -52,6 +52,8 @@ import re
 import sys
 from collections import Counter
 
+import mode_scope
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 COV = os.path.join(ROOT, "data", "research", "covariates.csv")
@@ -260,6 +262,11 @@ def load_rows() -> list[dict]:
             url = ov["url"] or url
             basis_of_measure = f"override:{ov['source']}"
 
+        # Axis 2. Derived from the scope qualifier system_rank pairs with the
+        # figure, unless a reviewed row has actually checked the publisher.
+        scope, scope_basis, scope_evidence, scope_url = mode_scope.resolve(
+            slug, rk.get("system", ""), r.get("mode", ""))
+
         vintage, vintage_basis = normalize_vintage(r.get("annual_year"), r.get("country", ""))
         riders = (r.get("annual_riders") or "").strip()
 
@@ -288,8 +295,10 @@ def load_rows() -> list[dict]:
             "pop_source": r.get("pop_source", ""),
             "population_basis": classify_denominator(r.get("pop_source", "")),
             "trips_per_capita": r.get("trips_per_capita", ""),
-            "mode_scope": "",          # axis 2: recorded nowhere yet
-            "mode_scope_checked": "",  # blank is honest; a guess is not
+            "mode_scope": scope,
+            "mode_scope_checked": scope_basis,
+            "mode_scope_evidence": scope_evidence,
+            "mode_scope_url": scope_url,
         })
     return out
 
@@ -305,11 +314,18 @@ def grade(rows: list[dict]) -> list[dict]:
         r["vintage_comparable"] = str(
             vintage != "" and int(vintage) >= VINTAGE_FLOOR
         ).lower()
+        r["mode_scope_known"] = str(
+            bool(r["mode_scope"]) and r["mode_scope"] != "unknown"
+        ).lower()
+        # Comparable numerators count urban rail and nothing else. A figure that
+        # folds in an S-Bahn or a bus network is not noisier, it is larger.
+        r["mode_scope_consistent"] = str(mode_scope.is_urban_rail(r["mode_scope"])).lower()
         r["usable_for_ratio"] = str(
             has
             and r["denominator_consistent"] == "true"
             and r["vintage_comparable"] == "true"
             and r["metric_known"] == "true"
+            and r["mode_scope_consistent"] == "true"
         ).lower()
     return rows
 
@@ -346,6 +362,13 @@ def main() -> int:
     for k, v in Counter(r["convention_family"] or "(unknown)" for r in have).most_common():
         print(f"  {k:22} {v:3}")
 
+    print("\nnumerator mode scope (axis 2)")
+    for k, v in Counter(r["mode_scope"] for r in have).most_common():
+        print(f"  {k:26} {v:3}")
+    basis = Counter(r["mode_scope_checked"] for r in have)
+    print(f"  [derived from the system field: {basis.get('system_field', 0)};"
+          f" reviewed against the publisher: {sum(v for k, v in basis.items() if k.startswith('override'))}]")
+
     print("\ndenominator basis (axis 3)")
     for k, v in Counter(r["population_basis"] for r in rows).most_common():
         print(f"  {k:22} {v:3}")
@@ -360,11 +383,13 @@ def main() -> int:
         ("citation_resolves", "a citation URL is recorded"),
         ("denominator_consistent", "denominator = built-up urban area"),
         ("vintage_comparable", f"ridership counted {VINTAGE_FLOOR} or later"),
+        ("mode_scope_known", "numerator mode scope established"),
+        ("mode_scope_consistent", "numerator is urban rail only"),
     ):
         c = count(key)
         print(f"  {label:38} {c:3}/{h}  ({100*c/h:.0f}%)")
     usable = count("usable_for_ratio")
-    print(f"\n  all three hold                         {usable:3}/{h}  ({100*usable/h:.0f}%)")
+    print(f"\n  all four hold                          {usable:3}/{h}  ({100*usable/h:.0f}%)")
     one_family = sum(1 for r in have
                      if r["usable_for_ratio"] == "true" and r["convention_family"] == "journey")
     print(f"  ...and restricted to one family        {one_family:3}/{h}  ({100*one_family/h:.0f}%)")
@@ -394,8 +419,10 @@ def main() -> int:
             w.writeheader()
             w.writerows(rows)
         keep = ("slug", "city", "country", "region", "measure_def", "convention_family",
-                "annual_year", "population_basis", "metric_known", "citation_resolves",
-                "denominator_consistent", "vintage_comparable", "usable_for_ratio")
+                "annual_year", "population_basis", "mode_scope", "mode_scope_checked",
+                "metric_known", "citation_resolves", "denominator_consistent",
+                "vintage_comparable", "mode_scope_known", "mode_scope_consistent",
+                "usable_for_ratio")
         with open(OUT_GRADES, "w", newline="", encoding="utf-8") as fh:
             w = csv.DictWriter(fh, fieldnames=list(keep))
             w.writeheader()

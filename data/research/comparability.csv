@@ -1,202 +1,202 @@
-slug,city,country,region,measure_def,convention_family,annual_year,population_basis,metric_known,citation_resolves,denominator_consistent,vintage_comparable,usable_for_ratio
-shanghai,Shanghai,China,Asia,unlinked_trips,boarding,2025,city_proper,true,true,false,true,false
-beijing,Beijing,China,Asia,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-tokyo,Tokyo,Japan,Asia,estimated,estimated,2025,built_up_urban_area,true,true,true,true,true
-guangzhou,Guangzhou,China,Asia,unlinked_trips,boarding,2025,city_proper,true,true,false,true,false
-shenzhen,Shenzhen,China,Asia,unlinked_trips,boarding,2025,city_proper,true,true,false,true,false
-seoul,Seoul,South Korea,Asia,station_entries,entries,2024,built_up_urban_area,true,true,true,true,true
-moscow,Moscow,Russia,Europe,estimated,estimated,2024,built_up_urban_area,true,true,true,true,true
-delhi,Delhi,India,Asia,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-chengdu,Chengdu,China,Asia,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-hong-kong,Hong Kong,Hong Kong,Asia,passenger_journeys,journey,2025,built_up_urban_area,true,true,true,true,true
-paris,Paris,France,Europe,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-hangzhou,Hangzhou,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,true,true,true,true,true
-cairo,Cairo,Egypt,Africa,estimated,estimated,2023,built_up_urban_area,true,true,true,true,true
-wuhan,Wuhan,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,true,true,true,true,true
-chongqing,Chongqing,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,true,true,true,true,true
-xian,Xi'an,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,true,true,true,true,true
-new-york,New York City,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-singapore,Singapore,Singapore,Asia,estimated,estimated,2025,built_up_urban_area,true,true,true,true,true
-london,London,United Kingdom,Europe,station_entries,entries,2024,built_up_urban_area,true,true,true,true,true
-mexico-city,Mexico City,Mexico,North America,station_entries,entries,2024,built_up_urban_area,true,true,true,true,true
-osaka,Osaka,Japan,Asia,estimated,estimated,2023,built_up_urban_area,true,true,true,true,true
-prague,Prague,Czechia,Europe,passenger_journeys,journey,2024,metro_region,true,true,false,true,false
-nanjing,Nanjing,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,true,true,true,true,true
-changsha,Changsha,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,true,true,true,true,true
-berlin,Berlin,Germany,Europe,estimated,estimated,2024,built_up_urban_area,true,true,true,true,true
-istanbul,Istanbul,Türkiye,Europe,station_entries,entries,2024,built_up_urban_area,true,true,true,true,true
-sao-paulo,São Paulo,Brazil,South America,passenger_journeys,journey,2025,built_up_urban_area,true,true,true,true,true
-vienna,Vienna,Austria,Europe,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-taipei,Taipei,Taiwan,Asia,station_entries,entries,2025,built_up_urban_area,true,true,true,true,true
-madrid,Madrid,Spain,Europe,passenger_journeys,journey,2025,built_up_urban_area,true,true,true,true,true
-zhengzhou,Zhengzhou,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,true,true,true,true,true
-tianjin,Tianjin,China,Asia,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-milan,Milan,Italy,Europe,passenger_journeys,journey,2023,built_up_urban_area,true,true,true,true,true
-santiago,Santiago,Chile,South America,passenger_journeys,journey,2025,built_up_urban_area,true,true,true,true,true
-suzhou,Suzhou,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,true,true,true,true,true
-hamburg,Hamburg,Germany,Europe,passenger_journeys,journey,2025,built_up_urban_area,true,true,true,true,true
-qingdao,Qingdao,China,Asia,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-hefei,Hefei,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,true,true,true,true,true
-shenyang,Shenyang,China,Asia,,,2023,built_up_urban_area,false,true,true,true,false
-saint-petersburg,Saint Petersburg,Russia,Europe,passenger_journeys,journey,2020,built_up_urban_area,true,true,true,false,false
-athens,Athens,Greece,Europe,passenger_journeys,journey,2013,built_up_urban_area,true,true,true,false,false
-barcelona,Barcelona,Spain,Europe,station_entries,entries,2024,built_up_urban_area,true,true,true,true,true
-tunis,Tunis,Tunisia,Africa,passenger_journeys,journey,2026,built_up_urban_area,true,true,true,true,true
-nagoya,Nagoya,Japan,Asia,estimated,estimated,2024,built_up_urban_area,true,true,true,true,true
-munich,Munich,Germany,Europe,passenger_journeys,journey,2025,built_up_urban_area,true,true,true,true,true
-nanchang,Nanchang,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,true,true,true,true,true
-toronto,Toronto,Canada,North America,unlinked_trips,boarding,2024,built_up_urban_area,true,true,true,true,true
-brussels,Brussels,Belgium,Europe,linked_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-caracas,Caracas,Venezuela,South America,passenger_journeys,journey,2014,built_up_urban_area,true,true,true,false,false
-ningbo,Ningbo,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,true,true,true,true,true
-sydney,Sydney,Australia,Oceania,passenger_journeys,journey,2025,built_up_urban_area,true,true,true,true,true
-tehran,Tehran,Iran,Middle East & Central Asia,passenger_journeys,journey,2025,built_up_urban_area,true,true,true,true,true
-harbin,Harbin,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,true,true,true,true,true
-melbourne,Melbourne,Australia,Oceania,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-mumbai,Mumbai,India,Asia,estimated,estimated,2025,built_up_urban_area,true,true,true,true,true
-rio-de-janeiro,Rio de Janeiro,Brazil,South America,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-rome,Rome,Italy,Europe,passenger_journeys,journey,2019,built_up_urban_area,true,true,true,false,false
-busan,Busan,South Korea,Asia,station_entries,entries,2024,built_up_urban_area,true,true,true,true,true
-stockholm,Stockholm,Sweden,Europe,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-montreal,Montréal,Canada,North America,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-medellin,Medellín,Colombia,South America,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-kunming,Kunming,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,true,true,true,true,true
-kuala-lumpur,Kuala Lumpur,Malaysia,Asia,estimated,estimated,2024,built_up_urban_area,true,true,true,true,true
-tashkent,Tashkent,Uzbekistan,Middle East & Central Asia,station_entries,entries,2025,built_up_urban_area,true,true,true,true,true
-bengaluru,Bengaluru,India,Asia,estimated,estimated,2025,built_up_urban_area,true,true,true,true,true
-dubai,Dubai,United Arab Emirates,Middle East & Central Asia,station_entries,entries,2024,built_up_urban_area,true,true,true,true,true
-changchun,Changchun,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,true,true,true,true,true
-dalian,Dalian,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,true,true,true,true,true
-bangkok,Bangkok,Thailand,Asia,station_entries,entries,2024,built_up_urban_area,true,true,true,true,true
-guiyang,Guiyang,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,true,true,true,true,true
-kyiv,Kyiv,Ukraine,Europe,station_entries,entries,2025,built_up_urban_area,true,true,true,true,true
-budapest,Budapest,Hungary,Europe,passenger_journeys,journey,2025,built_up_urban_area,true,true,true,true,true
-cologne,Cologne,Germany,Europe,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-buenos-aires,Buenos Aires,Argentina,South America,station_entries,entries,2023,built_up_urban_area,true,true,true,true,true
-minsk,Minsk,Belarus,Europe,passenger_journeys,journey,2023,built_up_urban_area,true,true,true,true,true
-sapporo,Sapporo,Japan,Asia,station_entries,entries,2024,built_up_urban_area,true,true,true,true,true
-baku,Baku,Azerbaijan,Middle East & Central Asia,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-yokohama,Yokohama,Japan,Asia,station_entries,entries,2024,city_proper,true,true,false,true,false
-kharkiv,Kharkiv,Ukraine,Europe,passenger_journeys,journey,2018,built_up_urban_area,true,true,true,false,false
-lyon,Lyon,France,Europe,passenger_journeys,journey,2019,built_up_urban_area,true,true,true,false,false
-kolkata,Kolkata,India,Asia,passenger_journeys,journey,2025,built_up_urban_area,true,true,true,true,true
-dusseldorf,Düsseldorf,Germany,Europe,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-warsaw,Warsaw,Poland,Europe,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-lima,Lima,Peru,South America,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-zurich,Zurich,Switzerland,Europe,passenger_journeys,journey,2024,metro_region,true,true,false,true,false
-dresden,Dresden,Germany,Europe,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-frankfurt,Frankfurt,Germany,Europe,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-ankara,Ankara,Türkiye,Europe,passenger_journeys,journey,2025,built_up_urban_area,true,true,true,true,true
-lisbon,Lisbon,Portugal,Europe,passenger_journeys,journey,2019,built_up_urban_area,true,true,true,false,false
-guadalajara,Guadalajara,Mexico,North America,station_entries,entries,2024,built_up_urban_area,true,true,true,true,true
-leipzig,Leipzig,Germany,Europe,passenger_journeys,journey,2024,city_proper,true,true,false,true,false
-stuttgart,Stuttgart,Germany,Europe,passenger_journeys,journey,2024,metro_region,true,true,false,true,false
-hanover,Hanover,Germany,Europe,passenger_journeys,journey,2024,metro_region,true,true,false,true,false
-nuremberg,Nuremberg,Germany,Europe,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-rotterdam,Rotterdam,Netherlands,Europe,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-kobe,Kobe,Japan,Asia,station_entries,entries,2024,city_proper,true,true,false,true,false
-vancouver,Vancouver,Canada,North America,station_entries,entries,2025,built_up_urban_area,true,true,true,true,true
-boston,Boston,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-bucharest,Bucharest,Romania,Europe,passenger_journeys,journey,2023,built_up_urban_area,true,true,true,true,true
-washington,"Washington, DC",United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-chicago,Chicago,United States,North America,station_entries,entries,2025,built_up_urban_area,true,true,true,true,true
-strasbourg,Strasbourg,France,Europe,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-izmir,İzmir,Türkiye,Europe,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-sofia,Sofia,Bulgaria,Europe,passenger_journeys,journey,2024,city_proper,true,true,false,true,false
-kyoto,Kyoto,Japan,Asia,station_entries,entries,2024,metro_region,true,true,false,true,false
-copenhagen,Copenhagen,Denmark,Europe,passenger_journeys,journey,2024,metro_region,true,true,false,true,false
-gothenburg,Gothenburg,Sweden,Europe,estimated,estimated,2024,built_up_urban_area,true,true,true,true,true
-helsinki,Helsinki,Finland,Europe,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-zagreb,Zagreb,Croatia,Europe,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-toulouse,Toulouse,France,Europe,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-oslo,Oslo,Norway,Europe,passenger_journeys,journey,2016,built_up_urban_area,true,true,true,false,false
-salvador,Salvador,Brazil,South America,passenger_journeys,journey,2024,city_proper,true,true,false,true,false
-jinan,Jinan,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,true,true,true,true,true
-panama-city,Panama City,Panama,North America,station_entries,entries,2025,city_proper,true,true,false,true,false
-tbilisi,Tbilisi,Georgia,Middle East & Central Asia,station_entries,entries,2017,city_proper,true,true,false,false,false
-basel,Basel,Switzerland,Europe,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-chennai,Chennai,India,Asia,passenger_journeys,journey,2025,built_up_urban_area,true,true,true,true,true
-fuzhou,Fuzhou,China,Asia,,,2022,built_up_urban_area,false,true,true,true,false
-lille,Lille,France,Europe,passenger_journeys,journey,2016,built_up_urban_area,true,true,true,false,false
-montpellier,Montpellier,France,Europe,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-bursa,Bursa,Türkiye,Europe,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-santo-domingo,Santo Domingo,Dominican Republic,North America,station_entries,entries,2023,built_up_urban_area,true,true,true,true,true
-recife,Recife,Brazil,South America,passenger_journeys,journey,2018,built_up_urban_area,true,true,true,false,false
-bilbao,Bilbao,Spain,Europe,unlinked_trips,boarding,2024,metro_region,true,true,false,true,false
-monterrey,Monterrey,Mexico,North America,station_entries,entries,2025,built_up_urban_area,true,true,true,true,true
-bordeaux,Bordeaux,France,Europe,passenger_journeys,journey,2018,built_up_urban_area,true,true,true,false,false
-calgary,Calgary,Canada,North America,unlinked_trips,boarding,2025,metro_region,true,true,false,true,false
-sendai,Sendai,Japan,Asia,station_entries,entries,2024,city_proper,true,true,false,true,false
-valencia,Valencia,Spain,Europe,passenger_journeys,journey,2024,unclassified,true,true,false,true,false
-philadelphia,Philadelphia,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-the-hague,The Hague,Netherlands,Europe,passenger_journeys,journey,2018,metro_region,true,true,false,false,false
-wuxi,Wuxi,China,Asia,,,2016,city_proper,false,true,false,false,false
-porto,Porto,Portugal,Europe,passenger_journeys,journey,2023,built_up_urban_area,true,true,true,true,true
-manila,Manila,Philippines,Asia,passenger_journeys,journey,2022,built_up_urban_area,true,true,true,true,true
-marseille,Marseille,France,Europe,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-nantes,Nantes,France,Europe,passenger_journeys,journey,2025,built_up_urban_area,true,true,true,true,true
-karlsruhe,Karlsruhe,Germany,Europe,passenger_journeys,journey,2024,city_proper,true,true,false,true,false
-kaohsiung,Kaohsiung,Taiwan,Asia,station_entries,entries,2025,built_up_urban_area,true,true,true,true,true
-los-angeles,Los Angeles,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-amsterdam,Amsterdam,Netherlands,Europe,passenger_journeys,journey,2015,built_up_urban_area,true,true,true,false,false
-lahore,Lahore,Pakistan,Asia,estimated,estimated,2023,built_up_urban_area,true,true,true,true,true
-quito,Quito,Ecuador,South America,passenger_journeys,journey,2025,built_up_urban_area,true,true,true,true,true
-xiamen,Xiamen,China,Asia,,,2019,built_up_urban_area,false,true,true,false,false
-san-francisco-bart,San Francisco Bay Area,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-dublin,Dublin,Ireland,Europe,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-ahmedabad,Ahmedabad,India,Asia,passenger_journeys,journey,2025,built_up_urban_area,true,true,true,true,true
-lausanne,Lausanne,Switzerland,Europe,passenger_journeys,journey,2023,built_up_urban_area,true,true,true,true,true
-manchester,Manchester,United Kingdom,Europe,passenger_journeys,journey,2025,built_up_urban_area,true,true,true,true,true
-algiers,Algiers,Algeria,Africa,passenger_journeys,journey,2023,built_up_urban_area,true,true,true,true,true
-rennes,Rennes,France,Europe,passenger_journeys,journey,2022,built_up_urban_area,true,true,true,true,true
-brasilia,Brasília,Brazil,South America,passenger_journeys,journey,2025,built_up_urban_area,true,true,true,true,true
-jakarta,Jakarta,Indonesia,Asia,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-naples,Naples,Italy,Europe,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-san-diego,San Diego,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-seattle,Seattle,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-turin,Turin,Italy,Europe,passenger_journeys,journey,2023,built_up_urban_area,true,true,true,true,true
-tel-aviv,Tel Aviv,Israel,Middle East & Central Asia,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-san-francisco-muni,San Francisco,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-newcastle,Newcastle / Tyne and Wear,United Kingdom,Europe,passenger_journeys,journey,2025,city_proper,true,true,false,true,false
-rabat,Rabat,Morocco,Africa,passenger_journeys,journey,2015,built_up_urban_area,true,true,true,false,false
-casablanca,Casablanca,Morocco,Africa,estimated,estimated,2018,built_up_urban_area,true,true,true,false,false
-atlanta,Atlanta,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-thessaloniki,Thessaloniki,Greece,Europe,passenger_journeys,journey,2025,city_proper,true,true,false,true,false
-miami,Miami,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-portland,Portland,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-dallas,Dallas,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-ottawa,Ottawa,Canada,North America,linked_journeys,journey,2024,metro_region,true,true,false,true,false
-ho-chi-minh-city,Ho Chi Minh City,Vietnam,Asia,passenger_journeys,journey,2025,built_up_urban_area,true,true,true,true,true
-addis-ababa,Addis Ababa,Ethiopia,Africa,estimated,estimated,2023,city_proper,true,true,false,true,false
-porto-alegre,Porto Alegre,Brazil,South America,passenger_journeys,journey,2024,built_up_urban_area,true,true,true,true,true
-hanoi,Hanoi,Vietnam,Asia,passenger_journeys,journey,2025,built_up_urban_area,true,true,true,true,true
-shiraz,Shiraz,Iran,Middle East & Central Asia,station_entries,entries,2018,city_proper,true,true,false,false,false
-minneapolis,Minneapolis–St. Paul,United States,North America,unlinked_trips,boarding,2024,built_up_urban_area,true,true,true,true,true
-salt-lake-city,Salt Lake City,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-glasgow,Glasgow,United Kingdom,Europe,passenger_journeys,journey,2025,city_proper,true,true,false,true,false
-houston,Houston,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-phoenix,Phoenix,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-denver,Denver,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-baltimore,Baltimore,United States,North America,unlinked_trips,boarding,2025,city_proper,true,true,false,true,false
-pune,Pune,India,Asia,passenger_journeys,journey,2023,built_up_urban_area,true,true,true,true,true
-st-louis,St. Louis,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-sacramento,Sacramento,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-charlotte,Charlotte,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-san-jose,San Jose,United States,North America,unlinked_trips,boarding,2025,city_proper,true,true,false,true,false
-lagos,Lagos,Nigeria,Africa,estimated,estimated,2025,built_up_urban_area,true,true,true,true,true
-edmonton,Edmonton,Canada,North America,,,,metro_region,false,false,false,false,false
-antwerp,Antwerp,Belgium,Europe,,,,city_proper,false,false,false,false,false
-krakow,Kraków,Poland,Europe,,,,city_proper,false,false,false,false,false
-mashhad,Mashhad,Iran,Middle East & Central Asia,,,,built_up_urban_area,false,false,true,false,false
-doha,Doha,Qatar,Middle East & Central Asia,,,2024,built_up_urban_area,false,false,true,true,false
-riyadh,Riyadh,Saudi Arabia,Middle East & Central Asia,,,,built_up_urban_area,false,false,true,false,false
-dhaka,Dhaka,Bangladesh,Asia,,,2025,built_up_urban_area,false,false,true,true,false
-nanning,Nanning,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,true,true,true,true,true
-shijiazhuang,Shijiazhuang,China,Asia,unlinked_trips,boarding,2025,built_up_urban_area,true,true,true,true,true
-hyderabad,Hyderabad,India,Asia,passenger_journeys,journey,2025,built_up_urban_area,true,true,true,true,true
-kochi,Kochi,India,Asia,passenger_journeys,journey,2025,built_up_urban_area,true,true,true,true,true
-nagpur,Nagpur,India,Asia,,,2025,built_up_urban_area,false,false,true,true,false
-fukuoka,Fukuoka,Japan,Asia,estimated,estimated,2024,built_up_urban_area,true,true,true,true,true
-daegu,Daegu,South Korea,Asia,estimated,estimated,2023,built_up_urban_area,true,true,true,true,true
-incheon,Incheon,South Korea,Asia,,,2025,built_up_urban_area,false,true,true,true,false
-taoyuan,Taoyuan,Taiwan,Asia,,,2025,city_proper,false,true,false,true,false
+slug,city,country,region,measure_def,convention_family,annual_year,population_basis,mode_scope,mode_scope_checked,metric_known,citation_resolves,denominator_consistent,vintage_comparable,mode_scope_known,mode_scope_consistent,usable_for_ratio
+shanghai,Shanghai,China,Asia,unlinked_trips,boarding,2025,city_proper,metro_only,system_field,true,true,false,true,true,true,false
+beijing,Beijing,China,Asia,unlinked_trips,boarding,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+tokyo,Tokyo,Japan,Asia,estimated,estimated,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+guangzhou,Guangzhou,China,Asia,unlinked_trips,boarding,2025,city_proper,metro_only,system_field,true,true,false,true,true,true,false
+shenzhen,Shenzhen,China,Asia,unlinked_trips,boarding,2025,city_proper,metro_only,system_field,true,true,false,true,true,true,false
+seoul,Seoul,South Korea,Asia,station_entries,entries,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+moscow,Moscow,Russia,Europe,estimated,estimated,2024,built_up_urban_area,metro_plus_regional_rail,system_field,true,true,true,true,true,false,false
+delhi,Delhi,India,Asia,unlinked_trips,boarding,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+chengdu,Chengdu,China,Asia,unlinked_trips,boarding,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+hong-kong,Hong Kong,Hong Kong,Asia,passenger_journeys,journey,2025,built_up_urban_area,metro_plus_urban_rail,system_field,true,true,true,true,true,true,true
+paris,Paris,France,Europe,passenger_journeys,journey,2024,built_up_urban_area,metro_plus_regional_rail,system_field,true,true,true,true,true,false,false
+hangzhou,Hangzhou,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+cairo,Cairo,Egypt,Africa,estimated,estimated,2023,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+wuhan,Wuhan,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+chongqing,Chongqing,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+xian,Xi'an,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+new-york,New York City,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+singapore,Singapore,Singapore,Asia,estimated,estimated,2025,built_up_urban_area,metro_plus_urban_rail,system_field,true,true,true,true,true,true,true
+london,London,United Kingdom,Europe,station_entries,entries,2024,built_up_urban_area,metro_plus_regional_rail,system_field,true,true,true,true,true,false,false
+mexico-city,Mexico City,Mexico,North America,station_entries,entries,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+osaka,Osaka,Japan,Asia,estimated,estimated,2023,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+prague,Prague,Czechia,Europe,passenger_journeys,journey,2024,metro_region,multimodal_agency,override:fetched 2026-09-20,true,true,false,true,true,false,false
+nanjing,Nanjing,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+changsha,Changsha,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+berlin,Berlin,Germany,Europe,estimated,estimated,2024,built_up_urban_area,unknown,override:fetched 2026-09-20,true,true,true,true,false,false,false
+istanbul,Istanbul,Türkiye,Europe,station_entries,entries,2024,built_up_urban_area,metro_plus_regional_rail,system_field,true,true,true,true,true,false,false
+sao-paulo,São Paulo,Brazil,South America,passenger_journeys,journey,2025,built_up_urban_area,metro_plus_regional_rail,system_field,true,true,true,true,true,false,false
+vienna,Vienna,Austria,Europe,passenger_journeys,journey,2024,built_up_urban_area,multimodal_agency,override:fetched 2026-09-20,true,true,true,true,true,false,false
+taipei,Taipei,Taiwan,Asia,station_entries,entries,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+madrid,Madrid,Spain,Europe,passenger_journeys,journey,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+zhengzhou,Zhengzhou,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+tianjin,Tianjin,China,Asia,unlinked_trips,boarding,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+milan,Milan,Italy,Europe,passenger_journeys,journey,2023,built_up_urban_area,metro_plus_urban_rail,system_field,true,true,true,true,true,true,true
+santiago,Santiago,Chile,South America,passenger_journeys,journey,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+suzhou,Suzhou,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+hamburg,Hamburg,Germany,Europe,passenger_journeys,journey,2025,built_up_urban_area,metro_plus_regional_rail,system_field,true,true,true,true,true,false,false
+qingdao,Qingdao,China,Asia,unlinked_trips,boarding,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+hefei,Hefei,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+shenyang,Shenyang,China,Asia,,,2023,built_up_urban_area,metro_only,system_field,false,true,true,true,true,true,false
+saint-petersburg,Saint Petersburg,Russia,Europe,passenger_journeys,journey,2020,built_up_urban_area,metro_only,system_field,true,true,true,false,true,true,false
+athens,Athens,Greece,Europe,passenger_journeys,journey,2013,built_up_urban_area,metro_plus_urban_rail,system_field,true,true,true,false,true,true,false
+barcelona,Barcelona,Spain,Europe,station_entries,entries,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+tunis,Tunis,Tunisia,Africa,passenger_journeys,journey,2026,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+nagoya,Nagoya,Japan,Asia,estimated,estimated,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+munich,Munich,Germany,Europe,passenger_journeys,journey,2025,built_up_urban_area,unknown,override:fetched 2026-09-20,true,true,true,true,false,false,false
+nanchang,Nanchang,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+toronto,Toronto,Canada,North America,unlinked_trips,boarding,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+brussels,Brussels,Belgium,Europe,linked_journeys,journey,2024,built_up_urban_area,metro_plus_urban_rail,system_field,true,true,true,true,true,true,true
+caracas,Caracas,Venezuela,South America,passenger_journeys,journey,2014,built_up_urban_area,metro_only,system_field,true,true,true,false,true,true,false
+ningbo,Ningbo,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+sydney,Sydney,Australia,Oceania,passenger_journeys,journey,2025,built_up_urban_area,metro_plus_regional_rail,system_field,true,true,true,true,true,false,false
+tehran,Tehran,Iran,Middle East & Central Asia,passenger_journeys,journey,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+harbin,Harbin,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+melbourne,Melbourne,Australia,Oceania,passenger_journeys,journey,2024,built_up_urban_area,metro_plus_regional_rail,system_field,true,true,true,true,true,false,false
+mumbai,Mumbai,India,Asia,estimated,estimated,2025,built_up_urban_area,metro_plus_urban_rail,system_field,true,true,true,true,true,true,true
+rio-de-janeiro,Rio de Janeiro,Brazil,South America,passenger_journeys,journey,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+rome,Rome,Italy,Europe,passenger_journeys,journey,2019,built_up_urban_area,metro_only,system_field,true,true,true,false,true,true,false
+busan,Busan,South Korea,Asia,station_entries,entries,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+stockholm,Stockholm,Sweden,Europe,passenger_journeys,journey,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+montreal,Montréal,Canada,North America,unlinked_trips,boarding,2025,built_up_urban_area,metro_plus_regional_rail,system_field,true,true,true,true,true,false,false
+medellin,Medellín,Colombia,South America,passenger_journeys,journey,2024,built_up_urban_area,metro_plus_urban_rail,system_field,true,true,true,true,true,true,true
+kunming,Kunming,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+kuala-lumpur,Kuala Lumpur,Malaysia,Asia,estimated,estimated,2024,built_up_urban_area,metro_plus_regional_rail,system_field,true,true,true,true,true,false,false
+tashkent,Tashkent,Uzbekistan,Middle East & Central Asia,station_entries,entries,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+bengaluru,Bengaluru,India,Asia,estimated,estimated,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+dubai,Dubai,United Arab Emirates,Middle East & Central Asia,station_entries,entries,2024,built_up_urban_area,metro_plus_urban_rail,system_field,true,true,true,true,true,true,true
+changchun,Changchun,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+dalian,Dalian,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+bangkok,Bangkok,Thailand,Asia,station_entries,entries,2024,built_up_urban_area,metro_plus_regional_rail,system_field,true,true,true,true,true,false,false
+guiyang,Guiyang,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+kyiv,Kyiv,Ukraine,Europe,station_entries,entries,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+budapest,Budapest,Hungary,Europe,passenger_journeys,journey,2025,built_up_urban_area,metro_plus_urban_rail,system_field,true,true,true,true,true,true,true
+cologne,Cologne,Germany,Europe,passenger_journeys,journey,2024,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+buenos-aires,Buenos Aires,Argentina,South America,station_entries,entries,2023,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+minsk,Minsk,Belarus,Europe,passenger_journeys,journey,2023,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+sapporo,Sapporo,Japan,Asia,station_entries,entries,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+baku,Baku,Azerbaijan,Middle East & Central Asia,passenger_journeys,journey,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+yokohama,Yokohama,Japan,Asia,station_entries,entries,2024,city_proper,metro_only,system_field,true,true,false,true,true,true,false
+kharkiv,Kharkiv,Ukraine,Europe,passenger_journeys,journey,2018,built_up_urban_area,metro_only,system_field,true,true,true,false,true,true,false
+lyon,Lyon,France,Europe,passenger_journeys,journey,2019,built_up_urban_area,metro_plus_urban_rail,system_field,true,true,true,false,true,true,false
+kolkata,Kolkata,India,Asia,passenger_journeys,journey,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+dusseldorf,Düsseldorf,Germany,Europe,passenger_journeys,journey,2024,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+warsaw,Warsaw,Poland,Europe,passenger_journeys,journey,2024,built_up_urban_area,metro_plus_urban_rail,system_field,true,true,true,true,true,true,true
+lima,Lima,Peru,South America,passenger_journeys,journey,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+zurich,Zurich,Switzerland,Europe,passenger_journeys,journey,2024,metro_region,tram_or_lrt_only,system_field,true,true,false,true,true,true,false
+dresden,Dresden,Germany,Europe,passenger_journeys,journey,2024,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+frankfurt,Frankfurt,Germany,Europe,passenger_journeys,journey,2024,built_up_urban_area,metro_plus_regional_rail,system_field,true,true,true,true,true,false,false
+ankara,Ankara,Türkiye,Europe,passenger_journeys,journey,2025,built_up_urban_area,metro_plus_urban_rail,system_field,true,true,true,true,true,true,true
+lisbon,Lisbon,Portugal,Europe,passenger_journeys,journey,2019,built_up_urban_area,metro_only,system_field,true,true,true,false,true,true,false
+guadalajara,Guadalajara,Mexico,North America,station_entries,entries,2024,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+leipzig,Leipzig,Germany,Europe,passenger_journeys,journey,2024,city_proper,tram_or_lrt_only,system_field,true,true,false,true,true,true,false
+stuttgart,Stuttgart,Germany,Europe,passenger_journeys,journey,2024,metro_region,tram_or_lrt_only,system_field,true,true,false,true,true,true,false
+hanover,Hanover,Germany,Europe,passenger_journeys,journey,2024,metro_region,tram_or_lrt_only,system_field,true,true,false,true,true,true,false
+nuremberg,Nuremberg,Germany,Europe,passenger_journeys,journey,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+rotterdam,Rotterdam,Netherlands,Europe,unlinked_trips,boarding,2025,built_up_urban_area,metro_plus_urban_rail,system_field,true,true,true,true,true,true,true
+kobe,Kobe,Japan,Asia,station_entries,entries,2024,city_proper,metro_only,system_field,true,true,false,true,true,true,false
+vancouver,Vancouver,Canada,North America,station_entries,entries,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+boston,Boston,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+bucharest,Bucharest,Romania,Europe,passenger_journeys,journey,2023,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+washington,"Washington, DC",United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+chicago,Chicago,United States,North America,station_entries,entries,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+strasbourg,Strasbourg,France,Europe,passenger_journeys,journey,2024,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+izmir,İzmir,Türkiye,Europe,passenger_journeys,journey,2024,built_up_urban_area,metro_plus_regional_rail,system_field,true,true,true,true,true,false,false
+sofia,Sofia,Bulgaria,Europe,passenger_journeys,journey,2024,city_proper,metro_only,system_field,true,true,false,true,true,true,false
+kyoto,Kyoto,Japan,Asia,station_entries,entries,2024,metro_region,metro_only,system_field,true,true,false,true,true,true,false
+copenhagen,Copenhagen,Denmark,Europe,passenger_journeys,journey,2024,metro_region,metro_only,system_field,true,true,false,true,true,true,false
+gothenburg,Gothenburg,Sweden,Europe,estimated,estimated,2024,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+helsinki,Helsinki,Finland,Europe,passenger_journeys,journey,2024,built_up_urban_area,metro_plus_urban_rail,system_field,true,true,true,true,true,true,true
+zagreb,Zagreb,Croatia,Europe,passenger_journeys,journey,2024,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+toulouse,Toulouse,France,Europe,passenger_journeys,journey,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+oslo,Oslo,Norway,Europe,passenger_journeys,journey,2016,built_up_urban_area,metro_plus_urban_rail,system_field,true,true,true,false,true,true,false
+salvador,Salvador,Brazil,South America,passenger_journeys,journey,2024,city_proper,metro_only,system_field,true,true,false,true,true,true,false
+jinan,Jinan,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+panama-city,Panama City,Panama,North America,station_entries,entries,2025,city_proper,metro_only,system_field,true,true,false,true,true,true,false
+tbilisi,Tbilisi,Georgia,Middle East & Central Asia,station_entries,entries,2017,city_proper,metro_only,system_field,true,true,false,false,true,true,false
+basel,Basel,Switzerland,Europe,passenger_journeys,journey,2024,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+chennai,Chennai,India,Asia,passenger_journeys,journey,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+fuzhou,Fuzhou,China,Asia,,,2022,built_up_urban_area,metro_only,system_field,false,true,true,true,true,true,false
+lille,Lille,France,Europe,passenger_journeys,journey,2016,built_up_urban_area,metro_only,system_field,true,true,true,false,true,true,false
+montpellier,Montpellier,France,Europe,passenger_journeys,journey,2024,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+bursa,Bursa,Türkiye,Europe,passenger_journeys,journey,2024,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+santo-domingo,Santo Domingo,Dominican Republic,North America,station_entries,entries,2023,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+recife,Recife,Brazil,South America,passenger_journeys,journey,2018,built_up_urban_area,metro_only,system_field,true,true,true,false,true,true,false
+bilbao,Bilbao,Spain,Europe,unlinked_trips,boarding,2024,metro_region,metro_only,system_field,true,true,false,true,true,true,false
+monterrey,Monterrey,Mexico,North America,station_entries,entries,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+bordeaux,Bordeaux,France,Europe,passenger_journeys,journey,2018,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,false,true,true,false
+calgary,Calgary,Canada,North America,unlinked_trips,boarding,2025,metro_region,tram_or_lrt_only,system_field,true,true,false,true,true,true,false
+sendai,Sendai,Japan,Asia,station_entries,entries,2024,city_proper,metro_only,system_field,true,true,false,true,true,true,false
+valencia,Valencia,Spain,Europe,passenger_journeys,journey,2024,unclassified,metro_only,system_field,true,true,false,true,true,true,false
+philadelphia,Philadelphia,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+the-hague,The Hague,Netherlands,Europe,passenger_journeys,journey,2018,metro_region,metro_plus_regional_rail,system_field,true,true,false,false,true,false,false
+wuxi,Wuxi,China,Asia,,,2016,city_proper,metro_only,system_field,false,true,false,false,true,true,false
+porto,Porto,Portugal,Europe,passenger_journeys,journey,2023,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+manila,Manila,Philippines,Asia,passenger_journeys,journey,2022,built_up_urban_area,metro_plus_urban_rail,system_field,true,true,true,true,true,true,true
+marseille,Marseille,France,Europe,passenger_journeys,journey,2024,built_up_urban_area,metro_plus_urban_rail,system_field,true,true,true,true,true,true,true
+nantes,Nantes,France,Europe,passenger_journeys,journey,2025,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+karlsruhe,Karlsruhe,Germany,Europe,passenger_journeys,journey,2024,city_proper,tram_or_lrt_only,system_field,true,true,false,true,true,true,false
+kaohsiung,Kaohsiung,Taiwan,Asia,station_entries,entries,2025,built_up_urban_area,metro_plus_urban_rail,system_field,true,true,true,true,true,true,true
+los-angeles,Los Angeles,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+amsterdam,Amsterdam,Netherlands,Europe,passenger_journeys,journey,2015,built_up_urban_area,metro_plus_urban_rail,system_field,true,true,true,false,true,true,false
+lahore,Lahore,Pakistan,Asia,estimated,estimated,2023,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+quito,Quito,Ecuador,South America,passenger_journeys,journey,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+xiamen,Xiamen,China,Asia,,,2019,built_up_urban_area,metro_only,system_field,false,true,true,false,true,true,false
+san-francisco-bart,San Francisco Bay Area,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+dublin,Dublin,Ireland,Europe,passenger_journeys,journey,2024,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+ahmedabad,Ahmedabad,India,Asia,passenger_journeys,journey,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+lausanne,Lausanne,Switzerland,Europe,passenger_journeys,journey,2023,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+manchester,Manchester,United Kingdom,Europe,passenger_journeys,journey,2025,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+algiers,Algiers,Algeria,Africa,passenger_journeys,journey,2023,built_up_urban_area,metro_plus_urban_rail,system_field,true,true,true,true,true,true,true
+rennes,Rennes,France,Europe,passenger_journeys,journey,2022,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+brasilia,Brasília,Brazil,South America,passenger_journeys,journey,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+jakarta,Jakarta,Indonesia,Asia,passenger_journeys,journey,2024,built_up_urban_area,metro_plus_regional_rail,system_field,true,true,true,true,true,false,false
+naples,Naples,Italy,Europe,passenger_journeys,journey,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+san-diego,San Diego,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+seattle,Seattle,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+turin,Turin,Italy,Europe,passenger_journeys,journey,2023,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+tel-aviv,Tel Aviv,Israel,Middle East & Central Asia,passenger_journeys,journey,2024,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+san-francisco-muni,San Francisco,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+newcastle,Newcastle / Tyne and Wear,United Kingdom,Europe,passenger_journeys,journey,2025,city_proper,metro_only,system_field,true,true,false,true,true,true,false
+rabat,Rabat,Morocco,Africa,passenger_journeys,journey,2015,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,false,true,true,false
+casablanca,Casablanca,Morocco,Africa,estimated,estimated,2018,built_up_urban_area,multimodal_agency,system_field,true,true,true,false,true,false,false
+atlanta,Atlanta,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+thessaloniki,Thessaloniki,Greece,Europe,passenger_journeys,journey,2025,city_proper,metro_only,system_field,true,true,false,true,true,true,false
+miami,Miami,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,metro_plus_urban_rail,system_field,true,true,true,true,true,true,true
+portland,Portland,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+dallas,Dallas,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+ottawa,Ottawa,Canada,North America,linked_journeys,journey,2024,metro_region,tram_or_lrt_only,system_field,true,true,false,true,true,true,false
+ho-chi-minh-city,Ho Chi Minh City,Vietnam,Asia,passenger_journeys,journey,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+addis-ababa,Addis Ababa,Ethiopia,Africa,estimated,estimated,2023,city_proper,tram_or_lrt_only,system_field,true,true,false,true,true,true,false
+porto-alegre,Porto Alegre,Brazil,South America,passenger_journeys,journey,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+hanoi,Hanoi,Vietnam,Asia,passenger_journeys,journey,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+shiraz,Shiraz,Iran,Middle East & Central Asia,station_entries,entries,2018,city_proper,metro_only,system_field,true,true,false,false,true,true,false
+minneapolis,Minneapolis–St. Paul,United States,North America,unlinked_trips,boarding,2024,built_up_urban_area,metro_plus_urban_rail,system_field,true,true,true,true,true,true,true
+salt-lake-city,Salt Lake City,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+glasgow,Glasgow,United Kingdom,Europe,passenger_journeys,journey,2025,city_proper,metro_only,system_field,true,true,false,true,true,true,false
+houston,Houston,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+phoenix,Phoenix,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+denver,Denver,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+baltimore,Baltimore,United States,North America,unlinked_trips,boarding,2025,city_proper,metro_plus_urban_rail,system_field,true,true,false,true,true,true,false
+pune,Pune,India,Asia,passenger_journeys,journey,2023,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+st-louis,St. Louis,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+sacramento,Sacramento,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+charlotte,Charlotte,United States,North America,unlinked_trips,boarding,2025,built_up_urban_area,tram_or_lrt_only,system_field,true,true,true,true,true,true,true
+san-jose,San Jose,United States,North America,unlinked_trips,boarding,2025,city_proper,tram_or_lrt_only,system_field,true,true,false,true,true,true,false
+lagos,Lagos,Nigeria,Africa,estimated,estimated,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+edmonton,Edmonton,Canada,North America,,,,metro_region,tram_or_lrt_only,system_field,false,false,false,false,true,true,false
+antwerp,Antwerp,Belgium,Europe,,,,city_proper,metro_plus_urban_rail,system_field,false,false,false,false,true,true,false
+krakow,Kraków,Poland,Europe,,,,city_proper,tram_or_lrt_only,system_field,false,false,false,false,true,true,false
+mashhad,Mashhad,Iran,Middle East & Central Asia,,,,built_up_urban_area,metro_only,system_field,false,false,true,false,true,true,false
+doha,Doha,Qatar,Middle East & Central Asia,,,2024,built_up_urban_area,metro_plus_urban_rail,system_field,false,false,true,true,true,true,false
+riyadh,Riyadh,Saudi Arabia,Middle East & Central Asia,,,,built_up_urban_area,metro_only,system_field,false,false,true,false,true,true,false
+dhaka,Dhaka,Bangladesh,Asia,,,2025,built_up_urban_area,metro_only,system_field,false,false,true,true,true,true,false
+nanning,Nanning,China,Asia,unlinked_trips,boarding,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+shijiazhuang,Shijiazhuang,China,Asia,unlinked_trips,boarding,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+hyderabad,Hyderabad,India,Asia,passenger_journeys,journey,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+kochi,Kochi,India,Asia,passenger_journeys,journey,2025,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+nagpur,Nagpur,India,Asia,,,2025,built_up_urban_area,metro_only,system_field,false,false,true,true,true,true,false
+fukuoka,Fukuoka,Japan,Asia,estimated,estimated,2024,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+daegu,Daegu,South Korea,Asia,estimated,estimated,2023,built_up_urban_area,metro_only,system_field,true,true,true,true,true,true,true
+incheon,Incheon,South Korea,Asia,,,2025,built_up_urban_area,metro_only,system_field,false,true,true,true,true,true,false
+taoyuan,Taoyuan,Taiwan,Asia,,,2025,city_proper,metro_only,system_field,false,true,false,true,true,true,false

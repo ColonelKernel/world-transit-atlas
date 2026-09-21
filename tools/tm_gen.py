@@ -62,7 +62,10 @@ def _thin(lines):
 
 NETWORKS = {}
 _before = _after = 0
-for _f in _glob.glob(os.path.join(_DAT,"networks","*.json")):
+# sorted(): glob returns filesystem order, which differs between macOS and
+# Linux, so an unsorted walk emits the same bytes in a different key order and
+# the build stops being reproducible across machines.
+for _f in sorted(_glob.glob(os.path.join(_DAT,"networks","*.json"))):
     _n = json.load(open(_f))
     _lines = _n.get("lines", [])
     _before += sum(len(p) for l in _lines for p in l.get("paths", []))

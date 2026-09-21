@@ -46,6 +46,18 @@ MODE_ROUTES = {
     "metro+tram": ["subway", "tram"],
     "metro+lrt":  ["subway", "light_rail"],
 }
+# OSM's `colour` tag permits CSS colour keywords as well as hex. Canvas renders
+# both, but a mixed schema means every consumer has to handle two formats, so
+# the keywords are canonicalised here. CSS `green` is #008000, not #00FF00.
+NAMED_COLOURS = {
+    "red": "#FF0000", "blue": "#0000FF", "green": "#008000", "black": "#000000",
+    "white": "#FFFFFF", "yellow": "#FFFF00", "orange": "#FFA500", "purple": "#800080",
+    "brown": "#A52A2A", "grey": "#808080", "gray": "#808080", "pink": "#FFC0CB",
+    "cyan": "#00FFFF", "aqua": "#00FFFF", "magenta": "#FF00FF", "fuchsia": "#FF00FF",
+    "silver": "#C0C0C0", "maroon": "#800000", "navy": "#000080", "olive": "#808000",
+    "teal": "#008080", "lime": "#00FF00",
+}
+
 PALETTE = ["#e6194b","#3cb44b","#4363d8","#f58231","#911eb4","#46f0f0","#f032e6",
            "#bcf60c","#fabebe","#008080","#e6beff","#9a6324","#800000","#808000",
            "#000075","#a9a9a9","#ffe119","#00a1de","#ff6319","#6cbe45"]
@@ -86,6 +98,8 @@ def fetch_lines(lat, lon, route_types):
         if SKIP_REF.search(str(ref)) or tags.get("disused") or tags.get("proposed"):
             continue
         color = tags.get("colour") or tags.get("color")
+        if color and color.strip().lower() in NAMED_COLOURS:
+            color = NAMED_COLOURS[color.strip().lower()]
         if color and not color.startswith("#") and len(color) in (3, 6) and all(c in "0123456789abcdefABCDEF" for c in color):
             color = "#" + color
         if not color:

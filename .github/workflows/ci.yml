@@ -1,0 +1,66 @@
+name: CI
+
+# The repo makes checkable claims -- a system count, a line count, a generated
+# page, two provenance enums -- and nothing checked them. These are the gates.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  data:
+    name: Data integrity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Data-integrity suite
+        # Schema, geometry, the README's own counts, both enums, and whether
+        # index.html is still what data/ generates.
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Comparability audit
+        # Runs read-only; fails if any measure_def or mode_scope stops resolving.
+        run: python3 tools/comparability.py
+
+      - name: Audit output is committed
+        # comparability.py --write must be a no-op on a clean tree. If it is
+        # not, the graded CSVs were generated from different inputs than the
+        # ones in the commit.
+        run: |
+          python3 tools/comparability.py --write
+          if ! git diff --quiet -- data/research/comparability.csv data/research/ridership_verified.csv; then
+            echo "::error::The graded CSVs are stale. Run 'python3 tools/comparability.py --write' and commit."
+            git --no-pager diff --stat -- data/research
+            exit 1
+          fi
+
+  model:
+    name: Ridership model
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install numpy
+        run: python3 -m pip install --quiet numpy
+
+      - name: Fit the ladder
+        # A smoke test, not a result check: the model must run end to end and
+        # still report the axis it is meant to control for.
+        run: |
+          python3 tools/ridership_model.py | tee model.txt
+          grep -q "H. + numerator mode scope" model.txt \
+            || { echo "::error::spec H (axis 2) is missing from the ladder"; exit 1; }

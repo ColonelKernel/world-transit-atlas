@@ -207,5 +207,36 @@ because mode scope is strongly collinear with the mode column — a tram system'
 figure covers trams. Axis 2 earns its place as an exclusion criterion, not as a
 predictor, and the ladder reports both.
 
+## What is checked
+
+`.github/workflows/ci.yml` runs on every push and pull request. The repo makes
+checkable claims and, until these gates existed, checked none of them.
+
+```bash
+python3 -m unittest discover -s tests -v   # 14 gates, stdlib only
+```
+
+- **Schema and geometry** — all 201 files carry `{slug, city, stations, lines}`,
+  every city has both lines and stations, every coordinate is on the globe,
+  every line colour is a hex triplet, and no depot track or disused alignment
+  has crept back in.
+- **Geometry is where it claims** — each city's line centroid must sit within
+  60 km of its recorded coordinates, which catches a transposed lon/lat or a
+  city wired to the wrong centre without penalising a wide tram catchment.
+- **The README's counts are asserted against the data**, not trusted. The
+  system, line and station totals above are parsed out of this file and
+  compared to `data/networks/`. This is the gate that would have caught
+  "1,303 lines".
+- **Both provenance enums resolve** for all 201 systems, with nothing allowed to
+  default, and every reviewed `mode_scope` override must carry evidence and a
+  URL.
+- **`index.html` is reproducible** — the committed page must be byte-identical
+  to what `tools/tm_gen.py` currently generates, so data can never drift away
+  from the page that claims to show it. (The check restores the committed bytes
+  before failing, so a local run never leaves a half-rebuilt page.)
+- **The graded CSVs are current** — `comparability.py --write` must be a no-op
+  on a clean tree.
+- **The model still runs** end to end and still reports spec H.
+
 ## Credit
 Built with Claude (Cowork). Transit data © its respective sources as listed above.

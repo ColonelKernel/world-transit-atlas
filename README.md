@@ -198,11 +198,11 @@ attached to it, the honest grade is `unknown`, not a plausible guess.
 `usable_for_ratio` now also requires an urban-rail-only numerator, which takes the
 comparable subset from 143 systems to 126. On that subset the counting-convention
 effect stops being significant — `is_boarding` moves from +0.789 (p=0.029) to
-+0.709 (p=0.077). The effect was partly carried by systems whose numerator was
++0.732 (p=0.066). The effect was partly carried by systems whose numerator was
 quietly larger.
 
 Entered as regressors instead (spec H), the scope dummies do **not** reach
-significance (p = 0.98, 0.41, 0.12, 0.14) and the mode coefficients inflate,
+significance (p = 0.95, 0.41, 0.12, 0.16) and the mode coefficients inflate,
 because mode scope is strongly collinear with the mode column — a tram system's
 figure covers trams. Axis 2 earns its place as an exclusion criterion, not as a
 predictor, and the ladder reports both.

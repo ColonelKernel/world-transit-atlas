@@ -189,8 +189,12 @@ def fetch_stations(lat, lon, route_types):
         if t == "tram":
             sel.append('node["railway"="tram_stop"](around:%d,%s,%s);' % (RADIUS_M, lat, lon))
         else:
-            sel.append('node["railway"="station"]["station"="%s"](around:%d,%s,%s);' % (t, RADIUS_M, lat, lon))
-            sel.append('node["railway"="station"]["%s"="yes"](around:%d,%s,%s);' % (t, RADIUS_M, lat, lon))
+            # ["construction"!~"."] drops nodes OSM marks as still being built
+            # (construction=station). It is the only build-status tag Chennai's
+            # station nodes carry, so it is worth the filter but does not settle
+            # that city -- 81 of its 83 nodes are tagged as open.
+            sel.append('node["railway"="station"]["station"="%s"]["construction"!~"."](around:%d,%s,%s);' % (t, RADIUS_M, lat, lon))
+            sel.append('node["railway"="station"]["%s"="yes"]["construction"!~"."](around:%d,%s,%s);' % (t, RADIUS_M, lat, lon))
     q = f'[out:json][timeout:180];({"".join(sel)});out;'
     els = overpass(q).get("elements", [])
     seen, stations = set(), []

@@ -74,9 +74,31 @@ jobs:
         run: python3 -m pip install --quiet numpy
 
       - name: Fit the ladder
-        # A smoke test, not a result check: the model must run end to end and
-        # still report the axis it is meant to control for.
+        # The model must run end to end and still report the axis it is meant
+        # to control for.
         run: |
           python3 tools/ridership_model.py | tee model.txt
           grep -q "H. + numerator mode scope" model.txt \
             || { echo "::error::spec H (axis 2) is missing from the ladder"; exit 1; }
+
+      - name: README quotes the model it ships
+        # The README states spec G's is_boarding coefficient and p-value. A
+        # station-count change moved them once while the prose stood still, so
+        # the quoted figure is parsed out of README.md and compared with the
+        # run above. A number written from memory drifts; one asserted here
+        # cannot.
+        run: |
+          python3 - <<'EOF'
+          import re, sys
+          readme = open("README.md", encoding="utf-8").read()
+          model  = open("model.txt", encoding="utf-8").read()
+          q = re.search(r"`is_boarding` moves from \+[\d.]+ \(p=[\d.]+\) to\s*\+([\d.]+) \(p=([\d.]+)\)", readme)
+          g = re.search(r"^G\..*?is_boarding\s+\+([\d.]+)\s+se\s+[\d.]+\s+p=([\d.]+)", model, re.S | re.M)
+          if not q or not g:
+              sys.exit("could not find the spec G is_boarding figure in README.md or model output")
+          qc, qp = float(q.group(1)), float(q.group(2))
+          mc, mp = float(g.group(1)), float(g.group(2))
+          if abs(qc - mc) > 0.0005 or abs(round(mp, 3) - qp) > 0.0005:
+              sys.exit(f"README quotes is_boarding +{qc} (p={qp}) but the model reports +{mc:.3f} (p={mp:.3f}). Update the README.")
+          print(f"README figure matches the model: +{mc:.3f} (p={mp:.3f})")
+          EOF

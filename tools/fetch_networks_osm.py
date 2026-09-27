@@ -147,6 +147,52 @@ def fetch_stations(lat, lon, route_types):
                          "lat": round(n["lat"], 5), "routes": routes})
     return stations
 
+# ---- provenance -------------------------------------------------------------
+# data/networks/provenance.csv is the geometry counterpart to the ridership
+# provenance tables. Writing the row here, at fetch time, is what stops the
+# record drifting from the data: a city refetched tomorrow carries tomorrow's
+# source, licence and parameters without anyone remembering to update a table.
+PROV = os.path.join(DATA_DIR, "networks", "provenance.csv")
+PROV_FIELDS = ["slug", "city", "source", "license", "attribution", "method",
+               "retrieved", "commit", "basis", "n_stations", "n_lines",
+               "frac_stations_with_routes"]
+
+
+def record_provenance(slug, city, stations, lines, route_types):
+    import csv as _csv, datetime as _dt
+    rows, seen = [], False
+    if os.path.exists(PROV):
+        with open(PROV, newline="", encoding="utf-8") as fh:
+            rows = list(_csv.DictReader(fh))
+    with_routes = sum(1 for s in stations if s.get("routes"))
+    row = {
+        "slug": slug,
+        "city": city,
+        "source": "OpenStreetMap (Overpass API)",
+        "license": "ODbL-1.0",
+        "attribution": "(c) OpenStreetMap contributors",
+        "method": f"tools/fetch_networks_osm.py, out geom, {RADIUS_M//1000} km radius, "
+                  f"route={'/'.join(route_types)}",
+        "retrieved": _dt.date.today().isoformat(),
+        "commit": "",                 # filled by tools/provenance.py once committed
+        "basis": "fetch_run",
+        "n_stations": len(stations),
+        "n_lines": len(lines),
+        "frac_stations_with_routes": round(with_routes / len(stations), 3) if stations else "",
+    }
+    for i, r in enumerate(rows):
+        if r.get("slug") == slug:
+            rows[i] = row; seen = True; break
+    if not seen:
+        rows.append(row)
+    rows.sort(key=lambda r: r.get("slug", ""))
+    with open(PROV, "w", newline="", encoding="utf-8") as fh:
+        w = _csv.DictWriter(fh, fieldnames=PROV_FIELDS)
+        w.writeheader()
+        for r in rows:
+            w.writerow({k: r.get(k, "") for k in PROV_FIELDS})
+
+
 # ---- driver ----------------------------------------------------------------
 def load_systems():
     coords = {c["slug"]: c for c in json.load(open(os.path.join(DATA_DIR, "research", "coords.json")))}
@@ -188,6 +234,7 @@ def main():
                 obj = {"slug": s["slug"], "city": s["city"], "stations": stations, "lines": lines}
                 json.dump(obj, open(os.path.join(OUT_DIR, s["slug"] + ".json"), "w"),
                           ensure_ascii=False, separators=(",", ":"))
+                record_provenance(s["slug"], s["city"], stations, lines, rts)
                 print(f"      {len(stations)} stations, {len(lines)} lines  ✓"); ok += 1
         except Exception as e:
             print(f"      FAILED: {e}"); fail += 1

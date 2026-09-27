@@ -207,6 +207,51 @@ because mode scope is strongly collinear with the mode column — a tram system'
 figure covers trams. Axis 2 earns its place as an exclusion criterion, not as a
 predictor, and the ladder reports both.
 
+## Where the geometry came from
+
+The ridership layer records, per system, what a number counts, who published it
+and when it was retrieved. The geometry layer — the larger half of the repo —
+recorded `{slug, city, stations, lines}` and nothing else, so the attribution
+below could not be traced to any particular city.
+
+`data/networks/provenance.csv` now carries a row per system, rebuilt by
+`tools/provenance.py` from evidence rather than memory:
+
+| basis | n | source | licence |
+|---|---|---|---|
+| `fetch_commit` | 39 | OpenStreetMap via Overpass | **ODbL-1.0** |
+| `initial_import` | 162 | unknown (mixed) | **unknown** |
+
+The 39 were refetched in known commits, so their source, method, radius and date
+are recorded; new fetches write their own row, so the record cannot drift from
+the data. The 162 arrived in the initial import as one undifferentiated drop,
+and two independent lines of evidence say they are not simply this repo's own
+OSM output: the introducing commit records no source, and the fetcher produces
+route strings on ~2% of stations against the initial import's ~69% — whatever
+built that corpus had line–station relations this fetcher does not obtain.
+
+**This is why `data/` is not redistributable yet**, and why the repository is
+MIT for code only. Share-alike obligations cannot be honoured for records whose
+origin is unknown. See [DATA-LICENSE.md](DATA-LICENSE.md); refetching a city
+moves it to ODbL automatically.
+
+## Using the data from R
+
+`transit_atlas.R` loads the graded table, not just the raw one. `systems` is the
+full 201 for description; **`comparable` is the 126 on which a cross-city ratio
+is defensible**, and `check_comparability()` warns when a frame mixes counting
+conventions or numerator scopes:
+
+```r
+comparable |>
+  filter(!is.na(trips_per_capita)) |>
+  check_comparability("my comparison")
+```
+
+Without this the R side could average boardings with journeys — a ~1.2–1.6×
+error — which is the exact mistake the Python layer exists to prevent. The
+headline demo plot now uses `comparable` and says so in its subtitle.
+
 ## What is checked
 
 `.github/workflows/ci.yml` runs on every push and pull request. The repo makes
@@ -236,6 +281,14 @@ python3 -m unittest discover -s tests -v   # 14 gates, stdlib only
   before failing, so a local run never leaves a half-rebuilt page.)
 - **The graded CSVs are current** — `comparability.py --write` must be a no-op
   on a clean tree.
+- **Geometry provenance is complete and honest** — every network file has a
+  provenance row, every licensed row carries a source, method and date, and a
+  row imported without a recorded source may not claim a licence. The counts in
+  DATA-LICENSE.md are asserted against `provenance.csv`.
+- **The R layer's column contract holds** — `transit_atlas.R` selects grade
+  columns out of `ridership_verified.csv`; the test parses the R source and
+  fails if `comparability.py` stops emitting one. With no R in CI, that break
+  would otherwise surface to a user rather than a test.
 - **The model still runs** end to end and still reports spec H.
 
 ## Credit

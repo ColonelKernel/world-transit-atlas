@@ -226,5 +226,84 @@ class TestPipelinesRun(unittest.TestCase):
                       f"the committed page is {len(committed)}. Run tools/tm_gen.py and commit.")
 
 
+class TestGeometryProvenance(unittest.TestCase):
+    """Every network file has a provenance row, and licensed rows show their work."""
+
+    @classmethod
+    def setUpClass(cls):
+        import csv
+        path = os.path.join(NETWORKS, "provenance.csv")
+        if not os.path.exists(path):
+            raise unittest.SkipTest("provenance.csv not built yet")
+        with open(path, newline="", encoding="utf-8") as fh:
+            cls.rows = list(csv.DictReader(fh))
+        cls.slugs = {os.path.basename(p)[:-5] for p in glob.glob(os.path.join(NETWORKS, "*.json"))}
+
+    def test_covers_every_network(self):
+        self.assertEqual({r["slug"] for r in self.rows}, self.slugs,
+                         "provenance.csv and data/networks/ disagree on which systems exist")
+
+    def test_licensed_rows_are_complete(self):
+        """A licence claim without a source, method and date is an assertion."""
+        for r in self.rows:
+            if r["license"] and r["license"] != "unknown":
+                with self.subTest(slug=r["slug"]):
+                    for field in ("source", "attribution", "method", "retrieved"):
+                        self.assertTrue(r[field].strip(),
+                                        f"{r['slug']}: licensed as {r['license']} but {field} is empty")
+
+    def test_unknown_rows_claim_nothing(self):
+        """The inverse: an unattributed record must not carry a licence."""
+        for r in self.rows:
+            if r["basis"] == "initial_import":
+                with self.subTest(slug=r["slug"]):
+                    self.assertEqual(r["license"], "unknown",
+                                     f"{r['slug']}: imported without a recorded source but claims a licence")
+
+    def test_data_license_counts_match(self):
+        """DATA-LICENSE.md states the split; it has to be the real one."""
+        path = os.path.join(ROOT, "DATA-LICENSE.md")
+        if not os.path.exists(path):
+            self.skipTest("DATA-LICENSE.md not present")
+        with open(path, encoding="utf-8") as fh:
+            text = fh.read()
+        known = sum(1 for r in self.rows if r["license"] not in ("", "unknown"))
+        unknown = len(self.rows) - known
+        m = re.search(r"\|\s*`fetch_commit`\s*\|\s*(\d+)\s*\|", text)
+        self.assertIsNotNone(m, "DATA-LICENSE.md no longer states a fetch_commit count")
+        self.assertEqual(int(m.group(1)), known)
+        m2 = re.search(r"\|\s*`initial_import`\s*\|\s*(\d+)\s*\|", text)
+        self.assertIsNotNone(m2, "DATA-LICENSE.md no longer states an initial_import count")
+        self.assertEqual(int(m2.group(1)), unknown)
+
+
+class TestRLayerContract(unittest.TestCase):
+    """transit_atlas.R reads columns this repo generates. Nothing checked that.
+
+    The R loader joins the comparability grades so a cross-city ratio cannot be
+    built without them. If comparability.py stops emitting one of those columns,
+    the R side breaks at runtime for whoever runs it next -- which, with no R in
+    CI, would be a user rather than a test.
+    """
+
+    def test_columns_the_r_loader_selects_exist(self):
+        import csv
+        r_path = os.path.join(ROOT, "transit_atlas.R")
+        if not os.path.exists(r_path):
+            self.skipTest("no R layer")
+        with open(r_path, encoding="utf-8") as fh:
+            r_src = fh.read()
+        m = re.search(r"grades\s*<-.*?select\((.*?)\)", r_src, re.S)
+        self.assertIsNotNone(m, "transit_atlas.R no longer selects grade columns")
+        wanted = [c.strip() for c in m.group(1).replace("\n", " ").split(",") if c.strip()]
+        with open(os.path.join(ROOT, "data", "research", "ridership_verified.csv"),
+                  newline="", encoding="utf-8") as fh:
+            have = next(csv.reader(fh))
+        for col in wanted:
+            with self.subTest(column=col):
+                self.assertIn(col, have,
+                              f"transit_atlas.R selects {col!r}, which comparability.py no longer emits")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

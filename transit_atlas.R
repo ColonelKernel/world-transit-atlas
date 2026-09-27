@@ -64,6 +64,55 @@ ridership <- readr::read_csv(p("ridership", "ridership_long.csv"), show_col_type
 # Just the 33 real monthly series:
 monthly <- ridership |> filter(granularity == "monthly")
 
+# 2d. The comparability grades — WITHOUT THESE, trips_per_capita LIES.
+#     covariates.csv carries a bare trips_per_capita for every system. It is a
+#     ratio whose numerator and denominator are defined differently across the
+#     201, and tools/comparability.py grades four axes that say when two of them
+#     may be compared:
+#       measure_def / convention_family  how a rider is counted (a transfer-heavy
+#                                        network reports ~1.2-1.6x more under
+#                                        boardings than under journeys)
+#       mode_scope                       what the numerator covers (Prague's
+#                                        headline is the whole agency, ~2.9x its
+#                                        metro)
+#       population_basis                 built-up area vs metro region vs city
+#       annual_year                      2013-2026, straddling COVID
+#     ridership_verified.csv is the graded join. Use `comparable` for any
+#     cross-city ratio; `systems` remains the full table for description.
+grades <- readr::read_csv(p("research", "ridership_verified.csv"), show_col_types = FALSE) |>
+  select(slug, measure_def, convention_family, mode_scope, mode_scope_checked,
+         population_basis, metric_known, denominator_consistent,
+         vintage_comparable, mode_scope_known, mode_scope_consistent,
+         usable_for_ratio)
+
+systems <- left_join(systems, grades, by = "slug")
+
+# The subset on which a cross-city ratio is defensible: all four axes hold.
+comparable <- systems |> filter(usable_for_ratio)
+
+#' Warn when a frame mixes counting conventions or numerator scopes.
+#'
+#' Returns the frame unchanged so it can sit mid-pipeline. This is a warning and
+#' not an error on purpose: mixing is sometimes what you mean (a descriptive
+#' world total), and silence is the only outcome that is never acceptable.
+check_comparability <- function(df, what = "this comparison") {
+  fams   <- unique(stats::na.omit(df$convention_family))
+  scopes <- unique(stats::na.omit(df$mode_scope))
+  wide   <- setdiff(scopes, c("metro_only", "tram_or_lrt_only", "metro_plus_urban_rail"))
+  if (length(fams) > 1) {
+    warning(sprintf(
+      "%s mixes %d counting conventions (%s). Boardings run ~1.2-1.6x journeys for identical travel; see data/ridership/SCHEMA.md.",
+      what, length(fams), paste(fams, collapse = ", ")), call. = FALSE)
+  }
+  if (length(wide) > 0) {
+    n <- sum(df$mode_scope %in% wide, na.rm = TRUE)
+    warning(sprintf(
+      "%s includes %d system(s) whose numerator is wider than urban rail (%s) -- those figures fold in regional rail or bus.",
+      what, n, paste(wide, collapse = ", ")), call. = FALSE)
+  }
+  invisible(df)
+}
+
 ## ---- 3. load a metro network (real line + station geometry) -----------------
 # Returns a list with $stations (tibble: name, lon, lat, routes) and
 # $lines (tibble: route, color, paths) where paths is a list-column of
@@ -127,8 +176,9 @@ run_demos <- function() {
 
   # (i) The headline relationship: density -> transit use, cars -> against it.
   #     Hong Kong (267 trips/cap, 24,500/km2, 124 cars) vs LA (4.4, 2,250, 779).
-  fig1 <- systems |>
+  fig1 <- comparable |>
     filter(!is.na(trips_per_capita), !is.na(density_per_km2)) |>
+    check_comparability("trips_per_capita vs density") |>
     ggplot(aes(density_per_km2, trips_per_capita,
                size = annual_riders, colour = region)) +
     geom_point(alpha = .7) +
@@ -137,6 +187,8 @@ run_demos <- function() {
               size = 3, vjust = -1, show.legend = FALSE) +
     scale_x_log10() + scale_y_log10() +
     labs(title = "Density drives metro use; car ownership fights it",
+         subtitle = paste0("Comparable subset only: ", nrow(comparable), " of ",
+                           nrow(systems), " systems pass all four comparability axes"),
          x = "Urban density (people / km2, log)",
          y = "Metro trips per capita per year (log)",
          size = "Annual riders", colour = "Region") +

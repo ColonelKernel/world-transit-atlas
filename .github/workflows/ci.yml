@@ -18,6 +18,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # tools/provenance.py reads the commits that fetched each city's
+          # geometry; a shallow clone cannot see them.
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -41,6 +45,18 @@ jobs:
           if ! git diff --quiet -- data/research/comparability.csv data/research/ridership_verified.csv; then
             echo "::error::The graded CSVs are stale. Run 'python3 tools/comparability.py --write' and commit."
             git --no-pager diff --stat -- data/research
+            exit 1
+          fi
+
+      - name: Geometry provenance is current
+        # provenance.csv is derived from git history and the files themselves,
+        # so regenerating it must be a no-op. If it is not, a network file
+        # changed without its source record following.
+        run: |
+          python3 tools/provenance.py --write
+          if ! git diff --quiet -- data/networks/provenance.csv; then
+            echo "::error::provenance.csv is stale. Run 'python3 tools/provenance.py --write' and commit."
+            git --no-pager diff -- data/networks/provenance.csv | head -40
             exit 1
           fi
 

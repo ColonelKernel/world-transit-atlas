@@ -196,6 +196,55 @@ class TestMeasurementEnums(unittest.TestCase):
                 self.assertTrue(r["url"].strip(), "reviewed row carries no URL")
 
 
+class TestRouteAssignment(unittest.TestCase):
+    """assign_routes maps relation stop-nodes onto stations.
+
+    Deterministic and offline: the Overpass fixtures are synthesised here, so a
+    flaky mirror cannot make this test lie either way.
+    """
+
+    def setUp(self):
+        import fetch_networks_osm as F
+        self.F = F
+
+    def _station(self, name, lon, lat, routes=""):
+        return {"name": name, "lon": lon, "lat": lat, "routes": routes}
+
+    def test_nearby_stop_node_assigns_its_route(self):
+        st = [self._station("Alpha", 11.5000, 48.1000)]
+        # ~30 m north: the platform node for the same station
+        out = self.F.assign_routes(st, {"U1": [(11.5000, 48.10027)]})
+        self.assertEqual(out[0]["routes"], "U1")
+
+    def test_distant_stop_node_does_not(self):
+        st = [self._station("Alpha", 11.5000, 48.1000)]
+        # ~1.1 km away: a different station entirely
+        out = self.F.assign_routes(st, {"U1": [(11.5000, 48.1100)]})
+        self.assertEqual(out[0]["routes"], "")
+
+    def test_interchange_collects_every_route(self):
+        st = [self._station("Hub", 11.5000, 48.1000)]
+        out = self.F.assign_routes(st, {
+            "U5": [(11.50005, 48.10005)],
+            "U7": [(11.49995, 48.09995)],
+            "U8": [(11.50010, 48.10010)],
+        })
+        self.assertEqual(out[0]["routes"], "U5;U7;U8")
+
+    def test_existing_routes_are_never_lost(self):
+        """A refetch must not strip metadata the previous source supplied."""
+        st = [self._station("Alpha", 11.5000, 48.1000, routes="S8")]
+        out = self.F.assign_routes(st, {"U1": [(11.5000, 48.10027)]})
+        self.assertEqual(out[0]["routes"], "S8;U1")
+
+    def test_each_stop_goes_to_its_nearest_station(self):
+        st = [self._station("Near", 11.5000, 48.1000),
+              self._station("Far", 11.5000, 48.1010)]   # ~110 m apart
+        out = self.F.assign_routes(st, {"U2": [(11.5000, 48.10002)]})
+        self.assertEqual(out[0]["routes"], "U2")
+        self.assertEqual(out[1]["routes"], "")
+
+
 class TestPipelinesRun(unittest.TestCase):
     def test_comparability_audit_runs_clean(self):
         r = subprocess.run([sys.executable, os.path.join(ROOT, "tools", "comparability.py")],

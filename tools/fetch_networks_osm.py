@@ -83,13 +83,22 @@ def overpass(query, tries=8):
 # depot tracks, sidings and disused/heritage alignments are not passenger lines
 SKIP_REF = re.compile(r"former|disused|abandoned|proposed|planned|under construction|siding|depot|not in use", re.I)
 
-def fetch_lines(lat, lon, route_types):
+def fetch_lines(lat, lon, route_types, want_stops=False):
+    """-> lines, or (lines, stops_by_route) when want_stops.
+
+    A route relation lists its stops as node members with role stop/platform and
+    carries their coordinates under `out geom`. Reading them is what lets a
+    station know which lines call there: the alternative, OSM's `route_ref` tag
+    on the station node, is populated on roughly 2% of stations, so a fetch that
+    relies on it strips the hover card bare.
+    """
     rt = "|".join(route_types)
     q = (f'[out:json][timeout:180];'
          f'relation["route"~"^({rt})$"](around:{RADIUS_M},{lat},{lon});'
          f'out geom;')
     els = overpass(q).get("elements", [])
     lines, ci = [], 0
+    stops_by_route = {}
     for rel in els:
         if rel.get("type") != "relation":
             continue
@@ -110,6 +119,11 @@ def fetch_lines(lat, lon, route_types):
                 pts = [[round(p["lon"], 5), round(p["lat"], 5)] for p in m["geometry"]]
                 if len(pts) >= 2:
                     paths.append(pts)
+            elif m.get("type") == "node" and m.get("role", "") in ("stop", "platform",
+                                                                   "stop_entry_only",
+                                                                   "stop_exit_only") \
+                    and "lat" in m and "lon" in m:
+                stops_by_route.setdefault(str(ref), []).append((m["lon"], m["lat"]))
         if paths:
             lines.append({"route": str(ref), "color": color, "paths": paths})
     # merge lines that share ref (branches) into one entry
@@ -120,7 +134,43 @@ def fetch_lines(lat, lon, route_types):
             merged[k]["paths"].extend(ln["paths"])
         else:
             merged[k] = ln
+    if want_stops:
+        return list(merged.values()), stops_by_route
     return list(merged.values())
+
+
+# A station node and the route's stop node are the same platform recorded twice
+# and sit tens of metres apart; adjacent metro stations are several hundred
+# apart. 200 m separates those two cases.
+STOP_MATCH_M = 200
+
+
+def assign_routes(stations, stops_by_route):
+    """Fill each station's `routes` from route-relation membership.
+
+    Only ever adds: a route string already present from route_ref is kept and
+    merged with what membership proves, so a refetch cannot lose metadata the
+    previous source had.
+    """
+    if not stations or not stops_by_route:
+        return stations
+    found = {i: set() for i in range(len(stations))}
+    for route, stops in stops_by_route.items():
+        for slon, slat in stops:
+            k = 111320.0 * math.cos(math.radians(slat))
+            best, bi = STOP_MATCH_M, None
+            for i, st in enumerate(stations):
+                d = math.hypot((st["lon"] - slon) * k, (st["lat"] - slat) * 111320.0)
+                if d < best:
+                    best, bi = d, i
+            if bi is not None:
+                found[bi].add(route)
+    for i, st in enumerate(stations):
+        existing = {r.strip() for r in str(st.get("routes") or "").replace(",", ";").split(";") if r.strip()}
+        merged_routes = existing | found[i]
+        if merged_routes:
+            st["routes"] = ";".join(sorted(merged_routes))
+    return stations
 
 def fetch_stations(lat, lon, route_types):
     sel = []
@@ -225,11 +275,30 @@ def main():
         rts = MODE_ROUTES.get(s["mode"], ["subway", "light_rail"])
         print(f"[{i}/{len(todo)}] {s['slug']:22} ({s['city']}, {'/'.join(rts)}) ...", flush=True)
         try:
-            lines = fetch_lines(s["lat"], s["lon"], rts)
-            time.sleep(1.5)
-            stations = fetch_stations(s["lat"], s["lon"], rts)
-            if not stations and not lines:
-                print("      no OSM data found — skipped"); fail += 1
+            # A busy Overpass mirror answers one of the two queries and returns
+            # an empty element list for the other, which looks like a city with
+            # no lines (or no stations) rather than like a failure. Observed on
+            # consecutive Munich runs, once each way. A half-answer must never
+            # be written: it would overwrite good geometry with a gap, and the
+            # routes derived from relation membership need BOTH halves anyway.
+            lines, stops_by_route, stations = [], {}, []
+            for attempt in range(3):
+                if not lines:
+                    lines, stops_by_route = fetch_lines(s["lat"], s["lon"], rts, want_stops=True)
+                    time.sleep(1.5)
+                if not stations:
+                    stations = fetch_stations(s["lat"], s["lon"], rts)
+                if lines and stations:
+                    break
+                if attempt < 2:
+                    print(f"      partial ({len(stations)} stations, {len(lines)} lines)"
+                          f" — retrying the empty half", flush=True)
+                    time.sleep(6)
+            stations = assign_routes(stations, stops_by_route)
+            if not stations or not lines:
+                print(f"      incomplete after retries "
+                      f"({len(stations)} stations, {len(lines)} lines) — not written")
+                fail += 1
             else:
                 obj = {"slug": s["slug"], "city": s["city"], "stations": stations, "lines": lines}
                 json.dump(obj, open(os.path.join(OUT_DIR, s["slug"] + ".json"), "w"),

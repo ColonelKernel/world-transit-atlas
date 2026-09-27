@@ -72,6 +72,13 @@ FETCH_COMMITS = {
     ),
     # Later entries win for a city that appears in more than one, so a refetch
     # registered here carries its own retrieval date rather than the original's.
+    "9ca0ff9": dict(
+        source="OpenStreetMap (Overpass API)",
+        license="ODbL-1.0",
+        attribution="(c) OpenStreetMap contributors",
+        method="tools/fetch_networks_osm.py, out geom, 45 km radius, routes from relation membership",
+        retrieved="2026-09-26",
+    ),
     "977c957": dict(
         source="OpenStreetMap (Overpass API)",
         license="ODbL-1.0",

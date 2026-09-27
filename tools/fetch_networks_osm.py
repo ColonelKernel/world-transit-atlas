@@ -106,6 +106,17 @@ def fetch_lines(lat, lon, route_types, want_stops=False):
         ref = tags.get("ref") or tags.get("name") or f"L{len(lines)+1}"
         if SKIP_REF.search(str(ref)) or tags.get("disused") or tags.get("proposed"):
             continue
+        # Unopened lines. OSM keeps a phase-2 metro as route=subway with the
+        # build status in `state` / `construction` rather than in the ref, so
+        # a ref-only test draws lines that carry no passengers yet -- Chennai
+        # came back with six lines for a two-line network. A future
+        # opening_date is the same fact written a third way.
+        if str(tags.get("state", "")).lower() in ("proposed", "construction", "planned") \
+                or tags.get("construction") or str(tags.get("railway", "")) == "construction":
+            continue
+        od = str(tags.get("opening_date", ""))[:10]
+        if od and od > time.strftime("%Y-%m-%d"):
+            continue
         color = tags.get("colour") or tags.get("color")
         if color and color.strip().lower() in NAMED_COLOURS:
             color = NAMED_COLOURS[color.strip().lower()]

@@ -56,7 +56,7 @@ data/
 
 ## Coverage
 
-All **201 systems carry both line and station geometry** — 1,298 lines and 22,641 stations,
+All **201 systems carry both line and station geometry** — 1,327 lines and 23,129 stations,
 counted from `data/networks/*.json` rather than from memory. (This line said 1,303 until the
 count was actually re-run.)
 

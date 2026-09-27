@@ -70,6 +70,15 @@ FETCH_COMMITS = {
         # fetch commit is not thereby fetched; these keep their unknown origin.
         exclude=("chennai", "kuala-lumpur"),
     ),
+    # Later entries win for a city that appears in more than one, so a refetch
+    # registered here carries its own retrieval date rather than the original's.
+    "977c957": dict(
+        source="OpenStreetMap (Overpass API)",
+        license="ODbL-1.0",
+        attribution="(c) OpenStreetMap contributors",
+        method="tools/fetch_networks_osm.py, out geom, 45 km radius, routes from relation membership",
+        retrieved="2026-09-26",
+    ),
 }
 
 INITIAL_IMPORT = "e9c9ac7"

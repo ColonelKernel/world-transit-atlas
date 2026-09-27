@@ -14,7 +14,7 @@ barcelona,Barcelona,unknown (initial import; mixed OSM / citylines.co / agency p
 basel,Basel,OpenStreetMap (Overpass via osm.ch),ODbL-1.0,(c) OpenStreetMap contributors,overpass relation[route] around city centre,2026-09-17,ee05c18,fetch_commit,108,1,0.0
 beijing,Beijing,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,340,24,1.0
 bengaluru,Bengaluru,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,74,6,0.0
-berlin,Berlin,OpenStreetMap (Overpass API),ODbL-1.0,(c) OpenStreetMap contributors,"tools/fetch_networks_osm.py, out geom, 45 km radius",2026-09-17,c0cc9ef,fetch_commit,177,9,0.972
+berlin,Berlin,OpenStreetMap (Overpass API),ODbL-1.0,(c) OpenStreetMap contributors,"tools/fetch_networks_osm.py, out geom, 45 km radius, routes from relation membership",2026-09-26,977c957,fetch_commit,177,9,0.972
 bilbao,Bilbao,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,65,4,0.985
 bordeaux,Bordeaux,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,126,3,1.0
 boston,Boston,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,119,4,1.0
@@ -58,7 +58,7 @@ gothenburg,Gothenburg,unknown (initial import; mixed OSM / citylines.co / agency
 guadalajara,Guadalajara,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,20,3,1.0
 guangzhou,Guangzhou,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,245,16,1.0
 guiyang,Guiyang,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,25,1,1.0
-hamburg,Hamburg,OpenStreetMap (Overpass API),ODbL-1.0,(c) OpenStreetMap contributors,"tools/fetch_networks_osm.py, out geom, 45 km radius",2026-09-17,c0cc9ef,fetch_commit,81,4,1.0
+hamburg,Hamburg,OpenStreetMap (Overpass API),ODbL-1.0,(c) OpenStreetMap contributors,"tools/fetch_networks_osm.py, out geom, 45 km radius, routes from relation membership",2026-09-26,977c957,fetch_commit,81,4,1.0
 hangzhou,Hangzhou,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,169,9,1.0
 hanoi,Hanoi,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,19,2,0.0
 hanover,Hanover,OpenStreetMap (Overpass API),ODbL-1.0,(c) OpenStreetMap contributors,"tools/fetch_networks_osm.py, out geom, 45 km radius",2026-09-17,c0cc9ef,fetch_commit,225,15,0.013
@@ -112,7 +112,7 @@ montpellier,Montpellier,unknown (initial import; mixed OSM / citylines.co / agen
 montreal,Montreal,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,68,4,1.0
 moscow,Moscow,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,369,21,1.0
 mumbai,Mumbai,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,118,1,0.0
-munich,Munich,OpenStreetMap (Overpass API),ODbL-1.0,(c) OpenStreetMap contributors,"tools/fetch_networks_osm.py, out geom, 45 km radius",2026-09-17,c0cc9ef,fetch_commit,100,8,1.0
+munich,Munich,OpenStreetMap (Overpass API),ODbL-1.0,(c) OpenStreetMap contributors,"tools/fetch_networks_osm.py, out geom, 45 km radius, routes from relation membership",2026-09-26,977c957,fetch_commit,100,8,1.0
 nagoya,Nagoya,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,87,6,1.0
 nagpur,Nagpur,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,37,1,0.0
 nanchang,Nanchang,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,50,2,1.0
@@ -159,7 +159,7 @@ sao-paulo,São Paulo,unknown (initial import; mixed OSM / citylines.co / agency 
 sapporo,Sapporo,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,46,3,1.0
 seattle,Seattle,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,19,2,1.0
 sendai,Sendai,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,29,2,1.0
-seoul,Seoul,OpenStreetMap (Overpass API),ODbL-1.0,(c) OpenStreetMap contributors,"tools/fetch_networks_osm.py, out geom, 45 km radius",2026-09-17,c0cc9ef,fetch_commit,461,12,0.978
+seoul,Seoul,OpenStreetMap (Overpass API),ODbL-1.0,(c) OpenStreetMap contributors,"tools/fetch_networks_osm.py, out geom, 45 km radius, routes from relation membership",2026-09-26,977c957,fetch_commit,461,12,0.978
 shanghai,Shanghai,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,346,20,1.0
 shenyang,Shenyang,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,84,4,1.0
 shenzhen,Shenzhen,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,236,10,1.0
@@ -175,7 +175,7 @@ suzhou,Suzhou,unknown (initial import; mixed OSM / citylines.co / agency portals
 sydney,Sydney,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,236,1,0.288
 taipei,Taipei,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,111,17,0.0
 taoyuan,Taoyuan,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,22,3,0.0
-tashkent,Tashkent,OpenStreetMap (Overpass API),ODbL-1.0,(c) OpenStreetMap contributors,"tools/fetch_networks_osm.py, out geom, 45 km radius",2026-09-17,c0cc9ef,fetch_commit,49,4,1.0
+tashkent,Tashkent,OpenStreetMap (Overpass API),ODbL-1.0,(c) OpenStreetMap contributors,"tools/fetch_networks_osm.py, out geom, 45 km radius, routes from relation membership",2026-09-26,977c957,fetch_commit,49,4,1.0
 tbilisi,Tbilisi,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,23,1,0.0
 tehran,Tehran,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,150,7,1.0
 tel-aviv,Tel Aviv,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,33,1,1.0
@@ -185,7 +185,7 @@ tianjin,Tianjin,unknown (initial import; mixed OSM / citylines.co / agency porta
 tokyo,Tokyo,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,216,13,1.0
 toronto,Toronto,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,65,3,1.0
 toulouse,Toulouse,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,44,3,0.727
-tunis,Tunis,OpenStreetMap (Overpass API),ODbL-1.0,(c) OpenStreetMap contributors,"tools/fetch_networks_osm.py, out geom, 45 km radius",2026-09-17,c0cc9ef,fetch_commit,59,8,1.0
+tunis,Tunis,OpenStreetMap (Overpass API),ODbL-1.0,(c) OpenStreetMap contributors,"tools/fetch_networks_osm.py, out geom, 45 km radius, routes from relation membership",2026-09-26,977c957,fetch_commit,59,8,1.0
 turin,Turin,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,23,1,1.0
 valencia,Valencia,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,135,6,0.548
 vancouver,Vancouver,unknown (initial import; mixed OSM / citylines.co / agency portals),unknown,see README 'Data sources & attribution',not recorded at import time,,e9c9ac7,initial_import,54,2,1.0

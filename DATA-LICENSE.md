@@ -17,15 +17,15 @@ unknown, so a single repository-wide data licence would have been a guess.
 
 | basis | n | source | licence |
 |---|---|---|---|
-| `fetch_commit` | 39 | OpenStreetMap via Overpass | **ODbL-1.0** |
-| `initial_import` | 162 | unknown (mixed) | **unknown** |
+| `fetch_commit` | 37 | OpenStreetMap via Overpass | **ODbL-1.0** |
+| `initial_import` | 164 | unknown (mixed) | **unknown** |
 
-The 39 are the cities refetched in commits `ee05c18` (the Swiss three via
+The 37 are the cities refetched in commits `ee05c18` (the Swiss three via
 osm.ch) and `c0cc9ef` (the 34 gap cities). Their source, method, radius and
 retrieval date are recorded, and they are ODbL: **© OpenStreetMap
 contributors**, share-alike, attribution required.
 
-The 162 arrived in the initial import as one undifferentiated drop. Two
+The 164 arrived in the initial import as one undifferentiated drop. Two
 independent lines of evidence say they are not simply this repo's own OSM
 output:
 

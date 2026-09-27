@@ -288,6 +288,17 @@ def main():
                     time.sleep(1.5)
                 if not stations:
                     stations = fetch_stations(s["lat"], s["lon"], rts)
+                # A busy mirror can also answer THIN rather than empty: Kuala
+                # Lumpur once came back as 1 station for 2 lines. The route
+                # relations already told us roughly how many stops exist, so a
+                # station list under a tenth of that is a truncated answer.
+                # (0.1 is loose on purpose: an interchange is counted once per
+                # route it serves, so stop nodes overcount stations ~3-4x.)
+                declared = sum(len(v) for v in stops_by_route.values())
+                if stations and declared and len(stations) < 0.1 * declared:
+                    print(f"      thin ({len(stations)} stations for {declared} declared stops)"
+                          f" — treating as partial", flush=True)
+                    stations = []
                 if lines and stations:
                     break
                 if attempt < 2:

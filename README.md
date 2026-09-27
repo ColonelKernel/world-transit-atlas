@@ -219,12 +219,12 @@ below could not be traced to any particular city.
 
 | basis | n | source | licence |
 |---|---|---|---|
-| `fetch_commit` | 39 | OpenStreetMap via Overpass | **ODbL-1.0** |
-| `initial_import` | 162 | unknown (mixed) | **unknown** |
+| `fetch_commit` | 37 | OpenStreetMap via Overpass | **ODbL-1.0** |
+| `initial_import` | 164 | unknown (mixed) | **unknown** |
 
-The 39 were refetched in known commits, so their source, method, radius and date
+The 37 were refetched in known commits, so their source, method, radius and date
 are recorded; new fetches write their own row, so the record cannot drift from
-the data. The 162 arrived in the initial import as one undifferentiated drop,
+the data. The 164 arrived in the initial import as one undifferentiated drop,
 and two independent lines of evidence say they are not simply this repo's own
 OSM output: the introducing commit records no source, and the fetcher produces
 route strings on ~2% of stations against the initial import's ~69% — whatever

@@ -27,8 +27,8 @@ This builds the record from evidence rather than assertion, and is regenerable:
   relations this fetcher does not get, which is consistent with the README's
   citylines/agency mix and inconsistent with it being this fetcher's output.
 
-So 39 cities get a real source and licence, and 162 are recorded `unknown` with
-the reason. Overstating the other 162 would make the ODbL notice a guess, which
+So 37 cities get a real source and licence, and 164 are recorded `unknown` with
+the reason. Overstating the other 164 would make the ODbL notice a guess, which
 is the one thing an attribution file may not be.
 
     python3 tools/provenance.py            # summary
@@ -65,6 +65,10 @@ FETCH_COMMITS = {
         attribution="(c) OpenStreetMap contributors",
         method="tools/fetch_networks_osm.py, out geom, 45 km radius",
         retrieved="2026-09-17",
+        # The same commit also EDITED two initial-import files -- it stripped a
+        # depot track from each -- without fetching them. A file touched by a
+        # fetch commit is not thereby fetched; these keep their unknown origin.
+        exclude=("chennai", "kuala-lumpur"),
     ),
 }
 
@@ -89,7 +93,7 @@ def _files_in(rev: str) -> set[str]:
 def build() -> list[dict]:
     attributed: dict[str, tuple[str, dict]] = {}
     for rev, meta in FETCH_COMMITS.items():
-        for slug in _files_in(rev):
+        for slug in _files_in(rev) - set(meta.get("exclude", ())):
             attributed[slug] = (rev, meta)
 
     if not attributed:
